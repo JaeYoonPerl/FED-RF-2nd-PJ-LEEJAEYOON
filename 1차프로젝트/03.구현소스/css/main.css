@@ -12,39 +12,32 @@
 body * {
     outline: 2px dashed #ccc;
 }
-/* 1. 상단영역 */
+
+/* 1. 상단영역  */
 .top-area{
     height: 100px;
 }
-/* 2. 메뉴영역 */
-.menu-area{
+/* 2. 메뉴영역  */
+.part-menu{
     height: 60px;
 }
-/* 3. 메인화면 */
-.main-area{
-    height: 817px;
+/* 3. 메인영역 */
+.ban-area{
+    height: 788px;
 }
-/* 3. 인트로영역 */
+/* . PIC소개영역(3페이지) */
 .intro-area{
-    height: 575px;
+    height: 3490px;
 }
-/* 4. 미리보기영역 */
-.preview-area{
-    height: 803px;
+/* 5. 마스코트 소개영역 */
+.masco-area{
+    height: 840px;
 }
-/* 5. 현장포토영역 */
-.real-photo-area{
-    height: 1043px;
+/* 6. 사진관 */
+.photo-area{
+    height: 1262px;
 }
-/* 6. 대표이미지 영역 */
-.main-photo-area{
-    height: 731px;
-}
-/* 7. 최신동영상영역 */
-.clip-video-area{
-    height: 548px;
-}
-/* 8. 하단영역 */
+/* 7. 하단영역 */
 .footer-area{
-    height: 371px;
+    height: 756px;
 }
