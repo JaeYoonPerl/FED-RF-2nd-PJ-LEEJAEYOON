@@ -9,14 +9,67 @@
 </head>
 <body>
     
+    <!-- 뒷배경영상 -->
+<div class="bg-video">
     <!-- 1. 상단영역 -->
     <div id="top-area">
         <header class="top-area inbox">
-            <h2 class="temp-tit">1. 상단영역</h2>
+            <!-- <h2 class="temp-tit">1. 상단영역</h2> -->
+            <!-- 1-1. 상단로고 파트 -->
             <div class="cont-box">
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
+                <!-- 1-1-1. 지역, 날씨파트 -->
+                <div class="col-4">
+                    <div class="weatherbox">
+                        <div class="weather-wrap">
+                            <dl>
+                                <dt>Guam</dt>
+                                <dd class="wicon">★</dd>
+                                <dd class="temp">27.8°c</dd>
+                            </dl>
+                            <dl>
+                                <dt>Saipan</dt>
+                                <dd class="wicon">♠</dd>
+                                <dd class="temp">21.8°c</dd>
+                            </dl>
+                        </div>
+                        <div class="button-wrap">
+                            <button type="button" class="up">▲</button>
+                            <button type="button" class="down">▼</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 메인 로고 -->
+                <div class="col-4">
+                    <h1 class="main-logo">
+                        <img src="./images/logo_w.png" alt="회사메인로고">
+                    </h1>
+                    
+                </div>
+                <!-- 다국어/예약버튼 -->
+                <div class="col-4">
+                    <nav class="lang-reserve">
+                        <ul>
+                            <!-- 지구모양 -->
+                            <li>
+                                <a href="#" class="fa-solid fa-globe"></a>
+                            </li>
+                            <li>
+                                <a href="#">한국어</a>
+                            </li>
+                            <li>
+                                <a href="#">Eng</a>
+                            </li>
+                            <!-- 캘린더 아이콘 -->
+                            <li>
+                                <a href="#" class="fa-regular fa-calendar-days"></a>
+                            </li>
+                            <li>
+                                <a href="#">Reservation</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
     </div>
@@ -38,15 +91,32 @@
                 </div>
         </section>
     </div>
+</div>
 
     <!-- 4. PIC소개영역(3페이지) -->
-    <div id="intro-area">
-        <section class="intro-area inbox">
+    <div id="intro-pic-area">
+        <section class="intro-pic-area inbox">
             <h2 class="temp-tit">4-1. PIC소개영역</h2>
                 <div class="cont-box">
                     <div class="col-12"></div>
-                    <div class="col-12"><h3 class="temp-tit">4-2. 워터파크 액티비티</h3></div>
-                    <div class="col-12"><h3 class="temp-tit">4-3. 클럽메이트 </h3></div>
+                </div>
+        </section>
+    </div>
+    <!-- 4-2. 워터파크 액티비티 -->
+    <div id="intro-act-area">
+        <section class="intro-act-area inbox">
+            <h2 class="temp-tit">4-2. 워터파크 액티비티</h2>
+                <div class="cont-box">
+                    <div class="col-12"></div>
+                </div>
+        </section>
+    </div>
+    <!-- 클럽메이트 -->
+    <div id="intro-mate-area">
+        <section class="intro-mate-area inbox">
+            <h2 class="temp-tit">4-3. 클럽메이트</h2>
+                <div class="cont-box">
+                    <div class="col-12"></div>
                 </div>
         </section>
     </div>
