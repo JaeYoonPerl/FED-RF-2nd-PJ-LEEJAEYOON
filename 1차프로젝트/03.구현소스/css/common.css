@@ -29,7 +29,7 @@
     display: flex;
 }
 
-/* 상단  오버시 배경색 변경  */
+/* 상단  오버시 배경색 변  */
 #part-menu{
      /* 트랜지션 : 속시이지 */
      transition: all 0.6s ease-in-out;
