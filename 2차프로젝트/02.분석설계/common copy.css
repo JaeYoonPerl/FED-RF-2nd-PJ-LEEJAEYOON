@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/* PIC J : 공통 모듈 CSS - common.css */
+/* 공유기능 요소 셋팅 */
+
+/************* 1. 상단영역 *************/
+
+/* 메인 뒷배경 영상 */
+.bg-video{
+    background: rgba(133, 133, 133, 0.733);
+}
+
+/* 날씨정보 */
+.top-area dl {
+    display: flex;
+}
+
+.main-logo{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 16%;
+}
+
+.button-wrap{
+    display: flex;
+}
+/* 다국어 예약파트 */
+.lang-reserve ul{
+    display: flex;
+}
+
+/* 상단  오버시 배경색 변  */
+#part-menu{
+     /* 트랜지션 : 속시이지 */
+     transition: all 0.6s ease-in-out;
+}
+#part-menu:hover{
+    background-color: blue;
+}
+
+
+/*************************** 네비파트 ***************************/
+/* GNB박스 */
+.gnb{
+    display: flex;
+    /* 직계자식요소 dl옆으로 흐르게 */
+
+    /* 높이값 제한 */
+    height: 60px;
+    /* 자식요소 하위메뉴 숨기기 */
+    overflow: hidden;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    /* 트랜지션 : 속시이지 */
+    transition: all 0.6s ease-in-out;
+
+}
+
+/* 상단영역 오버시 하위메뉴 보이기 */
+#part-menu:hover .gnb{
+    height:400px;
+}
+/* 상단영역 오버시 상위메뉴 dt>a 글자색변경 */
+#part-menu:hover .gnb dt a{
+    color: #fff;
+}
+
+/* 네비게이션 a요소 공통 */
+.gnb dt a{
+    color: #fff;
+}
+/* 메뉴 박스 dl */
+.gnb dl{
+    padding: 0 80px;
+   
+}
+/* 상위메뉴 dt */
+.gnb dt{
+    line-height: 60px;
+}
+/* 상위메뉴 dd */
+.gnb dd{
+    line-height: 60px;
+}
+
+
+
+/************ 2. 메인영역 ************/
+
+/************* 3. 하단영역 *************/

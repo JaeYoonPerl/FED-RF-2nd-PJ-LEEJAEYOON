@@ -15,18 +15,28 @@ body * {
 
 /* 1. 상단영역  */
 .top-area{
-    height: 160px;
+    height: 100px;
 }
-
-/* 3. 배너영역 */
+/* 2. 메뉴영역  */
+.part-menu{
+    height: 60px;
+}
+/* 3. 메인영역 */
 .ban-area{
     height: 788px;
 }
 /* . PIC소개영역 */
 .intro-pic-area{
-    height: 3490px;
+    height: 1200px;
 }
- 
+ /* 4-2. 워터파크 액티비티 */
+.intro-act-area{
+    height: 1200px;
+}
+/* 클럽메이트 */
+.intro-mate-area{
+    height: 1200px;
+}
 /* 5. 마스코트 소개영역 */
 .masco-area{
     height: 840px;
