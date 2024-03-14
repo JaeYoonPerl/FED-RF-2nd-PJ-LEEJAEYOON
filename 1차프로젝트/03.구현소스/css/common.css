@@ -16,14 +16,37 @@ body{
 /************* 1. 상단영역 *************/
 /* 날씨정보 */
 .top-area dl {
-    display: flex;
+    /* display: flex; */
+    margin-top: 10%;
 }
+.button-wrap {
+    /* display: flex; */
+    margin-top: 5%;
+}
+
+
 /* 메인로고 */
 .main-logo{
-    display: flex;
-    margin-top: 20px;
-    margin-left: 16%;
+    display: flex; 
+   margin-top: 20px;
+    margin-left: 33%;
+    /* justify-content: center; */
 }
+
+/***************** 1-2. 네비파트 *****************/
+/* GNB파트 */
+.gnb{
+    display: flex;
+    margin-top: -3vw;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+.gnb dt{
+    padding: 0 30px;
+}
+
+
 
 
 

@@ -33,3 +33,8 @@
     /* 블록박스 중앙 정렬 */
     margin: 0 auto;
 }
+
+
+html{
+    font-size: 10px;
+}
