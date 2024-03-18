@@ -9,9 +9,9 @@
 @import url(./grid_12_flex.css);
 
 /* 공사중 표시 */
-body * {
+/* body * {
     outline: 2px dashed #ccc;
-}
+} */
 
 /* 1. 상단영역  */
 .top-area{
@@ -24,8 +24,8 @@ body * {
 }
 
 
-/* 3. 배너영역 */
-.ban-area{
+/* 3. 비주얼영역 */
+.visual-area{
     height: 790px;
 }
 /* . PIC소개영역 */
