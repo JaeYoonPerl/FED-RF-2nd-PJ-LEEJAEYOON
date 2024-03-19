@@ -153,28 +153,64 @@ body{
     transition: top .3s, transform .3s .3s;
 }
 /***************** 1.5. 네비파트 *****************/
-/* 바로가기 메뉴 */
-.nav-area ul{
+/* 텍스트 CSS */
+.gnb dt{
+    font-size: 3.2rem;
+    padding: 0 2vw;
+    
+    
+}
+.gnb dd{
+    font-size: 2.2rem;
+    margin-left: 15%;
+    padding: 0 0.5vw;
+    
+}
+.gnb a{
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+/* gnb */
+.gnb{
     display: flex;
+    /* dl 옆으로 흐르게 */
+
+    /* 높이값 제한 */
+    height: 40px;
     justify-content: center;
+
+    /* 자식요소 하위메뉴 숨기기 */
+    overflow: hidden;
+    /* 글자 줄바꿈방지 */
+    white-space: nowrap;
+
+    /* 테두리선 */
     border-top: 2px solid #ccc;
     border-bottom: 2px solid #ccc;
-     text-shadow: 0 0 2px #000;
-     padding: .7vw;
-}
-.nav-area ul li{
-    
-    padding: 0 2vw;
-}
-.nav-area ul li a{
-     font-size: 1.8rem;
-     font-weight: bold;
-     color: #fff;
-     text-shadow: 0 0 2px #000;
-     padding: 0 1vw;
 
-     
+    font-weight: bold;
+
+    /* 트랜지션 : 속시이지 */
+    transition: all 0.6s ease-in-out;
+
+    z-index: 1;
+    
 }
+
+/* 상단영역 오버시 하위메뉴 보이기 */
+#nav-area:hover .gnb{
+    height: 500px;    
+    
+}
+#nav-area:hover .gnb{
+    background-color: blue;
+}
+
+
+
+
+
+
 
 /************ 2. 메인영역 ************/
 /* 비주얼 영역 */
@@ -185,13 +221,41 @@ body{
     font-weight: bold;
     /* justify-content: center; */
 }
+
+#visual-area .txt-box p{
+    margin-top: 10%;
+}
 #visual-area .txt-box p span{
     padding: 0.2vw;
     color: #fff;
     font-size: 10rem;
     margin-top: 10%;
 }
-#visual-area .desc{
+#visual-area .desc1{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 2vw;
+    margin-top: 2%;
+    font-weight: bold;
+}
+#visual-area .desc2{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 2vw;
+    margin-top: 2%;
+    font-weight: bold;
+}
+#visual-area .desc3{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 2vw;
+    margin-top: 2%;
+    font-weight: bold;
+}
+#visual-area .desc4{
     display: flex;
     justify-content: center;
     color: #fff;
@@ -200,5 +264,48 @@ body{
     font-weight: bold;
 }
 
+/* 상단 텍스트 애니메이션 */
+/* 모두 숨기기 */
+#visual-area p{
+    display: none;
+} #visual-area .desc1{
+    display: none;
+}
+#visual-area .desc2{
+    display: none;
+}
+ #visual-area .desc3{
+    display: none;
+}
+ #visual-area .desc4{
+    display: none;
+}
+
+/* 첫번째 텍스트 박스 */
+#visual-area p:nth-child(1){
+    display: block;
+}
+
+#visual-area .desc1{
+    display: block;
+    text-align: center;
+}
+
+
+
+/* 하단 텍스트 */
+#visual-area .bot-txt-box ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 28%;
+}
+
+.bot-txt-box ul li span{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 5rem;
+    
+}
 
 /************* 3. 하단영역 *************/
