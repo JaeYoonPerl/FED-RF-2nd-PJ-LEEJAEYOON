@@ -208,10 +208,6 @@ body{
 
 
 
-
-
-
-
 /************ 2. 메인영역 ************/
 /* 비주얼 영역 */
 #visual-area .txt-box p{
@@ -307,5 +303,77 @@ body{
     padding: 0 5rem;
     
 }
+
+/********************* PIC소개 영역 *********************/
+#intro-pic-area{
+    background-color: #fff;
+}
+#intro-pic-area .title-box{
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: darkblue;
+   
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 50px;
+}
+
+#intro-pic-area .introbox{
+
+   position: relative;
+   padding-top: 10vw;
+}
+#intro-pic-area .introbox li{
+
+   display: flex;
+}
+
+#intro-pic-area .intro-images{
+    position: relative;
+    width: 409px;
+    height: 500px;
+    margin: 0 76px 0 105px;
+    /* display: flex; */
+
+    vertical-align: middle;
+}
+#intro-pic-area .intro-images img{
+    position: absolute;
+   display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+#intro-pic-area h3{
+     position: relative;
+    display: block;
+    font-size: 6.6rem;
+    white-space: nowrap;
+    color: darkblue;
+}
+#intro-pic-area p{
+    /* display: flex; */
+    padding-top: 1vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    display: block;
+    line-height: 1.8;
+
+    font-size: 2rem;
+}
+
+#intro-pic-area .intro-txt-box{
+    position: relative;
+    width: 500px;
+}
+
+/* 두번째 인트로박스 사진 텍스트 위치 바꿈 */
+
+
+
 
 /************* 3. 하단영역 *************/
