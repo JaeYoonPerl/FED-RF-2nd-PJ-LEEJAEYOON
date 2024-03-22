@@ -13,6 +13,9 @@
     outline: 2px dashed #ccc;
 } */
 
+body{
+    overflow-x: hidden
+}
 /* 1. 상단영역  */
 .top-area{
     height: 100px;
