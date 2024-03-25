@@ -19,7 +19,7 @@ body{
 .bg-video{
     position: absolute;
     width: 100%;
-    height: 930px;
+    height: 990px;
     margin: 0 auto;
     overflow : hidden;
     z-index: -1;
@@ -31,149 +31,118 @@ body{
 
 /************* 1. 상단영역 *************/
 
-/***************** 1-1. 날씨정보 *****************/
-#top-area .weather-wrap dl {
-    display: flex;
-    margin-top: 10%;
-    font-size: 2.5rem;
-    margin-left: 15%;
-    color: #fff;
-    font-weight: bold;
-    text-shadow: 0 0 5px #000;
-   
+
+
+/****************** 1-1. 메인로고 ********************/
+.logo-part{
+    padding-top: 3.2%;
 }
-.weather-wrap dl dd{
-    padding: 0 2%;
-}
-.button-wrap {
-    /* display: flex; */
-    /* margin-top: 9%;
-    margin-left: 12%; */
-}
-
-
-
-
-/****************** 1-2. 메인로고 ********************/
 .main-logo{
     display: flex; 
-   margin-top: 20px;
+   /* margin-top: 8%; */
     /* margin-left: 33%; */
     justify-content: center;
+
+}
+/******************* 1-2. 네비파트  *******************/
+/* Top 메뉴 */
+.top-menu{
+    position: absolute;
+    left: 82%;
+    top: 1%;
 }
 
-/****************** 1-3. 언어, 햄버거 ******************/
-
-/*  */
-.lang-wrap dl{
+.top-menu ul {
+    /* position: absolute; */
     display: flex;
-    margin-top: 10%;
-    font-size: 2.5rem;
-    margin-left: 35%;
-    color: #fff;
+    justify-content: flex-end;
+}
+/* Top 리스트 */
+.top-menu ul li {
+    padding: 0 10px;
+}
+.top-menu ul a {
+    font-size: 1.4rem;
+    line-height: 40px;
     font-weight: bold;
-    text-shadow: 0 0 5px #000;
+    color: #fff;
+}
+
+
+.nav-part{
+    padding-top: 3.5%;
+}
+/* gnb박스 */
+.gnb{
+  /* position: absolute; */
+    /* padding-left: 13%; */
+    display: flex;
+    height: 30px;
+    overflow: hidden;
+    /* GNB 전체 중앙정렬 */
+    text-align: center;
+    /* 트랜지션 : 속시이지 */
+    transition: all 0.6s ease-in-out;
+
+    /* 글자 줄바꿈방지 */
+    white-space: nowrap;
     
 }
-.lang-wrap dl dd{
-    padding: 0 .5vw;
+#top-area:hover .gnb{
+    height: 700px;
 }
-
-/* 햄버거 버튼 */
-.hambtn{
-    position: absolute;
-    /* 부모자격: span */
-    width: 400px;
-    height: 250px;
-    transform: scale(0.1);
-    transform-origin: right top;
-    margin: -2% auto;
-    /* outline: 5px dotted lightpink; */
-    /* 손가락보이기 */
-    cursor: pointer;
-}
-/* 햄버거 바 공통 */
-.hambtn span{
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 25px;
-    text-shadow: 0 0 2px #000;
+#top-area{
    
-}
-/* 1번 바 */
-.hambtn span:nth-child(1){
-    top: 0;  
-     /* 트랜지션 개별 설정 : 햄버거 복귀*/
-     transition: top .3s .3s, transform .3s;
-    /* top값은 0.3초 대기후 0.3초 애니
-    transform은 바로 0.3초 애니
-    최전후 중앙이동함 */
-}
-/* 2번 바 */
-.hambtn span:nth-child(2){
-    top: 100px;  
-    left: 0;
-    /* left 초기값 있어야 애니메이션 됨(기본값 auto) */
-     /* 트랜지션 0.3초 후 0.1초 애니*/
-     transition: 0.1s 0.3s;
-}
-/* 3번 바 */
-.hambtn span:nth-child(3){
-    top: 200px;  
-     /* 트랜지션 개별 설정 : 햄버거 복귀*/
-     transition: top .3s .3s, transform .3s;
-    /* top값은 0.3초 대기후 0.3초 애니
-    transform은 바로 0.3초 애니
-    최전후 중앙이동함 */
+    /* 트랜지션 : 속시이지 */
+    transition: all 0.6s ease-in-out;
+    
 }
 
-/* 상위 메뉴에 클래스 on 줄경우 닫기버튼으로 변경 */
-/* 1번 바 */
-.hambtn.on span:nth-child(1){
-    top: 100px;  
-    transform: rotate(45deg);
-    /* 트랜지션 개별 설정 */
-    transition: top .3s, transform .3s .3s;
-    /* top값은 바로 0.3초 애니
-    transform은 0.3초 대기후 0.3초 애니
-    중앙이동후 회전함 */
+/* 상단영역 오버시 배경색 흰색 */
+#top-area:hover{
+    background-color: blue;
 }
-/* 2번 바 */
-.hambtn.on span:nth-child(2){
-    top: 100px; 
-    width: 0;
-    left: 50%;
-    /* 트랜지션 0.3초 후 0.1초 애니*/
-    transition: 0.1s 0.3s;
+
+/* 메뉴 박스 dl */
+.gnb dl{
+    padding: 0 10px;
 }
-/* 3번 바 */
-.hambtn.on span:nth-child(3){
-    top: 100px;  
-    transform: rotate(-45deg);
-    transition: top .3s, transform .3s .3s;
+/* 상위메뉴 dt */
+.gnb dt{
+    line-height: 1.5;
 }
+
+/* gnb 텍스트 세팅 */
+.gnb dl a{
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    font-weight: bold;
+
+}
+
+
+
 /***************** 1.5. 네비파트 *****************/
 /* 텍스트 CSS */
-.gnb dt{
+.gnb1 dt{
     font-size: 3.2rem;
     padding: 0 2vw;
     
     
 }
-.gnb dd{
+.gnb1 dd{
     font-size: 2.2rem;
     margin-left: 15%;
     padding: 0 0.5vw;
     
 }
-.gnb a{
+.gnb1 a{
     color: #fff;
     text-shadow: 0 0 2px #000;
 }
-/* gnb */
-.gnb{
+/* gnb1 */
+.gnb1{
     display: flex;
     /* dl 옆으로 흐르게 */
 
@@ -195,16 +164,16 @@ body{
     /* 트랜지션 : 속시이지 */
     transition: all 0.6s ease-in-out;
 
-    z-index: 1;
+    /* z-index: 1; */
     
 }
 
 /* 상단영역 오버시 하위메뉴 보이기 */
-#nav-area:hover .gnb{
+#nav-area:hover .gnb1{
     height: 500px;    
     
 }
-#nav-area:hover .gnb{
+#nav-area:hover .gnb1{
     background-color: blue;
 }
 
@@ -326,6 +295,11 @@ body{
 
    position: relative;
    padding-top: 10vw;
+   
+}
+#intro-pic-area .introbox ul{
+    margin-left: 7vw;
+    text-align: center;
 }
 #intro-pic-area .introbox li{
 
@@ -371,6 +345,17 @@ body{
 #intro-pic-area .intro-txt-box{
     position: relative;
     width: 500px;
+}
+/* 스크롤 글자 */
+.scroll-txt{
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+.introbox em{
+    font-size: 20rem;
+    font-style: normal;
+    font-weight: bold;
+    color: darkblue;
 }
 
 
@@ -431,7 +416,8 @@ body{
    position: absolute;
    display: block;
    top: 30%;
-   text-align: left;
+   left:5%;
+   /* text-align: left; */
 }
 
 .footer-txt-box ul {
@@ -464,7 +450,7 @@ body{
     position: relative;
     display: block;
     top: 30%;
-    left: 58%;
+    left: 28%;
 }
 
 .footer-icon {
@@ -478,3 +464,4 @@ body{
     font-size: 1.5rem;
     white-space: nowrap;
 }
+
