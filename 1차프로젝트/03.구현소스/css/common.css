@@ -277,6 +277,7 @@ body{
 
 /********************* PIC소개 영역 *********************/
 #intro-pic-area{
+    /* position: sticky; */
     background-color: #fff;
 }
 #intro-pic-area .title-box{
@@ -357,6 +358,20 @@ body{
     font-weight: bold;
     color: darkblue;
 }
+/* 원 애니 */
+.circle-ani-box{
+    /* position: fixed; */
+}
+.circle-ani-box canvas{
+    position: absolute;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 10px solid red;
+    border-radius: 50%;
+    z-index: 220;
+}
 
 
 /**************** 4. 마스코트 소개영역 ****************/
@@ -378,8 +393,8 @@ body{
 .masco-intro-txt{
     position: absolute;
     display: block;
-    top: 70%;
-    left: 60%;
+    top: 60%;
+    left: 70%;
 }
 .masco-txt h3{
     font-size: 8.5rem;
@@ -400,10 +415,135 @@ body{
     left: 40%;
     top: 30%;
     
-   
-
+}
+/* 마스코트영역 물방울, 물고기 애니메이션 */
+.ani-box img{
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;   
+    /* 애니메이션 적용 */
+    animation: fish-bub-ani 5s ease-in-out infinite alternate;
+}
+/* 물고기 위치 */
+.fish1{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+.fish2{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+}
+.fish3{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+/* 물방울 위치 */
+.bubble1{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}
+.bubble2{
+    position: absolute;
+    top: 15%;
+    left: 30%;
+}
+.bubble3{
+    position: absolute;
+    top: 55%;
+    left: 70%;
+}
+.bubble4{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}
+.bubble5{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+}
+.ani-box{
+    
 }
 
+/* 위아래 반복 애니메이션 */
+@keyframes fish-bub-ani {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(1vw);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/************************************** 영상관 **************************************/
+#video-area{
+    background-color: #fff;
+}
+#video-area .video-list-box{
+   
+   padding-top: 5vw;
+}
+#video-area h3{
+    font-size: 8rem;
+    display: flex;
+    /* 글자 줄바꿈방지 */
+    white-space: nowrap;
+}
+#video-area ul{
+    display: flex; 
+    padding-left: 3vw;
+
+}
+#video-area ul li {
+    padding: 0.5vw;
+}
+#video-area ul li img{
+    height: 270px;
+    width: 480px; 
+}
+.list-guam{
+    position: relative;
+    left: -30vw;
+    animation: guam-ani 20s linear infinite alternate;
+    padding-bottom: 5vw;
+}
+.list-saipan{
+    position: relative;
+    animation: saipan-ani 20s linear infinite alternate;
+}
+
+/* 애니메이션 guam 좌->우->좌 */
+@keyframes guam-ani {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(30vw);
+    }
+    100%{
+        transform: translateX(0);
+    } 
+}
+/* 애니메이션 Saipan 우 좌 우*/
+@keyframes saipan-ani {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-30vw);
+    }
+    100%{
+        transform: translateX(0);
+    } 
+}
 
 /************* 3. 하단영역 *************/
 
