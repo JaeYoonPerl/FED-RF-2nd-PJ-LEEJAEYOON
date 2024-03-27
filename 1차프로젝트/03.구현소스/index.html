@@ -485,6 +485,22 @@
 
      <!-- 6. 하단영역 -->
      <div id="footer-area">
+        <div class="wave">
+            <svg class="footer_wave" viewBox="0 24 150 28" preserveAspectRatio="none">
+             <defs>
+             <path id="gentle-wave" d="M-160 44c30 0 
+                58-18 88-18s
+                58 18 88 18 
+                58-18 88-18 
+                58 18 88 18
+                v44h-352z"></path>
+              </defs>
+              <g class="parallax">
+                   <use xlink:href="#gentle-wave" x="50" y="0" fill="#3461C1"></use>
+                   <use xlink:href="#gentle-wave" x="50" y="6" fill="#212C92"></use>  
+              </g>
+            </svg>
+        </div>
         <footer class="footer-area inbox">
             <!-- <h2 class="temp-tit">6. 하단영역</h2> -->
                 <div class="cont-box">
@@ -522,5 +538,7 @@
                 </div>
         </footer>
     </div>
+
+
 </body>
 </html>
