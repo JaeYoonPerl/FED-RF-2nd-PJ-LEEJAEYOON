@@ -86,6 +86,7 @@ body{
 }
 #top-area:hover .gnb{
     height: 200px;
+   
 }
 #top-area{
    
@@ -99,8 +100,28 @@ body{
 
 /* 상단영역 오버시 배경색 흰색 */
 #top-area:hover{
-    background-color: blue;
+    background-color: #212C92;
 }
+
+/* gnb메뉴 애니메이션 */
+
+/* 상단 파도1 */
+/* .gnb::after {
+    content: '';
+    width: 300vw;
+    display: block;
+    position: relative;
+    top: -6.3vw;
+    left: -15%;
+    background: transparent url(../images/siheky_wave.svg) repeat-x top left;
+    animation: footerwave 7s linear infinite;
+    background-size: 100vw 100%;
+    height: 6.4vw;
+    z-index: 20;
+    display: none;
+    
+} */
+
 
 /* 메뉴 박스 dl */
 .gnb dl{
@@ -168,102 +189,54 @@ body{
 }
 
 /* 상단영역 오버시 하위메뉴 보이기 */
-#nav-area:hover .gnb1{
+#nav-area:hover .gnb{
     height: 500px;    
     
 }
-#nav-area:hover .gnb1{
-    background-color: blue;
+#nav-area:hover .gnb{
+    background-color: #212C92;
 }
+
 
 
 
 /************ 2. 메인영역 ************/
-/* 비주얼 영역 */
-#visual-area .txt-box p{
-    /* display: flex; */
-    
-    text-align: center;
-    font-weight: bold;
-    /* justify-content: center; */
-}
+.txt-banner{
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: 2px dashed yellow;
 
-#visual-area .txt-box p{
-    margin-top: 10%;
-}
-#visual-area .txt-box p span{
-    padding: 0.2vw;
+    /* 글자설정 */
+    font-size: 5vw;
     color: #fff;
-    font-size: 10rem;
-    margin-top: 10%;
-}
-#visual-area .desc1{
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    font-size: 2vw;
-    margin-top: 2%;
-    font-weight: bold;
-}
-#visual-area .desc2{
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    font-size: 2vw;
-    margin-top: 2%;
-    font-weight: bold;
-}
-#visual-area .desc3{
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    font-size: 2vw;
-    margin-top: 2%;
-    font-weight: bold;
-}
-#visual-area .desc4{
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    font-size: 2vw;
-    margin-top: 2%;
-    font-weight: bold;
-}
+    white-space: nowrap;
 
-/* 상단 텍스트 애니메이션 */
-/* 모두 숨기기 */
-#visual-area p{
-    display: none;
-} #visual-area .desc1{
-    display: none;
 }
-#visual-area .desc2{
-    display: none;
-}
- #visual-area .desc3{
-    display: none;
-}
- #visual-area .desc4{
-    display: none;
-}
-
-/* 첫번째 텍스트 박스 */
-#visual-area p:nth-child(1){
+/* 글자개별박스 셋팅 */
+.txt-banner span{
+    /* 트랜스폼 적용위해 */
     display: block;
 }
 
-#visual-area .desc1{
-    display: block;
-    text-align: center;
-}
 
 
 
 /* 하단 텍스트 */
-#visual-area .bot-txt-box ul{
+/* #visual-area .bot-txt-box{
+    position: absolute;
+    left: 0;
+    bottom: 0;
     display: flex;
     justify-content: center;
-    margin-top: 28%;
+    width: 100px;
+    height: 74%;
+   
+}
+#visual-area .bot-txt-box ul{
+    display: flex;
 }
 
 .bot-txt-box ul li span{
@@ -272,7 +245,7 @@ body{
     color: #fff;
     padding: 0 5rem;
     
-}
+} */
 
 /********************* PIC소개 영역 *********************/
 #intro-pic-area{
@@ -355,7 +328,7 @@ body{
     font-size: 20rem;
     font-style: normal;
     font-weight: bold;
-    color: darkblue;
+    color: 212C92;
 }
 /* 원 애니 */
 .circle-ani-box{
@@ -376,24 +349,31 @@ body{
 /**************** 4. 마스코트 소개영역 ****************/
 
 #masco-area{
-    background: darkblue;
+    background: #212C92;
     position: relative;
 }
 
-
-/* #masco-area::before {
+/* 상단 파도1 */
+#masco-area::before {
     content: '';
     width: 300vw;
     display: block;
     position: relative;
     top: -6.3vw;
-    left: 0;
-    background: transparent url(../img/siheky_wave.svg) repeat-x top left;
+    left: -15%;
+    background: transparent url(../images/siheky_wave.svg) repeat-x top left;
     animation: footerwave 7s linear infinite;
     background-size: 100vw 100%;
     height: 6.4vw;
     
-} */
+}
+
+@keyframes footerwave {
+    0%{transform: translate(-10% , 0%)}
+	50%{transform: translate(-5% , 0%)}
+	100%{transform: translate(-10% , 0%)}
+}
+
 .masco-txt{
     /* position: absolute; */
     
@@ -425,8 +405,8 @@ body{
 .masco-img{
     position: absolute;
     display: block;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     left: 40%;
     top: 30%;
     
@@ -567,7 +547,21 @@ body{
     position: relative;
 }
 
-#footer-area .wave {
+#footer-area::before {
+    content: '';
+    width: 300vw;
+    display: block;
+    position: relative;
+    top: -6.3vw;
+    left: -15%;
+    background: transparent url(../images/siheky_wave.svg) repeat-x top left;
+    animation: footerwave 7s linear infinite;
+    background-size: 100vw 100%;
+    height: 6.4vw;
+    
+}
+
+/* #footer-area .wave {
     display: block;
     top: -100px;
     position: absolute;
@@ -602,11 +596,11 @@ body{
 @keyframes move-forever2{
 	0%{transform: translate(-90px , 0%)}
 	100%{transform: translate(85px , 0%)}
-}
+} */
 
 
 .footer-txt-box {
-   position: absolute;
+   /* position: absolute; */
    display: block;
    top: 30%;
    left:5%;

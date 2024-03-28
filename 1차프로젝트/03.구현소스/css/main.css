@@ -9,9 +9,9 @@
 @import url(./grid_12_flex.css);
 
 /* 공사중 표시 */
-/* body * {
+body * {
     outline: 2px dashed #ccc;
-} */
+}
 
 body{
     overflow-x: hidden
@@ -29,12 +29,12 @@ body{
 }
 /* . PIC소개영역 */
 .intro-pic-area{
-    height: 3200px;
+    height: 3300px;
 }
  
 /* 5. 마스코트 소개영역 */
 .masco-area{
-    height: 840px;
+    height: 740px;
 }
 /* 6. 사진관 */
 .video-area{
@@ -43,5 +43,5 @@ body{
 }
 /* 7. 하단영역 */
 .footer-area{
-    height: 300px;
+    height: 200px;
 }
