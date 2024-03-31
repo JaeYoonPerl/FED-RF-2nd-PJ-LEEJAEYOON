@@ -4,33 +4,36 @@
 /* 공유기능 요소 셋팅 */
 
 body{
-    padding-top: 80px;
+    /* padding-top: 80px; */
     background: #a3a3a3;
     
 }
 
-.weatherbox,
-.weather-wrap{
-    display: flex;
 
-}
 
 /* 배경 동영상 */
 .bg-video{
+    /* display: block; */
     position: absolute;
-    width: 100%;
-    height: 990px;
+    min-width: 1360px;
+    
+    height: 1040px;
     margin: 0 auto;
     overflow : hidden;
     z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
 
 /************* 1. 상단영역 *************/
 
+.top-area{
+    position: relative;
 
-
+}
 /****************** 1-1. 메인로고 ********************/
 .logo-part{
     padding-top: 3.2%;
@@ -45,14 +48,14 @@ body{
 /* Top 메뉴 */
 .top-menu{
     position: absolute;
-    left: 82%;
     top: 1%;
+    right: 5%;
 }
-
 .top-menu ul {
     
     display: flex;
     justify-content: flex-end;
+
 }
 /* Top 리스트 */
 .top-menu ul li {
@@ -89,40 +92,23 @@ body{
    
 }
 #top-area{
-   
-    position: absolute;
-    top: 0;
+   position: absolute;
+    /* position: relative; */
+    
     width: 100%;
+   
     /* 트랜지션 : 속시이지 */
     transition: all 0.6s ease-in-out;
     
 }
 
-/* 상단영역 오버시 배경색 흰색 */
+/* 상단영역 오버시 배경색  */
 #top-area:hover{
     background-color: #212C92;
     /* background: url(../images/siheky_wave.svg)repeat-x top left; */
    
 }
 
-/* gnb메뉴 애니메이션 */
-
-/* 상단 파도1 */
-/* .gnb::after {
-    content: '';
-    width: 300vw;
-    display: block;
-    position: relative;
-    top: -6.3vw;
-    left: -15%;
-    background: transparent url(../images/siheky_wave.svg) repeat-x top left;
-    animation: footerwave 7s linear infinite;
-    background-size: 100vw 100%;
-    height: 6.4vw;
-    z-index: 20;
-    display: none;
-    
-} */
 
 
 /* 메뉴 박스 dl */
@@ -145,50 +131,7 @@ body{
 
 
 
-/***************** 1.5. 네비파트 *****************/
-/* 텍스트 CSS */
-.gnb1 dt{
-    font-size: 3.2rem;
-    padding: 0 2vw;
-    
-    
-}
-.gnb1 dd{
-    font-size: 2.2rem;
-    margin-left: 15%;
-    padding: 0 0.5vw;
-    
-}
-.gnb1 a{
-    color: #fff;
-    text-shadow: 0 0 2px #000;
-}
-/* gnb1 */
-.gnb1{
-    display: flex;
-    /* dl 옆으로 흐르게 */
 
-    /* 높이값 제한 */
-    height: 40px;
-    justify-content: center;
-
-    /* 자식요소 하위메뉴 숨기기 */
-    overflow: hidden;
-    /* 글자 줄바꿈방지 */
-    white-space: nowrap;
-
-    /* 테두리선 */
-    border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
-
-    font-weight: bold;
-
-    /* 트랜지션 : 속시이지 */
-    transition: all 0.6s ease-in-out;
-
-    /* z-index: 1; */
-    
-}
 
 /* 상단영역 오버시 하위메뉴 보이기 */
 #nav-area:hover .gnb{
@@ -203,9 +146,9 @@ body{
 
 
 /************ 2. 메인영역 ************/
+
 .txt-banner{
-    position: fixed;
-    display: flex;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -223,31 +166,26 @@ body{
     display: block;
 }
 
-
-
-
-/* 하단 텍스트 */
-/* #visual-area .bot-txt-box{
+/* 하단 메뉴이동 블릿 */
+.indic-box{
+    display: block;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    height: 74%;
-   
-}
-#visual-area .bot-txt-box ul{
-    display: flex;
-}
-
-.bot-txt-box ul li span{
-    font-size: 4rem;
-    font-weight: bold;
-    color: #fff;
-    padding: 0 5rem;
     
-} */
+
+    /* 글자설정*/
+    font-size: 2vw;
+    white-space: nowrap;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.indic-box ol{
+    display: flex;
+    gap: 0 10rem;
+}
+.indic-box ol ul a{
+    color: #fff;
+}
 
 /********************* PIC소개 영역 *********************/
 #intro-pic-area{
@@ -263,7 +201,7 @@ body{
    
     margin: 0 auto;
     width: 100%;
-    padding-top: 50px;
+    /* padding-top: 50px; */
 }
 
 #intro-pic-area .introbox{

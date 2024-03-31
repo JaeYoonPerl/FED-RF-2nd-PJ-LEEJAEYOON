@@ -23,9 +23,10 @@ body{
 } */
 
 
+
 /* 3. 비주얼영역 */
 .visual-area{
-    height: 790px;
+    height: 960px;
 }
 /* . PIC소개영역 */
 .intro-pic-area{
