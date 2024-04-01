@@ -112,12 +112,9 @@ body{
 }
 
 /* 상단영역 오버시 파도  */
-#top-area:hover{
-    
+#top-area:hover{   
     background:url(../images/wave.png) repeat-x center -301% / cover;
     background-size: 35% 100%;
-    
-    
 }
 
 
