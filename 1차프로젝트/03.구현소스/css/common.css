@@ -15,15 +15,18 @@ body{
 .bg-video{
     /* display: block; */
     position: absolute;
+    z-index: -1;
+   
+    object-fit: cover;
+    left: 50%;
+    transform: translateX(-50%); 
     min-width: 1360px;
     
+    /* 
     height: 1040px;
     margin: 0 auto;
     overflow : hidden;
-    z-index: -1;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;*/
 }
 
 
