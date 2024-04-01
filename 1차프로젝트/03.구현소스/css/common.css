@@ -9,7 +9,7 @@ body{
     
 }
 
-
+ 
 
 /* 배경 동영상 */
 .bg-video{
@@ -100,16 +100,24 @@ body{
     
     width: 100%;
    
+    /* background: url(../images/wave.png) repeat-x center 105% / 35%; */
+    background: url(../images/wave.png) repeat-x / cover;
+    background-size: 35% 100%;
+
     /* 트랜지션 : 속시이지 */
     transition: all 0.6s ease-in-out;
+
+
     
 }
 
-/* 상단영역 오버시 배경색  */
+/* 상단영역 오버시 파도  */
 #top-area:hover{
-    background-color: #212C92;
-    /* background: url(../images/siheky_wave.svg)repeat-x top left; */
-   
+    
+    background:url(../images/wave.png) repeat-x center -301% / cover;
+    background-size: 35% 100%;
+    
+    
 }
 
 
@@ -192,7 +200,7 @@ body{
 
 /********************* PIC소개 영역 *********************/
 #intro-pic-area{
-    
+    padding-top: 5%;
     background-color: #fff;
 }
 #intro-pic-area .title-box{
