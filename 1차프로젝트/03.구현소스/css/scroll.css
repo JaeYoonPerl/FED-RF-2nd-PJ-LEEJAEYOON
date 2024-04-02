@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* 스크롤 글자 */
+.scroll-txt{
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+/*  소개영역 이미지 */
+#intro-pic-area .intro-images{
+    position: relative;
+    width: 409px;
+    height: 500px;
+    
+    transform: translateX(-50%);
+}
+
+
+/* 첫번째 소개 박스 */
+#intro-pic-area .fir-img{
+    left: 45%;
+}
+#intro-pic-area .intro1 h3{
+    transform: translate(0, 30%);
+}
+#intro-pic-area .intro1 span{
+    transform: translate(140%, 147%);
+}
+#intro-pic-area .intro1 p{
+    transform: translate(183%, -120%);
+}
+
+/* 두번째 소개 박스 */
+#intro-pic-area .sec-img{
+    left: 60%;
+}
+#intro-pic-area .intro2 h3{
+    transform: translate(20%, 42%);
+}
+#intro-pic-area .intro2 span{
+    transform: translate(168%, 147%);
+}
+#intro-pic-area .intro2 p{
+    transform: translate(0, -16%);
+}
+
+/* 세번째 소개 박스 */
+#intro-pic-area .thr-img{
+    left: 45%;
+}
+#intro-pic-area .intro3 h3{
+    transform: translate(0, 30%);
+}
+#intro-pic-area .intro3 span{
+    transform: translate(15%, 91%);
+}
+#intro-pic-area .intro3 p{
+    transform: translate(176%, -54%);
+}
