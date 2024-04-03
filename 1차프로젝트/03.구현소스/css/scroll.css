@@ -57,3 +57,29 @@
 #intro-pic-area .intro3 p{
     transform: translate(176%, -54%);
 }
+
+
+
+/* 스크롤시 텍스트 옆으로 이동 */
+/* 우측->좌측 */
+.scr-side1{
+    transform: translateX(50%);
+    transition: 2.5s ;
+}
+/* 스크롤 이동 클래스1 on */
+.scr-side1.on{
+    transform: translateX(20%);
+}
+
+
+
+
+/* 좌측-> 우측 */
+.scr-side2{
+    transform: translateX(-50%);
+    transition: 2.5s ;
+}
+/* 스크롤 이동 클래스2 on */
+.scr-side2.on{
+    transform: translateX(-20%);
+}
