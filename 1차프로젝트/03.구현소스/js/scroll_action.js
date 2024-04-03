@@ -16,9 +16,9 @@ const myFn = {
     getOT: (ele) => ele.offsetTop,
 }; /////// myFn 객체 /////////////
 
-/********************* 첫번째 대상 .side-text *********************/
+
 // 1. 대상설정
-// 첫번째 대상: .side-text
+// 대상: .side-text
 const scAct = myFn.qsa(".side-text");
 //console.log('대상',scAct);
 

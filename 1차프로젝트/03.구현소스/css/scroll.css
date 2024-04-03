@@ -93,9 +93,9 @@
 
 /* 인트로 박스 안 사진 따로 바운딩 */
 
-.img-bound{
+/* .img-bound{
     transition: 1.2s ease-out;
 }
 .img-bound.on{
-    transform: translateY(10%);
-}
+    transform: translate(-50%, 5px);
+} */
