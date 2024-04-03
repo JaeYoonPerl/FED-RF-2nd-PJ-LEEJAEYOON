@@ -64,22 +64,38 @@
 /* 우측->좌측 */
 .scr-side1{
     transform: translateX(50%);
-    transition: 2.5s ;
+    transition: 1.2s ease-out ;
 }
 /* 스크롤 이동 클래스1 on */
 .scr-side1.on{
     transform: translateX(20%);
 }
 
-
-
-
 /* 좌측-> 우측 */
 .scr-side2{
     transform: translateX(-50%);
-    transition: 2.5s ;
+    transition: 1.2s ease-out;
 }
 /* 스크롤 이동 클래스2 on */
 .scr-side2.on{
     transform: translateX(-20%);
+}
+
+
+/* 인트로 텍스트박스 스크롤시 바운딩 */
+.box-bound{
+    transition: 1.2s ease-out;
+}
+.box-bound.on{
+    transform: translateY(20%);
+}
+
+
+/* 인트로 박스 안 사진 따로 바운딩 */
+
+.img-bound{
+    transition: 1.2s ease-out;
+}
+.img-bound.on{
+    transform: translateY(10%);
 }

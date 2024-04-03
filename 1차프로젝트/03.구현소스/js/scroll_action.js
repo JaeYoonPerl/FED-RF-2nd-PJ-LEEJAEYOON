@@ -16,23 +16,26 @@ const myFn = {
     getOT: (ele) => ele.offsetTop,
 }; /////// myFn 객체 /////////////
 
-
+/********************* 첫번째 대상 .side-text *********************/
 // 1. 대상설정
-// 대상: .side-text
+// 첫번째 대상: .side-text
 const scAct = myFn.qsa(".side-text");
 //console.log('대상',scAct);
 
+
 // 2. 이벤트 설정 및 함수 호출하기
 // 2-1 . 스크롤 이동 이벤트 설정하기
-myFn.addEvt(window,"scroll",showIt);
+myFn.addEvt(window,"scroll",sideSC);
 
 // 3. 함수 만들기
-// 3.1 스크롤 이동 액션 함수
-function showIt(){
+// 3.1 스크롤 좌우 이동 액션 함수
+function sideSC(){
     for (let x of scAct) addOn(x);
+    
+} //// sideSC함수
 
-} //// showIt함수
 
+/* *************************on 넣기 **************************/
 // 스크롤 등장 기준 : 화면의 2/3
 const CRITERIA = (window.innerHeight / 5) * 3;
 
@@ -48,3 +51,7 @@ function addOn(ele){
     else ele.classList.remove("on");
 
 }
+
+
+
+
