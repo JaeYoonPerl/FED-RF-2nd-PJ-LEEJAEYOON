@@ -7,6 +7,8 @@ body{
     /* padding-top: 80px; */
     background: #a3a3a3;
     
+    margin: 0 auto;
+    
 }
 
  
@@ -281,8 +283,15 @@ body{
     color: #212C92;
 }
 
-
-
+/* 원 애니메이션 */
+.cir-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: 0;
+    outline: 2px solid red;
+}
 
 /**************** 4. 마스코트 소개영역 ****************/
 
