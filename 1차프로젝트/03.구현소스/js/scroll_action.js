@@ -37,7 +37,10 @@ function sideSC(){
 
 /* *************************on 넣기 **************************/
 // 스크롤 등장 기준 : 화면의 2/3
-const CRITERIA = (window.innerHeight / 5) * 3;
+const CRITERIA = (window.innerHeight / 2) * 1;
+
+// 스크롤 시
+
 
 
 // 클래스 on 넣기 함수

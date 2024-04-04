@@ -84,10 +84,12 @@
 
 /* 인트로 텍스트박스 스크롤시 바운딩 */
 .box-bound{
-    transition: 1.2s ease-out;
+    transform: translateY(-10%);
+    transition: 3s ease-in-out;
 }
 .box-bound.on{
-    transform: translateY(20%);
+    transform: translateY(10%);
+    transition: 3s ease-in-out;
 }
 
 
@@ -99,3 +101,13 @@
 .img-bound.on{
     transform: translate(-50%, 5px);
 } */
+
+/*  스크롤시 배경색 변경 */
+#intro-pic-area{
+    background-color: #fff;
+    transition: 1.2s ease-in-out;
+}
+
+#intro-pic-area.on{
+    background-color: #212C92;
+}
