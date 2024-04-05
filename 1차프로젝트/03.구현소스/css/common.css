@@ -458,13 +458,13 @@ body{
     position: relative;
     
     transform: translateX(-10%);
-    animation: guam-ani 20s linear infinite alternate;
+    animation: guam-ani 60s linear infinite alternate;
     padding-bottom: 5vw;
 }
 .list-saipan{
     position: relative;
     transform: translateX(-50%);
-    animation: saipan-ani 20s linear infinite alternate;
+    animation: saipan-ani 60s linear infinite alternate;
 }
 
 /* 애니메이션 guam 좌->우->좌 */
