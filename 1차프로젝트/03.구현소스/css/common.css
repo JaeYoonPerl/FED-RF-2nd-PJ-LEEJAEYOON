@@ -203,6 +203,7 @@ body{
 #intro-pic-area{
     padding-top: 5%;
     background-color: #fff;
+    position: relative;
 }
 #intro-pic-area .title-box{
     position: relative;
@@ -283,14 +284,16 @@ body{
     color: #212C92;
 }
 
-/* 원 애니메이션 */
-.cir-box{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    opacity: 0;
+.cir-ani canvas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     outline: 2px solid red;
+    /* z-index: -2; */
 }
 
 /**************** 4. 마스코트 소개영역 ****************/
@@ -453,37 +456,39 @@ body{
 }
 .list-guam{
     position: relative;
-    left: -30vw;
+    
+    transform: translateX(-10%);
     animation: guam-ani 20s linear infinite alternate;
     padding-bottom: 5vw;
 }
 .list-saipan{
     position: relative;
+    transform: translateX(-50%);
     animation: saipan-ani 20s linear infinite alternate;
 }
 
 /* 애니메이션 guam 좌->우->좌 */
 @keyframes guam-ani {
     0%{
-        transform: translateX(0);
+        transform: translateX(-10%);
     }
     50%{
-        transform: translateX(30vw);
+        transform: translateX(-50%);
     }
     100%{
-        transform: translateX(0);
+        transform: translateX(-10%);
     } 
 }
 /* 애니메이션 Saipan 우 좌 우*/
 @keyframes saipan-ani {
     0%{
-        transform: translateX(0);
+        transform: translateX(-50%);
     }
     50%{
-        transform: translateX(-30vw);
+        transform: translateX(-10%);
     }
     100%{
-        transform: translateX(0);
+        transform: translateX(-50%);
     } 
 }
 
