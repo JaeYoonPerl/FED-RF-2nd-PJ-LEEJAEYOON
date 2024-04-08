@@ -6,10 +6,17 @@
         <title>휴가, 그 이상의 모든것. 클럽 리조트 PIC</title>
         <link rel="shortcut icon" href="./images/favicon.png" />
         <link rel="stylesheet" href="./css/main.css" />
+        <!-- 메인JS 불러오기 : 모듈로 불러오기 -->
+        <!-- <script type="module" src="./js/main.js"></script> -->
+        <script src="./js/smoothScroll23.js" defer></script>
         <script src="./js/slide.js" defer></script>
         <script src="./js/scroll_action.js" defer></script>
+        <script src="./js/goTop.js" defer></script>
     </head>
     <body>
+        <!-- 상단 이동 버튼 -->
+        <button onclick="backToTop()" id="btn-back-to-top" title="위로 가기">
+        <img src="./images/btn_top.png" alt="위로가기"></button>
         <!-- 동영상 배경 -->
         <!-- 1. 상단 영역 -->
         <div class="bg-video">
@@ -185,6 +192,13 @@
                 <!-- <h2 class="temp-tit">3. PIC소개영역</h2> -->
                 <div class="cont-box">
                     <div class="col-12">
+                        <!-- 패턴박스 -->
+                        <div class="pBox1">
+                            <img src="./images/img_pattern1.png" alt="패턴1">
+                        </div>
+                        <div class="pBox2">
+                            <img src="./images/img_pattern3.png" alt="패턴1">
+                        </div>
                         <!-- 원애니 -->
                         <div class="cir-ani">
                             <div class="cir1"></div>
@@ -199,7 +213,6 @@
                             잊지 못할 특별한 행복의 순간이 됩니다
                         </div>
                         <div class="introbox">
-
                             <ul>
                                 <li class="intro1">
                                     <!-- 3-1.  ALL INCLUSIVERESORT -->
