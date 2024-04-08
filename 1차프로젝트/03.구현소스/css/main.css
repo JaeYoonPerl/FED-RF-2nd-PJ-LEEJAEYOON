@@ -38,12 +38,284 @@ body{
 .masco-area{
     height: 740px;
 }
+/**************** 4. 마스코트 소개영역 ****************/
+
+#masco-area{
+    background: #212C92;
+    position: relative;
+}
+
+/* 상단 파도1 */
+#masco-area::before {
+    content: '';
+    width: 300vw;
+    display: block;
+    position: relative;
+    top: -6.3vw;
+    left: -15%;
+    background: transparent url(../images/siheky_wave.svg) repeat-x top left;
+    animation: footerwave 10s linear infinite;
+    background-size: 100vw 100%;
+    height: 6.4vw;
+    
+}
+
+@keyframes footerwave {
+    0%{transform: translate(-40% , 0%)}
+	50%{transform: translate(0% , 0%)}
+	100%{transform: translate(-40% , 0%)}
+}
+
+.masco-txt{
+    /* position: absolute; */
+    
+}
+
+.masco-tit-txt{
+    position: absolute;
+    display: block;
+    top: 30%;
+    left: 20%;
+}
+.masco-intro-txt{
+    position: absolute;
+    display: block;
+    top: 60%;
+    left: 70%;
+}
+.masco-txt h3{
+    font-size: 8.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+.masco-txt p{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+  
+}
+.masco-img{
+    position: absolute;
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+    left: 40%;
+    top: 30%;
+    
+}
+/* 마스코트영역 물방울, 물고기 애니메이션 */
+.ani-box img{
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;   
+    /* 애니메이션 적용 */
+    animation: fish-bub-ani 5s ease-in-out infinite alternate;
+}
+/* 물고기 위치 */
+.fish1{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+.fish2{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+}
+.fish3{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+/* 물방울 위치 */
+.bubble1{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}
+.bubble2{
+    position: absolute;
+    top: 15%;
+    left: 30%;
+}
+.bubble3{
+    position: absolute;
+    top: 55%;
+    left: 70%;
+}
+.bubble4{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}
+.bubble5{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+}
+.ani-box{
+    
+}
+
+/* 위아래 반복 애니메이션 */
+@keyframes fish-bub-ani {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(1vw);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/************************************** 영상관 **************************************/
 /* 6. 사진관 */
 .video-area{
     height: 1100px;
     
 }
+#video-area{
+    background-color: #fff;
+}
+#video-area .video-list-box{
+   
+   padding-top: 5vw;
+}
+#video-area h3{
+    font-size: 8rem;
+    display: flex;
+    /* 글자 줄바꿈방지 */
+    white-space: nowrap;
+}
+#video-area ul{
+    display: flex; 
+    padding-left: 3vw;
+
+}
+#video-area ul li {
+    padding: 0.5vw;
+}
+#video-area ul li img{
+    height: 270px;
+    width: 480px; 
+}
+.list-guam{
+    position: relative;
+    
+    transform: translateX(-10%);
+    animation: guam-ani 60s linear infinite alternate;
+    padding-bottom: 5vw;
+}
+.list-saipan{
+    position: relative;
+    transform: translateX(-50%);
+    animation: saipan-ani 60s linear infinite alternate;
+}
+
+/* 애니메이션 guam 좌->우->좌 */
+@keyframes guam-ani {
+    0%{
+        transform: translateX(-10%);
+    }
+    50%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(-10%);
+    } 
+}
+/* 애니메이션 Saipan 우 좌 우*/
+@keyframes saipan-ani {
+    0%{
+        transform: translateX(-50%);
+    }
+    50%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(-50%);
+    } 
+}
 /* 7. 하단영역 */
 .footer-area{
     height: 200px;
 }
+/************* 7. 하단영역 *************/
+
+#footer-area{
+    background: #212C92;
+    position: relative;
+}
+
+#footer-area::before {
+    content: '';
+    width: 300vw;
+    display: block;
+    position: relative;
+    top: -6.3vw;
+    left: -15%;
+    background: transparent url(../images/siheky_wave.svg) repeat-x top left;
+    animation: footerwave 7s linear infinite;
+    background-size: 100vw 100%;
+    height: 6.4vw;
+    
+}
+
+.footer-txt-box {
+   /* position: absolute; */
+   display: block;
+   top: 30%;
+   left:5%;
+   /* text-align: left; */
+}
+
+.footer-txt-box ul {
+    display: flex;
+}
+.footer-txt-box li:nth-child(2)::before{
+    content: '|';
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: .5rem;
+}
+
+.footer-txt-box ul li a{
+    color: #fff;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+.footer-txt-box p{
+    color: #fff;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+.footer-txt-box p:last-child{
+    color: #a3a3a3;
+    font-size: 1.5rem;
+    
+}
+
+.footer-icon-box{
+    position: relative;
+    display: block;
+    top: 30%;
+    left: 28%;
+}
+
+.footer-icon {
+    position: absolute;
+    /* top: 30%;
+    left: 78%; */
+   
+}
+.footer-icon p{
+    color: #a3a3a3;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
