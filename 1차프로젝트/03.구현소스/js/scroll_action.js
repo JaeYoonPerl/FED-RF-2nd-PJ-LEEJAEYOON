@@ -36,8 +36,8 @@ function sideSC(){
 
 
 /* *************************on 넣기 **************************/
-// 스크롤 등장 기준 : 화면의 2/3
-const CRITERIA = (window.innerHeight / 3) * 2;
+// 스크롤 등장 기준 : 화면의 3/5
+const CRITERIA = (window.innerHeight / 5) * 3;
 // 스크롤 등장 기준 : 화면의 1/3
 const CRITERIA_OF =(window.innerHeight/3) * 1;
 
