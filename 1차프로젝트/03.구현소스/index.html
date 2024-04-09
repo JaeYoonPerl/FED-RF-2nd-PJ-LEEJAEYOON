@@ -7,15 +7,12 @@
         <link rel="shortcut icon" href="./images/favicon.png" />
         <link rel="stylesheet" href="./css/main.css" />
         <!-- 메인JS 불러오기 : 모듈로 불러오기 -->
-        <!-- <script type="module" src="./js/main.js"></script> -->
-        <!-- <script src="./js/smoothScroll23.js" defer></script> -->
-        <script src="./js/slide.js" defer></script>
-        <script src="./js/scroll_action.js" defer></script>
-        <script src="./js/goTop.js" defer></script>
+        <script type="module" src="./js/main.js"></script>
+        
     </head>
     <body class="scbar">
         <!-- 상단 이동 버튼 -->
-        <button onclick="backToTop()" id="btn-back-to-top" title="위로 가기">
+        <button onclick id="btn-back-to-top" title="위로 가기">
         <img src="./images/btn_top.png" alt="위로가기"></button>
         <!-- 동영상 배경 -->
         <!-- 1. 상단 영역 -->
@@ -232,7 +229,7 @@
                                 </li>
                                 <!-- 스크롤 텍스트 1 -->
                                 <div class="scroll-txt scr-side1 side-text">
-                                    <em>PACIFIC</em>
+                                    <em class="em1">PACIFIC</em>
                                 </div>
                                 <li class="intro2">
                                     <!-- 3-2.  ACTIVITY PIC -->
@@ -241,13 +238,13 @@
                                     </div>
                                     <div class="intro-txt-box box-bound side-text">
                                         <h3>ACTIVITY</h3>
-                                        <span>PIC</span>
+                                        <span class="sp-intro">PIC</span>
                                         <p>남태평양의 아름다운 섬 괌과 사이판에 위치하여 있으며 PIC괌에는 70여 가지, PIC사이판에는 40여 가지의 액티비티가 준비되어 있습니다. 인공수족관과 라군카약(괌), 포인트 브레이크와 레이지 리버(사이판) 등 다양한 종류의 워터파크 시설이 있으며 해변에서는 세일링과 카약을 타거나 선베드에 누워 드넓게 펼쳐진 바다를 감상할 수 있습니다.</p>
                                     </div>
                                 </li>
                                 <!-- 스크롤 텍스트 2 -->
                                 <div class="scroll-txt scr-side2 side-text">
-                                    <em>ISLANDS</em>
+                                    <em class="em2">ISLANDS</em>
                                 </div>
                                 <li class="intro3">
                                     <!-- 3-3.  CLUB MATES -->
@@ -264,7 +261,7 @@
                                 </li>
                                 <!-- 스크롤 텍스트 3 -->
                                 <div class="scroll-txt scr-side1 side-text">
-                                    <em>CLUB</em>
+                                    <em class="em3">CLUB</em>
                                 </div>
                             </ul>
                             
@@ -277,6 +274,9 @@
         <div id="masco-area">
             <section class="masco-area inbox">
                 <!-- <h2 class="temp-tit">4. 마스코트 소개영역</h2> -->
+                <div class="cloud-box">
+                    <img src="./images/img_cloud.png" alt="구름">
+                </div>
                 <div class="cont-box">
                     <div class="col-12">
                         <div class="masco-box">
@@ -286,9 +286,9 @@
                             <div class="masco-txt">
                                 <div class="masco-tit-txt">
                                     <h3>
-                                        PIC<br />
+                                        <span>PIC</span><br />
                                         MASCOT<br />
-                                        SIHEKY
+                                        <span>SIHEKY</span>
                                     </h3>
                                 </div>
                                 <div class="masco-intro-txt">
@@ -340,7 +340,7 @@
                         <div class="video-list-box">
                             <div class="inner-box">
                                 <div class="list-guam">
-                                    <h3>GUAM POPULAR CONTENTS GUAM POPULAR CONTENTS GUAM POPULAR CONTENTS</h3>
+                                    <h3>GUAM <span>POPULAR CONTENTS</span>GUAM <span>POPULAR CONTENTS</span>GUAM <span>POPULAR CONTENTS</span></h3>
                                     <ul>
                                         <li>
                                             <a href="https://youtu.be/SzdswMhq4nM" target="_blank">
@@ -375,7 +375,7 @@
                                     </ul>
                                 </div>
                                 <div class="list-saipan">
-                                    <h3>SAIPAN POPULAR CONTENTS SAIPAN POPULAR CONTENTS SAIPAN POPULAR CONTENTS</h3>
+                                    <h3>SAIPAN <span>POPULAR CONTENTS</span> SAIPAN <span>POPULAR CONTENTS</span> SAIPAN <span>POPULAR CONTENTS</span></h3>
                                     <ul>
                                         <li>
                                             <a href="https://youtu.be/cea4dVGJEzc" target="_blank">

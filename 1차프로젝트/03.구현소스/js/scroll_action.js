@@ -1,4 +1,8 @@
 // 스크롤 액션 JS
+
+// 스크롤 액션 전체함수
+export default function scrAct(){
+
 // DOM 함수 객체 //////////////
 const myFn = {
     // 요소선택함수 ////////
@@ -61,5 +65,5 @@ function addOn(ele){
 }
 
 
-
+} //// scAct 전체함수
 

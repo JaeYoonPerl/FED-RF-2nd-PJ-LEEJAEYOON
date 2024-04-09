@@ -100,7 +100,7 @@ function SmoothScroll(scrollTarget, speed, smooth) {
     }()
 }
 
-startSS();
+// startSS();
 
 // 함수 외부공개하기
 // 부드러운 스크롤 시작함수 : startSS()

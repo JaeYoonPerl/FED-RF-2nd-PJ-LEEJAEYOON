@@ -11,7 +11,7 @@
 
 /* 공사중 표시 */
 body * {
-    outline: 2px dashed #ccc;
+    /* outline: 2px dashed #ccc; */
 }
 
 body{
@@ -33,6 +33,252 @@ body{
 .intro-pic-area{
     height: 3600px;
 }
+/********************* PIC소개 영역 *********************/
+
+/* 소개 영역 제목 */
+#intro-pic-area{
+    padding-top: 5%;
+    background-color: #fff;
+    position: relative;
+}
+#intro-pic-area .title-box{
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: darkblue;
+    margin: 0 auto;
+    width: 100%;
+    /* padding-top: 50px; */
+}
+
+
+/* 소개영역 컨텐츠 */
+
+#intro-pic-area .introbox{
+
+   position: relative;
+   padding-top: 10vw;
+   
+}
+#intro-pic-area .introbox ul{
+    
+    text-align: center;
+}
+#intro-pic-area .introbox li{
+
+   display: flex;
+}
+
+/* 소개 이미지 형태 */
+#intro-pic-area .intro-images img{
+   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+/* 텍스트 박스 */
+#intro-pic-area .intro-txt-box{
+    position: absolute;
+    width: 500px;
+}
+
+/* 소개 소제목 텍스트 */
+#intro-pic-area h3{
+     position: relative;
+    display: block;
+    font-size: 9rem;
+    white-space: nowrap;
+    color: darkblue;
+}
+#intro-pic-area span{
+     position: relative;
+    display: block;
+    font-size: 9rem;
+    white-space: nowrap;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: darkblue;
+}
+#intro-pic-area .sp-intro{
+     position: relative;
+    display: block;
+    font-size: 9rem;
+    white-space: nowrap;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FF0099;
+}
+
+/* 소개글 */
+#intro-pic-area p{
+    padding-top: 1vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    display: block;
+    line-height: 1.8;
+    font-size: 2rem;
+    color: #666;;
+    font-weight: bold;
+}
+
+/* 스크롤 텍스트 */
+.introbox .em1{
+    font-size: 30rem;
+    font-style: normal;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #FF0099;
+}
+.introbox .em2{
+    font-size: 30rem;
+    font-style: normal;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #ff7b00;
+}
+.introbox .em3{
+    font-size: 30rem;
+    font-style: normal;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #212C92;
+}
+
+/* 배경원 애니메이션 */
+.cir-ani{
+    position: sticky;
+    top: 10%;
+    
+    
+}
+.cir-ani>div{
+    position: absolute;
+    
+    border-radius: 50%;
+   
+    
+}
+
+.cir-ani .cir1{
+
+    left: 10%;
+    transform: translate(-50%, 100%);
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: cir-move1 5s ease-in-out infinite alternate;
+}
+.cir-ani .cir2{
+
+    left: 20%;
+    transform: translate(-50%, 200%);
+    width: 200px;
+    height: 200px;
+    background: magenta;
+    animation: cir-move2 6s ease-in-out infinite alternate;
+}
+.cir-ani .cir3{
+    left: 100%;
+    transform: translate(-50%, 0%);
+    width: 150px;
+    height: 150px;
+    background: orange;
+    animation: cir-move3 5s ease-in-out infinite alternate;
+}
+.cir-ani .cir4{
+    left: 70%;
+    transform: translate(-50%, 180%);
+    width: 280px;
+    height: 280px;
+    background: skyblue;
+    animation: cir-move4 7s ease-in-out infinite alternate;
+}
+.cir-ani .cir5{
+    
+    left: 80%;
+    transform: translate(-50%, 30%);
+    width: 180px;
+    height: 180px;
+    background: rgb(29, 250, 165);
+    animation: cir-move5 4s ease-in-out infinite alternate;
+}
+/* 패턴 이미지 */
+.pBox1{
+    position: absolute;
+    top: 30%;
+}
+.pBox2{
+    position: absolute;
+    top: 60%;
+    right: 10%
+}
+
+/* 위아래 반복 애니메이션 */
+@keyframes cir-move1 {
+    0%{
+        transform: translate(-50%, 100%);
+    }
+    50%{
+        transform: translate(-50%, 80%);
+    }
+    100%{
+        transform: translate(-50%, 100%);
+    }
+}
+@keyframes cir-move2 {
+    0%{
+        transform: translate(-50%, 200%);
+    }
+    50%{
+        transform: translate(-50%, 180%);
+    }
+    100%{
+        transform: translate(-50%, 200%);
+    }
+}
+@keyframes cir-move3 {
+    0%{
+        transform: translate(-50%, 0%);
+    }
+    50%{
+        transform: translate(-50%, 20%);
+    }
+    100%{
+        transform: translate(-50%, 0%);
+    }
+}
+@keyframes cir-move4 {
+    0%{
+        transform: translate(-50%, 180%);
+    }
+    50%{
+        transform: translate(-50%, 150%);
+    }
+    100%{
+        transform: translate(-50%, 180%);
+    }
+}
+@keyframes cir-move5 {
+    0%{
+        transform: translate(-50%, 30%);
+    }
+    50%{
+        transform: translate(-50%, 20%);
+    }
+    100%{
+        transform: translate(-50%, 30%);
+    }
+}
+
+
  
 /* 5. 마스코트 소개영역 */
 .masco-area{
@@ -41,8 +287,16 @@ body{
 /**************** 4. 마스코트 소개영역 ****************/
 
 #masco-area{
-    background: #212C92;
+    background: #212C92 url(../images/underSea.PNG) no-repeat bottom;
     position: relative;
+}
+/* 상단 구름 */
+.cloud-box{
+    position: absolute;
+    top:-35%;
+    left: 0;
+    z-index: 0;
+    /* outline: 2px solid red; */
 }
 
 /* 상단 파도1 */
@@ -57,6 +311,7 @@ body{
     animation: footerwave 10s linear infinite;
     background-size: 100vw 100%;
     height: 6.4vw;
+    z-index: 1;
     
 }
 
@@ -93,6 +348,11 @@ body{
     color: #fff;
     font-weight: bold;
   
+}
+.masco-txt span{
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
 }
 .masco-img{
     position: absolute;
@@ -153,9 +413,7 @@ body{
     top: 10%;
     left: 70%;
 }
-.ani-box{
-    
-}
+
 
 /* 위아래 반복 애니메이션 */
 @keyframes fish-bub-ani {
@@ -186,11 +444,26 @@ body{
    
    padding-top: 5vw;
 }
-#video-area h3{
+.list-guam h3{
     font-size: 8rem;
     display: flex;
     /* 글자 줄바꿈방지 */
     white-space: nowrap;
+    color: #212C92;
+}
+.list-saipan h3{
+    font-size: 8rem;
+    display: flex;
+    /* 글자 줄바꿈방지 */
+    white-space: nowrap;
+    color:#FF0099;
+}
+#video-area span{
+    font-size: 8rem;
+    display: flex;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #212C92;
 }
 #video-area ul{
     display: flex; 

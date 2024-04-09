@@ -88,8 +88,20 @@
     transition: 3s ease-in-out;
 }
 .box-bound.on{
-    transform: translateY(10%);
-    transition: 3s ease-in-out;
+    /* transform: translateY(10%); */
+    animation: bb-ani 3s ease-in-out 1 forwards;
+    
+}
+@keyframes bb-ani {
+    0%{
+        transform: translateY(-10%);
+    }
+    70%{
+        transform: translateY(10%);
+    }
+    100%{
+        transform: translateY(5%);
+    }
 }
 
 
