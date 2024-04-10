@@ -59,5 +59,5 @@ const domFn = {
   // 6. 일정 시간 뒤 등장클래스 .on 넣기
   setTimeout(() => {
         stage.classList.toggle('on');
-  }, 2000);
+  }, 200);
 }
