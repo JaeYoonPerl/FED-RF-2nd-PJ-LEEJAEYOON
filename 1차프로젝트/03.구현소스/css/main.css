@@ -16,21 +16,31 @@ body * {
 
 body{
     overflow-x: hidden
-    /* margin: 0; */
+   
 }
-
-
-
-/* 3. 비주얼영역 */
-.visual-area{
+.banner-area{
     position: relative;
-    /* height: 100vh;
-    width: 100vw; */
+    width: 100%;
+    height: calc(var(--vh, 1vh)* 100);
+    min-height: 770px;
 }
-/* . PIC소개영역 */
-.intro-pic-area{
-    height: 3600px;
+
+
+/* 배너영역 */
+.bg-video{
+    
+   height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    
 }
+.bgvideo{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 /********************* PIC소개 영역 *********************/
 
 /* 소개 영역 제목 */
