@@ -19,7 +19,15 @@ const domFn = {
   console.log('대상:',stage);
 
   //3. 글자데이터 할당하기
-  const myText ='Exciting PIC';
+  const banText =[
+
+    'Exciting PIC',
+    'Kid Friendly PIC',
+    'Romantic PIC',
+    'Relaxing PIC'
+  ]
+
+    
   
   // 3. 데이터 글자 한 글자씩 태그로 싸기
   // for of 사용!
@@ -29,19 +37,22 @@ const domFn = {
   // 지연시간 계산을 위한 순번변수
   let seqNum =0;
 
-  for(let x of myText){
-    // console.log(x);
-    if(x===' '){ // 스페이스 공백처리
-        hcode += '&nbsp;&nbsp;';
-    }/// if
-    else{// 글자일 경우 span태그 랩핑처리
-        hcode += `<span style="transition-delay: ${seqNum*0.08}s">${x}</span>`;
-    } ///else ///
-    
-    // 중요! 지연시간에 곱해질 순번증가 하기
-    seqNum++;
+  for(var i=0; i<banText.length;i++){
 
-  } //// for of //////
+    for(let x of banText[i]){
+      // console.log(x);
+      if(x===' '){ // 스페이스 공백처리
+          hcode += '&nbsp;&nbsp;';
+      }/// if
+      else{// 글자일 경우 span태그 랩핑처리
+          hcode += `<span style="transition-delay: ${seqNum*0.08}s">${x}</span>`;
+      } ///else ///
+      
+      // 중요! 지연시간에 곱해질 순번증가 하기
+      seqNum++;
+  
+    } //// for of //////
+  }
 
   // 5. 스테이지에 코드 출력하기 ///
   stage.innerHTML = hcode;
