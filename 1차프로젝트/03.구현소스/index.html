@@ -8,14 +8,157 @@
         <link rel="stylesheet" href="./css/main.css" />
         <!-- 메인JS 불러오기 : 모듈로 불러오기 -->
         <script type="module" src="./js/main.js"></script>
+        <script>
+            // 로드구역
+            window.addEventListener("DOMContentLoaded", () => {
+                // 1.대상선정: .ham(이벤트/변경), .gnb(변경)
+                const ham = document.querySelector(".ham");
+                const gnb = document.querySelector(".gnb");
+                const bgTop =document.querySelector(".top-area");
+
+                // 2.이벤트설정
+                ham.onclick = () => {
+                    // 햄버거버튼 on넣기/빼기
+                    ham.classList.toggle("on");
+                    // GNB on넣기/빼기
+                    gnb.classList.toggle("on");
+                    // 상단영역 배경색
+                    bgTop.classList.toggle("on");
+                }; /////////// click /////////////
+            }); //////////// 로드구역 ///////////////
+        </script>
         
     </head>
     <body class="scbar">
         <!-- 상단 이동 버튼 -->
         <button onclick id="btn-back-to-top" title="위로 가기">
         <img src="./images/btn_top.png" alt="위로가기"></button>
-        
-       
+    
+        <!-- 상단 영역  -->
+        <div class="top-area">
+            <header class="top-area ">
+                <div class="cont-box">
+                    <!-- 메뉴박스 -->
+                    <nav class="gnb">
+                            <!-- RESERVATION: dl -->
+                            <dl>
+                                <!-- 상위 메뉴 : dt -->
+                                <dt>
+                                    <a href="#">RESERVATION</a>
+                                </dt>
+                                <!-- 하위 메뉴 : dd -->
+                                <dd>
+                                    <a href="#">예약하기</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">자주하는 질문</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">문의</a>
+                                </dd>
+                            </dl>
+                            <!-- GUAM : dl -->
+                            <dl>
+                                <!-- 상위 메뉴 : dt -->
+                                <dt>
+                                    <a href="#">GUAM</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC괌</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">PIC괌 이용안내</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">일반서비스</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">예약하기</a>
+                                </dd>
+                            </dl>
+                            <!-- SAIPAN : dl -->
+                            <dl>
+                                <!-- 상위메뉴 Saipan : dt -->
+                                <dt>
+                                    <a href="#">SAIPN</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC괌</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">PIC괌 이용안내</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">일반서비스</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">예약하기</a>
+                                </dd>
+                            </dl>
+                            <!-- Notice : dl -->
+                            <dl>
+                                <!-- 상위메뉴 Notice : dt -->
+                                <dt>
+                                    <a href="#">NOTICE</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC괌</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">PIC사이판</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">COMMUNITY</a>
+                                </dd>
+                            </dl>
+                            <!-- 스토리메뉴 : dl -->
+                            <dl>
+                                <!-- 상위메뉴 COMMUNITY : dt -->
+                                <dt>
+                                    <a href="#">COMMUNITY</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC영상</a>
+                                </dd>
+                            </dl>
+                        
+                    </nav>
+                    <!-- 1-1. 햄버거 -->
+                    <div class="col-3">
+                         <!-- 햄버거버튼 -->
+                        <div class="ham">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- 메인로고 -->
+                    <div class="col-6">
+                        <div class="logo-box">
+                            <h1 class="main-logo">
+                                <a href="#">
+                                    <!-- <img src="./images/logo_w.png" alt="회사메인로고" /> -->
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                    <!-- 예약버튼 -->
+                    <div class="col-3">
+                        <div class="res-box">
+                            <a href="#" class="reservBtn">
+                                <img src="./images/ico_calender_w.png" alt="예약버튼">
+                            </a>
+                            <a href="#">RESERVATION</a>
+                        </div> 
+                </div>
+
+            </header>
+        </div>
+    
             
             
                 

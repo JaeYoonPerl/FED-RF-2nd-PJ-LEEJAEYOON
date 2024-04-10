@@ -12,26 +12,6 @@ body{
 }
 
 
-
-
-
- 
-
-/* 배경 동영상 */
-.bg-video{
-    
-    position: absolute;
-    z-index: -1;
-   
-    /* object-fit: cover; */
-    background-size : cover;
-    /* width: 100%;
-    height: 100%; */
-    height: 100vh;
-    width: 100vw;
-    
-  
-}
 /* 상단이동 버튼 */
 #btn-back-to-top {
     display: none;
@@ -49,14 +29,171 @@ body{
 
 
 /************* 1. 상단영역 *************/
+.top-area{
+   
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    color: transparent;
+    height: 10%;
+      /* 트랜지션 */
+      transition: 0.4s ease-in-out;
+}
+.top-area.on{
+   
+   
+    background-color: #212C92;
+     
+}
+ /* 햄버거버튼 */
+ .ham {
+    position: fixed;
+    top:3%;
+    left: 5%;
+    width: 80px;
+    height: 50px;
+    z-index: 99999;
+    /* GNB박스 보다위 */
+    /* outline: 2px solid red; */
+}
+/* 햄버거 버튼바 */
+.ham span {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: #000;
+    /* 트랜지션 */
+    transition: 0.3s;
+}
+/* 햄버거on일때 */
+.ham.on span {
+    background-color: #fff;
+}
+
+/* 햄버거 span바 초기셋팅 */
+.ham span:nth-child(1) {
+    top: 0px;
+}
+.ham span:nth-child(2) {
+    top: 20px;
+    /* left: -50%; */
+}
+.ham span:nth-child(3) {
+    top: 40px;
+}
+/* 햄버거 마우스 오버시 중앙바변경 */
+.ham:hover span:nth-child(2) {
+    left: 0;
+}
+
+/* 클릭이벤트JS처리시 클래스on셋팅 */
+.ham.on span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 20px;
+}
+.ham.on span:nth-child(2) {
+    width: 0;
+    left: 50%;
+}
+.ham.on span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 20px;
+}
+
+/* 전체메뉴박스 */
+.gnb {
+    position: fixed;
+    display: flex;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    background-color: #212C92;
+    z-index: 9999;
+    /* 트랜지션 */
+    transition: top 0.5s ease-out;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.gnb.on {
+    top: 10%;
+}
+.gnb dl{
+    line-height: 2;
+}
+/* gnb 텍스트 */
+
+.gnb dt>a{
+    color: #fff;
+    font-size: 3rem ;
+    font-weight: 600;
+}
 
 
+.gnb dt{
+    
+    margin-bottom: 15%;
+}
+.gnb dd{
+    line-height: 2.5;
+}
+.gnb dd>a{
+    color: #ffffffaf;
+   font-size: 2rem;
+   font-weight: 600;
+   
+}
+.gnb dd>a:hover{
+    color: #fff;
+}
+/* 로고 */
+.main-logo{
+    display: flex; 
+    justify-content: center;
+    /* outline: 2px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    height: auto;
+    /* height: 38px; */
+    font-size: 0;
+    background: url(../images/logo_w.png) no-repeat 0 0;
+    background-size: 100%;
+}
+.main-logo a{
+    width: 280px;
+    height: 38px;
+}
 
-/****************** 1-1. 메인로고 ********************/
+/*  예약버튼 */
+.res-box{
+    
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 8%;
+    letter-spacing: -0.7px;
+    
+    
+    
+}
+.reservBtn{
+    padding: 0 1%;
+}
+.res-box a{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+   
+}
+
 
 
 /******************* 1-2. 네비파트  *******************/
-/* Top 메뉴 */
 
 
 
@@ -72,5 +209,4 @@ body{
 
 
 
-/************ 2. 메인영역 ************/
 
