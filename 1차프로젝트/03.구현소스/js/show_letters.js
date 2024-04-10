@@ -14,9 +14,31 @@ const domFn = {
   // 1. 구현 요구사항 :
   // - 글자를 박스에 넣고 하나씩 일어나면서 등장(.style3)
 
-  // 2. 대상선정 : .stage-letters
+  // 2-1. 대상선정 : .txt-banner'
   const stage = domFn.qs('.txt-banner');
   console.log('대상:',stage);
+
+  // 2-2 이동버튼
+  const abtn = domFn.qsa(".abtn");
+
+
+  // // 룰렛 버튼 구역
+  // let botBox = qs("")
+
+  // 2-3 블릿버튼
+  let indic = domFn.qs(".indic");
+
+  // 블릿,슬라이드 개수
+  const SLIDE_CNT = 4;
+
+  // 슬라이드 트랜지션 시간 상수
+  const SLIDE_TRANS_TIME = 600;
+
+  // 광클금지변수
+  let stop = false;
+
+  // 슬라이드 순번 전역변수
+  let snum = 0;
 
   //3. 글자데이터 할당하기
   const banText =[
@@ -26,11 +48,20 @@ const domFn = {
     'Relaxing PIC'
   ]
 
+  const bulText =[
+    'Exciting',
+    'Kid Friendly',
+    'Romantic',
+    'Relaxing'
+  ]
     
+  // 블릿 영역 표시
+  for(let i=0;i<bulText.length;i++){
+    indic.innerHTML += `<li><span>${bulText[i]}</span></li>`;
+  }
   
-  // 3. 데이터 글자 한 글자씩 태그로 싸기
-  // for of 사용!
-
+  // 데이터 글자 한 글자씩 태그로 싸기
+ 
   // html태그 변수
   let hcode = '';
   // 지연시간 계산을 위한 순번변수
@@ -52,6 +83,7 @@ const domFn = {
     } //// for of //////
     hcode += `</ul>`;
   }
+
 
   // 5. 스테이지에 코드 출력하기 ///
   stage.innerHTML = hcode;
