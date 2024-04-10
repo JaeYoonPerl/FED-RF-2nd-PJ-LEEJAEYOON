@@ -4,6 +4,9 @@ import scrAct from './scroll_action.js';
 // goTop 불러오기
 import goTop from './goTop.js';
 
+// show letters 불러오기
+import letterAni from './show_letters.js';
+
 // 부드러운 스크롤 불러오기
 //import { startSS, setScrollPos } from "./smoothScroll23.js";
 //  부드러운 스크롤 호출
@@ -14,3 +17,6 @@ scrAct();
 
 // 위로가기 버튼 호출
 goTop();
+
+//letterAni 호출
+letterAni();

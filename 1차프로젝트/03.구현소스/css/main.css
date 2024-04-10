@@ -83,6 +83,8 @@ body{
 
 /* 글자 배너 */
 .txt-banner{
+    /* position: fixed; */
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -94,6 +96,37 @@ body{
     color: #fff;
     white-space: nowrap;
 
+}
+/* 글자 개별박스 셋팅 */
+.txt-banner span{
+    display: block;
+    font-size: 100px;
+    color: #fff;
+    font-family: 'Poppins', Sans-serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+}
+
+
+/* 글자 애니메이션 */
+.let-style{
+/* 원근설정 */
+perspective: 100vh;
+}
+.let-style span{
+    transform:translateY(100%);
+    transform-origin: top;
+   
+    opacity: 0;    
+    /* 트랜지션: 속시이지 */
+    transition: 1s ease-in;
+}
+/* 등장클래스 .on */
+.let-style.on span{
+    transform:translateY(0);
+    /* 투명도 0 */
+    opacity: 1;    
 }
 /********************* PIC소개 영역 *********************/
 
