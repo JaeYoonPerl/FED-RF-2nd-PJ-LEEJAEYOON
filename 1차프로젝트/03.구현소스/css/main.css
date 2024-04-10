@@ -40,7 +40,46 @@ body{
     width: 100%;
     object-fit: cover;
 }
-
+/* 퀵메뉴 */
+.menu-box{
+    position: absolute;
+    left: 0;
+    top: 96px;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 10;
+}
+.menu-box ul{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu-box li a{
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px #0000009d;
+}
+/* .menu-box ul li + li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 43%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 8, 8, 0.45);
+   
+    z-index: 20;
+} */
 /********************* PIC소개 영역 *********************/
 
 /* 소개 영역 제목 */
