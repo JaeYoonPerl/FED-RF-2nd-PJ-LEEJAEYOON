@@ -17,17 +17,14 @@ body * {
 body{
     overflow-x: hidden
 }
-/* 1. 상단영역  */
-/* .top-area{
-
-
-} */
 
 
 
 /* 3. 비주얼영역 */
 .visual-area{
-    height: 930px;
+    position: relative;
+    /* height: 100vh;
+    width: 100vw; */
 }
 /* . PIC소개영역 */
 .intro-pic-area{
