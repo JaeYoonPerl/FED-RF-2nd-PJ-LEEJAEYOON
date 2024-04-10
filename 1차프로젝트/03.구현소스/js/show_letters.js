@@ -20,7 +20,6 @@ const domFn = {
 
   //3. 글자데이터 할당하기
   const banText =[
-
     'Exciting PIC',
     'Kid Friendly PIC',
     'Romantic PIC',
@@ -38,20 +37,20 @@ const domFn = {
   let seqNum =0;
 
   for(var i=0; i<banText.length;i++){
-
+      hcode+='<ul>';
     for(let x of banText[i]){
       // console.log(x);
       if(x===' '){ // 스페이스 공백처리
           hcode += '&nbsp;&nbsp;';
       }/// if
       else{// 글자일 경우 span태그 랩핑처리
-          hcode += `<span style="transition-delay: ${seqNum*0.08}s">${x}</span>`;
+          hcode += `<li style="transition-delay: ${seqNum*0.08}s">${x}</li>`;
       } ///else ///
       
       // 중요! 지연시간에 곱해질 순번증가 하기
       seqNum++;
-  
     } //// for of //////
+    hcode += `</ul>`;
   }
 
   // 5. 스테이지에 코드 출력하기 ///

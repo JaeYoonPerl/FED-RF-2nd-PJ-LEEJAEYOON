@@ -89,7 +89,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    outline: 2px dashed yellow;
+    /* outline: 2px dashed yellow; */
 
     /* 글자설정 */
     font-size: 5vw;
@@ -97,8 +97,19 @@ body{
     white-space: nowrap;
 
 }
+/* 개별 배너 ul*/
+.txt-banner ul{
+display: flex;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+
+
 /* 글자 개별박스 셋팅 */
-.txt-banner span{
+.txt-banner li{
     display: block;
     font-size: 100px;
     color: #fff;
@@ -114,7 +125,7 @@ body{
 /* 원근설정 */
 perspective: 100vh;
 }
-.let-style span{
+.let-style li{
     transform:translateY(100%);
     transform-origin: top;
    
@@ -123,7 +134,7 @@ perspective: 100vh;
     transition: 1s ease-in;
 }
 /* 등장클래스 .on */
-.let-style.on span{
+.let-style.on li{
     transform:translateY(0);
     /* 투명도 0 */
     opacity: 1;    
