@@ -80,6 +80,21 @@ body{
    
     z-index: 20;
 } */
+
+/* 글자 배너 */
+.txt-banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: 2px dashed yellow;
+
+    /* 글자설정 */
+    font-size: 5vw;
+    color: #fff;
+    white-space: nowrap;
+
+}
 /********************* PIC소개 영역 *********************/
 
 /* 소개 영역 제목 */
