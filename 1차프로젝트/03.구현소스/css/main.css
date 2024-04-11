@@ -44,7 +44,7 @@ body{
 .menu-box{
     position: absolute;
     left: 0;
-    top: 96px;
+    top: 10.7%;
     width: 100%;
     height: auto;
     background: transparent;
@@ -104,6 +104,15 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
+
+/* 모두 투명 */
+opacity: 0;
+/* 트랜지션 */
+transition: opacity .6s ease-in-out;
+}
+.txt-banner ul.on{
+    opacity: 1;
+    z-index: 1;
 }
 
 
@@ -126,20 +135,21 @@ transform: translate(-50%, -50%);
 /* 원근설정 */
 perspective: 100vh;
 }
-.let-style li{
+/* .let-style li{
     transform:translateY(100%);
     transform-origin: top;
    
     opacity: 0;    
-    /* 트랜지션: 속시이지 */
     transition: 1s ease-in;
-}
+} */
 /* 등장클래스 .on */
-.let-style.on li{
+/* .let-style.on li{
     transform:translateY(0);
-    /* 투명도 0 */
+   
     opacity: 1;    
-}
+} */
+
+
 
 .bot-box{
     position: absolute;
@@ -152,6 +162,26 @@ perspective: 100vh;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 2;
 }
+
+/* 슬라이드 이동 버튼 */
+/*이동버튼*/
+.abtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /*Y축 중앙이동*/
+}
+
+/*왼쪽버튼*/
+.ab1 {
+    left: 50px;
+}
+
+/*오른쪽버튼*/
+.ab2 {
+    right: 50px;
+}
+
 
 /* 하단 텍스트 불릿 */
 
