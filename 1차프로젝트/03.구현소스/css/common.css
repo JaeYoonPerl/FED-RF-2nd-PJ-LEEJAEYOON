@@ -36,8 +36,8 @@ body{
     position: fixed;
     z-index: 20;
     width: 100%;
-    color: transparent;
-    height: 10%;
+    background-color: #7777774f;
+    height: 10.7%;
       /* 트랜지션 */
       transition: 0.4s ease-in-out;
 }
@@ -132,7 +132,7 @@ body{
     width: 300vw;
     height: 40vh;
  
-    z-index: 999;
+    z-index: 20;
 }
 .gnb::after.on{
 
@@ -148,6 +148,7 @@ body{
 }
 .gnb dl{
     line-height: 2;
+    z-index: 30;
 }
 /* gnb 텍스트 */
 
@@ -155,6 +156,7 @@ body{
     color: #fff;
     font-size: 3rem ;
     font-weight: 600;
+    z-index: 30;
 }
 
 
@@ -169,6 +171,7 @@ body{
     color: #ffffffaf;
    font-size: 2rem;
    font-weight: 600;
+   
    
 }
 .gnb dd>a:hover{
