@@ -36,17 +36,46 @@ body{
     position: fixed;
     z-index: 20;
     width: 100%;
-    background-color: #7777774f;
+    background-color: transparent;
     height: 10.7%;
       /* 트랜지션 */
       transition: 0.4s ease-in-out;
-}
-.top-area.on{
-   
-   
-    background-color: #212C92;
      
 }
+.top-area.on{
+    background-color: #212C92;
+}
+.top-area.get{
+    /* background-color: #fff; */
+}
+/* 상단바 스크롤시 변경 */
+.top-area.get span{
+    background-color: #212C92;
+}
+.top-area.get{
+
+    background-color: #fff;
+}
+.top-area.get.on{
+
+    background-color: #212C92;
+}
+
+.top-area.get .main-logo{
+    background: url(../images/logo_c.svg) no-repeat 0 0;
+}
+
+.top-area.get .WhiteR{
+    opacity: 0;
+    
+}
+.top-area.get .blueR{
+    opacity: 1;
+    
+}
+
+
+
  /* 햄버거버튼 */
  .ham {
     position: fixed;
@@ -134,9 +163,7 @@ body{
  
     z-index: 20;
 }
-.gnb::after.on{
 
-}
 @keyframes footerwave {
     0%{transform: translate(-5% , 0%)}
 	50%{transform: translate(0% , 0%)}
@@ -214,13 +241,29 @@ body{
     
 }
 .reservBtn{
-    padding: 0 1%;
+    position: absolute;
+    top: 35%;
+    right: 2%;
 }
-.res-box a{
+.reservBtn img{
+    position: relative;
+   
+    left: -3%;
+}
+
+.res-box .WhiteR{
     font-size: 2.5rem;
     color: #fff;
     font-weight: 600;
     text-shadow: 2px 2px 2px #0000009d;
+    opacity: 1;
+}
+.res-box .blueR{
+    font-size: 2.5rem;
+    color: #212C92;
+    font-weight: 600;
+    
+    opacity: 0;
 }
 
 

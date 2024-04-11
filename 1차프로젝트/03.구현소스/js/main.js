@@ -7,6 +7,10 @@ import goTop from './goTop.js';
 // show letters 불러오기
 import letterAni from './show_letters.js';
 
+// topBar
+
+import topBar from './top_area.js';
+
 // 부드러운 스크롤 불러오기
 //import { startSS, setScrollPos } from "./smoothScroll23.js";
 //  부드러운 스크롤 호출
@@ -20,3 +24,6 @@ goTop();
 
 //letterAni 호출
 letterAni();
+
+// topBar 호출
+topBar();
