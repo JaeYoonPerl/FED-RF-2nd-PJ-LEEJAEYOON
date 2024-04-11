@@ -269,7 +269,10 @@ body{
 
 
 
-
+/* 서브 페이지 */
+.res-area{
+    height: 500px;
+}
 
 
 
