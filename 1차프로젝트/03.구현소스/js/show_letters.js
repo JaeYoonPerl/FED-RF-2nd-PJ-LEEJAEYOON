@@ -46,6 +46,13 @@ export default function letterAni() {
         //3. 글자데이터 할당하기
         const banText = ["Exciting PIC", "Kid Friendly PIC", "Romantic PIC", "Relaxing PIC"];
 
+        const introText=[
+          "상상, 그 이상의 즐거움이 펼쳐지는 곳",
+          "아이와 가족 모두에게 충만한 행복을 선사합니다",
+          "로맨틱하고 아름다운 휴가로 사랑하는 연인과 특별한 추억을 남기세요",
+          "몸도 마음도 풍요로워지는 진정한 휴식과 충만한 재충전의 시간을 경험하세요",
+        ]
+
         const bulText = ["Exciting", "Kid Friendly", "Romantic", "Relaxing"];
 
         // html태그 변수
@@ -63,6 +70,7 @@ export default function letterAni() {
       <li>${bulText[i]}
         &nbsp;&nbsp;
         <span>PIC</span>
+        <p>${introText[i]}</p>
         </li>
     </ul>
     `;
@@ -175,7 +183,7 @@ export default function letterAni() {
           setClass(stage, "on", snum);
           // 3. 블릿 순번 클래스 제어함수 호출
           setClass(indic, "on", snum);
-      }, 3000);
+      }, 5000);
   } /////// autoSlide 함수 /////////////
   /// [ 인터발 지우기함수 : 버튼조작시 호출함! ] ///////
   function clearAuto() {
@@ -188,7 +196,7 @@ export default function letterAni() {
     // 3.5초후 아무작동도 안하면 다시 인터발호출
     autoT = setTimeout(() => {
         autoSlide();
-    }, 5000);
+    }, 7000);
 } ////////// clearAuto ////////////
 
 

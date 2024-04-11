@@ -103,16 +103,21 @@ display: flex;
 position: absolute;
 top: 50%;
 left: 50%;
-transform: translate(-50%, -50%);
+transform: translate(-50%, 50%);
+
+    transform-origin: top;
+    /* transform: rotateX(90deg); */
 
 /* 모두 투명 */
 opacity: 0;
 /* 트랜지션 */
-transition: opacity .6s ease-in-out;
+transition: .6s ease-in;
 }
 .txt-banner ul.on{
     opacity: 1;
     z-index: 1;
+    transform:translate(-50%,-50%);
+    
 }
 
 
@@ -128,6 +133,16 @@ transition: opacity .6s ease-in-out;
     line-height: 1;
 }
 
+.txt-banner p{
+    margin-top: 5%;
+    font-size: 2rem;
+}
+
+.txt-banner li span{
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+}
 
 
 /* 글자 애니메이션 */
@@ -166,6 +181,7 @@ perspective: 100vh;
 /* 슬라이드 이동 버튼 */
 /*이동버튼*/
 .abtn {
+    display: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -472,7 +488,7 @@ perspective: 100vh;
 /**************** 4. 마스코트 소개영역 ****************/
 
 #masco-area{
-    background: #212C92 url(../images/underSea.PNG) no-repeat bottom;
+    background: #212C92 url(../images/underSea.PNG) repeat-x bottom;
     position: relative;
 }
 /* 상단 구름 */
