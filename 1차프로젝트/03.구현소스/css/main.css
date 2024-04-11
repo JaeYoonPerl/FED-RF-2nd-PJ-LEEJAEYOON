@@ -111,7 +111,8 @@ transform: translate(-50%, 50%);
 /* 모두 투명 */
 opacity: 0;
 /* 트랜지션 */
-transition: .6s ease-in;
+transition: 0.8s ease-out;
+
 }
 .txt-banner ul.on{
     opacity: 1;
@@ -230,9 +231,31 @@ perspective: 100vh;
     cursor: pointer;
     opacity: 0.7;
     white-space: nowrap;
-   
-
 }
+
+.indic li.on span{
+   
+    opacity: 1;
+    text-shadow: 1px 1px 1px #747474;
+}
+
+/* 가상요소 바 */
+.indic li::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    bottom: 0;
+    height: 0.5rem;
+    background-color: magenta;
+  }
+  .indic li.on::before{
+    width: 100%;
+    transition: width 3s linear;
+  }
+
+
+
 
 /********************* PIC소개 영역 *********************/
 

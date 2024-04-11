@@ -196,7 +196,7 @@ export default function letterAni() {
     // 3.5초후 아무작동도 안하면 다시 인터발호출
     autoT = setTimeout(() => {
         autoSlide();
-    }, 7000);
+    }, 8000);
 } ////////// clearAuto ////////////
 
 
