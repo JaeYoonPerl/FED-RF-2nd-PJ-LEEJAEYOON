@@ -15,9 +15,12 @@ body * {
 }
 
 body{
-    overflow-x: hidden
+    /* overflow-x: hidden */
    
 }
+body>* {
+    overflow-x: hidden;
+  }
 .banner-area{
     position: relative;
     width: 100%;
