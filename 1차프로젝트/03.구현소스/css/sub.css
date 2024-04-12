@@ -23,7 +23,7 @@ body{
 .res-area{
     margin: 0 auto;
     width: 100%;
-    max-width: 1180px;
+    
     
     
 }
@@ -59,3 +59,64 @@ body{
 }
 
 /* 서브 페이지 내용박스*/
+.reservBox{
+    position: relative;
+    margin-top: 105px;
+    padding: 0 100px;
+    top: 10%;
+}
+.reservBox ul{    
+    display: flex;
+    justify-content: space-between;
+}
+.reservBox li{
+    position: relative;
+    display: flex;
+    width: calc(50% - 10px);
+    height: auto;
+    border: 2px solid #212C92;
+    background-color: #fff;
+    border-radius: 60px;
+    padding-top: 174px;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    transition: border-color 0.5s ease;
+}
+.imgr{
+    position: absolute;
+    top: 45px;
+}
+.reservBox h3{
+    font-size: 41px;
+    color: #212C92;
+    font-weight: 700;
+    font-family: 'Poppins', Sans-serif;
+}
+
+.reservBox h3 em{
+    font-size: 41px;
+    /* font-weight: 700; */
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Poppins', Sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #212C92;
+    font-style: normal;
+}
+.reservBox p{
+    margin-top: 18px;
+    font-size: 2rem;
+    font-weight: 500;
+    font-weight: bold;
+    text-align: center;
+    color: #000551;
+}
+.reservBox .reservchoice ul li strong {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-weight: bold;
+    color: #000551;
+}
