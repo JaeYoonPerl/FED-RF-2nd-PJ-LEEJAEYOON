@@ -33,7 +33,9 @@ function changeIt(){
 }
     
     
-const CRITERIA = (window.innerHeight / 4) * 1;
+const CRITERIA = (window.innerHeight / 4) * 3;
+const CRITERIA2 = (window.innerHeight / 4) * 1;
+
 console.log(CRITERIA);
 
 function addOn(ele) {
@@ -45,8 +47,8 @@ function addOn(ele) {
     
 // console.log('바운딩',bcrVal);
     // 기준값보다 작을때 등장
-    if (bcrVal < CRITERIA && bcrValb>CRITERIA) bG.style.backgroundColor ="blue";
+    if (bcrVal < CRITERIA && bcrValb>CRITERIA2) bG.style.backgroundColor ="#212c92";
     // 기준값보다 크면 원상복귀(숨김-on빼기)
-    else bG.style.backgroundColor ="white";
+    else bG.style.backgroundColor ="#fff";
 } ////// addOn 함수
 }

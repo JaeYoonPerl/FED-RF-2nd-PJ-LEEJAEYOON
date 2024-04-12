@@ -33,4 +33,4 @@ letterAni();
 topBar();
 
 // 배경색 변경
-// changeBack();
+changeBack();

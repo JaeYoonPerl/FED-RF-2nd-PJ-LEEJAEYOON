@@ -379,6 +379,14 @@ perspective: 100vh;
     -webkit-text-stroke-color: #212C92;
 }
 
+.intro2 .act-txt{
+    color: #FF0099 !important;
+}
+.intro2 p{
+    color: #fff !important;
+}
+
+
 /* 배경원 애니메이션 */
 .cir-ani{
     position: sticky;
@@ -535,7 +543,7 @@ perspective: 100vh;
     top: -6.3vw;
     left: -15%;
     background: transparent url(../images/siheky_wave.svg) repeat-x top left;
-    animation: footerwave 10s linear infinite;
+    animation: footerwave 7s linear infinite;
     background-size: 100vw 100%;
     height: 6.4vw;
     z-index: 1;
@@ -543,15 +551,11 @@ perspective: 100vh;
 }
 
 @keyframes footerwave {
-    0%{transform: translate(-40% , 0%)}
-	50%{transform: translate(0% , 0%)}
-	100%{transform: translate(-40% , 0%)}
+    0%{transform: translate(-20% , 0%)}
+	50%{transform: translate(20% , 0%)}
+	100%{transform: translate(-20% , 0%)}
 }
 
-.masco-txt{
-    /* position: absolute; */
-    
-}
 
 .masco-tit-txt{
     position: absolute;
@@ -750,9 +754,13 @@ perspective: 100vh;
 #footer-area{
     background: #212C92;
     position: relative;
+    overflow-x: visible;
+}
+#footer-area .wrap{
+    overflow-x: hidden;
 }
 
-#footer-area::before {
+#footer-area .wrap::before {
     content: '';
     width: 300vw;
     display: block;
