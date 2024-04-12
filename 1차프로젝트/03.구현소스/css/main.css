@@ -8,6 +8,7 @@
 /* 그리드 12 불러오기 */
 @import url(./grid_12_flex.css);
 @import url(./scroll.css);
+@import url(./sub.css);
 
 /* 공사중 표시 */
 body * {
@@ -446,7 +447,13 @@ perspective: 100vh;
     background: rgb(29, 250, 165);
     animation: cir-move5 4s ease-in-out infinite alternate;
 }
-
+/* 원 애니 박스 */
+.cir-box2{
+    top: 45%;
+}
+.cir-box3{
+    top: 75%;
+}
 /* 패턴 이미지 */
 .pBox1{
     position: absolute;

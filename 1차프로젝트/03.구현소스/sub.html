@@ -6,7 +6,7 @@
         <title>휴가, 그 이상의 모든것. 클럽 리조트 PIC</title>
         <link rel="shortcut icon" href="./images/favicon.png" />
         <link rel="stylesheet" href="./css/main.css" />
-        <!-- 메인JS 불러오기 : 모듈로 불러오기 -->
+        <!-- 서브JS 불러오기 : 모듈로 불러오기 -->
         <script type="module" src="./js/sub.js"></script>
         <script>
             // 로드구역
@@ -35,7 +35,7 @@
         <img src="./images/btn_top.png" alt="위로가기"></button>
     
         <!-- 상단 영역  -->
-        <div class="top-area get">
+        <div class="top-area get sub-top">
             <header id="top-area">
                 <div class="cont-box">
                     <!-- 메뉴박스 -->
@@ -161,12 +161,31 @@
                 </div>
             </header>
         </div>
+        <!-- 중간 메뉴바 -->
+        <div class="sub-bar">
+             <!-- 빠른메뉴 -->
+             <nav class="menu-box">
+                <ul>
+                    <li><a href="#">RESERVATION</a></li>
+                    <li><a href="#">GUAM</a></li>
+                    <li><a href="#">SAIPAN</a></li>
+                    <li><a href="#">NOTICE</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+                </ul>
+            <div class="wave-box">
+
+            </div>
+        </div>
 
         <!-- 서브 비주얼 -->
-        <div class="res-area">
+        <div id="res-area">
             <section class="res-area inbox">
                 <div class="cont-box">
                     <div class="col-12">
+
+                        <div class="s-title-box">
+                             예약하기
+                        </div>
                         
                     </div>
                 </div>
@@ -177,6 +196,7 @@
         <!-- 하단영역 -->
         <!-- 6. 하단영역 -->
         <div id="footer-area">
+            <div class="wrap"></div>
             <footer class="footer-area inbox">
                 <!-- <h2 class="temp-tit">6. 하단영역</h2> -->
                 <div class="cont-box">
