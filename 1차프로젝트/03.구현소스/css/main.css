@@ -317,14 +317,14 @@ perspective: 100vh;
 #intro-pic-area h3{
      position: relative;
     display: block;
-    font-size: 9rem;
+    font-size: 10rem;
     white-space: nowrap;
     color: darkblue;
 }
 #intro-pic-area span{
      position: relative;
     display: block;
-    font-size: 9rem;
+    font-size: 10rem;
     white-space: nowrap;
     font-weight: bold;
     color: transparent;
@@ -334,7 +334,7 @@ perspective: 100vh;
 #intro-pic-area .sp-intro{
      position: relative;
     display: block;
-    font-size: 9rem;
+    font-size: 10rem;
     white-space: nowrap;
     font-weight: bold;
     color: transparent;
@@ -446,6 +446,7 @@ perspective: 100vh;
     background: rgb(29, 250, 165);
     animation: cir-move5 4s ease-in-out infinite alternate;
 }
+
 /* 패턴 이미지 */
 .pBox1{
     position: absolute;
@@ -454,7 +455,12 @@ perspective: 100vh;
 .pBox2{
     position: absolute;
     top: 60%;
-    right: 10%
+    left: 74%;
+}
+.pBox3{
+    position: absolute;
+    top: 90%;
+    left: 10%;
 }
 
 /* 위아래 반복 애니메이션 */
