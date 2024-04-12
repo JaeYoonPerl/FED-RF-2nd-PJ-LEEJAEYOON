@@ -1,17 +1,13 @@
 @charset "utf-8";
 
-body>* {
-    overflow-x: hidden;
-  }
 
 
 body{
-    overflow-x: hidden;
-    /* overflow: hidden; */
+   
 }
 .res-area{
     height: 1000px;
-    overflow-x: hidden;
+    
 }
 
 .sub-bar>.menu-box{
@@ -19,7 +15,7 @@ body{
     background: #212C92;
     border-bottom: none;
     /* top: 10%; */
-    overflow-x: hidden;
+    
     
 }
 
@@ -29,19 +25,37 @@ body{
     width: 100%;
     max-width: 1180px;
     
+    
 }
 /* 배경 */
 
 
-/* 서브 페이지 제목박스*/
+
+/* 서브 페이지 제목*/
 .s-title-box{
     position: relative;
-    top: 10%;
+    top: 15%;
     padding-top: 76px;
     margin: 0 auto;
     text-align: center;
     width: 100%;
     max-width: 1010px;
+}
+.tit{
+    font-size: 4rem;
+    line-height: 50px;
+    font-weight: 700;
+    color: #212C92;
+    
+}
+.s-title-box>p{
+    margin-top: 2%;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #666;
+    display: block;
+    font-weight: bold;
+
 }
 
 /* 서브 페이지 내용박스*/
