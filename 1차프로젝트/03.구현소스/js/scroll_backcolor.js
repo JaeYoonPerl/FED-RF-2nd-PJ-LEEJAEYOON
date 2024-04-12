@@ -28,6 +28,7 @@ myFn.addEvt(window, "scroll", changeIt);
 
 function changeIt(){
     for (let x of obj) addOn(x);
+
 }
     
     
@@ -38,6 +39,7 @@ function addOn(ele) {
     // ele - 대상요소
     // 바운딩값 구하기
     let bcrVal = myFn.getBCR(ele);
+    
     
 console.log('바운딩',bcrVal);
     // 기준값보다 작을때 등장
