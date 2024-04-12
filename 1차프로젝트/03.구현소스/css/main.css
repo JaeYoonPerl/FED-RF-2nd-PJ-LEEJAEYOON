@@ -551,9 +551,9 @@ perspective: 100vh;
 }
 
 @keyframes footerwave {
-    0%{transform: translate(-20% , 0%)}
-	50%{transform: translate(20% , 0%)}
-	100%{transform: translate(-20% , 0%)}
+    0%{transform: translate(-40% , 0%)}
+	50%{transform: translate(0% , 0%)}
+	100%{transform: translate(-40% , 0%)}
 }
 
 
