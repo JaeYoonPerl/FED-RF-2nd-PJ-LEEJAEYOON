@@ -6,7 +6,9 @@ body{
    
 }
 .res-area{
-    height: 1000px;
+    overflow: hidden;
+    height: 1200px;
+
     
 }
 
@@ -72,17 +74,25 @@ body{
 .reservBox li{
     position: relative;
     display: flex;
-    width: calc(50% - 10px);
-    height: auto;
+    width: 480px;
+    height: 500px;
     border: 2px solid #212C92;
     background-color: #fff;
     border-radius: 60px;
-    padding-top: 174px;
+    
     align-items: center;
     flex-direction: column;
     z-index: 1;
+    gap: 0 20px;
     transition: border-color 0.5s ease;
+   margin: 0 5px;
+    padding-top: 174px;
+
 }
+.reservBox li:hover{
+    border: 2px solid magenta;
+}
+
 .imgr{
     position: absolute;
     top: 45px;
@@ -119,4 +129,48 @@ body{
     font-weight: 600;
     font-weight: bold;
     color: #000551;
+}
+.reservchoice .btnBox {
+    margin-top: 118px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 75px;
+}
+.reservBox .reservchoice ul li .btn {
+    width: 210px;
+    line-height: 49px;
+    display: inline-block;
+   
+    height: 55px;
+    
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-weight: bold;
+    text-align: center;
+    color: #000551;
+    border: 2px solid #000551;
+    border-radius: 30px;
+    background-color: #fff;
+    font-family: 'Poppins', 'welcome', Sans-serif;
+    transition: all 0.5s;
+}
+.btn i{
+    display: inline-block;
+    width: 19px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url(../images/ico_calendar.svg) no-repeat 0 0;
+    background-size: 100%;
+    transition: all 0.5s;
+}
+.reservBox .reservchoice ul li .btn:hover {
+    color: #fff;
+    background-color: #000551;
+}
+
+.reservBox .reservchoice ul li .btn:hover i{
+    background: url(../images/ico_calender_wh.png) no-repeat 0 0;
+    background-size: 100%;
 }
