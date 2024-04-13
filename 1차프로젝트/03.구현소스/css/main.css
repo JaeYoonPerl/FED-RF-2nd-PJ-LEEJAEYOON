@@ -736,38 +736,38 @@ perspective: 100vh;
 .list-guam{
     position: relative;
     
-    transform: translateX(-10%);
+    transform: translateX(-15%);
     animation: guam-ani 60s linear infinite alternate;
     padding-bottom: 5vw;
 }
 .list-saipan{
     position: relative;
-    transform: translateX(-50%);
+    transform: translateX(-40%);
     animation: saipan-ani 60s linear infinite alternate;
 }
 
 /* 애니메이션 guam 좌->우->좌 */
 @keyframes guam-ani {
     0%{
-        transform: translateX(-10%);
+        transform: translateX(-15%);
     }
     50%{
         transform: translateX(-50%);
     }
     100%{
-        transform: translateX(-10%);
+        transform: translateX(-15%);
     } 
 }
 /* 애니메이션 Saipan 우 좌 우*/
 @keyframes saipan-ani {
     0%{
-        transform: translateX(-50%);
+        transform: translateX(-40%);
     }
     50%{
         transform: translateX(-10%);
     }
     100%{
-        transform: translateX(-50%);
+        transform: translateX(-40%);
     } 
 }
 /* 7. 하단영역 */
