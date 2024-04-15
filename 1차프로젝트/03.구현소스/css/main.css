@@ -741,7 +741,7 @@ perspective: 100vh;
     display: flex;
     /* 글자 줄바꿈방지 */
     white-space: nowrap;
-    color:#FF0099;
+    color:#ff0099;
 }
 #video-area span{
     font-size: 8rem;
