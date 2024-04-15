@@ -6,6 +6,8 @@
     const navbar = document.querySelector(".top-area"); //from HTML
     const navbarHeight = navbar.getBoundingClientRect().height;
     
+    const ham = document.querySelector(".ham");
+
     document.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
     
@@ -19,5 +21,10 @@
       } else {
         navbar.classList.remove("get");
       }
+    
+
+
+      
+     
     });
 }

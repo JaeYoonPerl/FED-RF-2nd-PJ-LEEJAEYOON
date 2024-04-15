@@ -50,7 +50,7 @@ body{
 }
 /* 상단바 스크롤시 변경 */
 .top-area.get span{
-    background-color: #212C92;
+    background-color: rgb(33, 44, 146);
 }
 .top-area.get{
 
@@ -173,6 +173,15 @@ body{
 .gnb.on {
     top: 10%;
 }
+
+.gnb .blueR.on{
+    opacity: 0;
+
+}
+.gnb .WhiteR.on{
+    opacity: 1;
+}
+
 .gnb dl{
     line-height: 2;
     z-index: 30;

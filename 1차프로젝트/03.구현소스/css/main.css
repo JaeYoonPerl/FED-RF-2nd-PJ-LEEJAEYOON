@@ -463,6 +463,7 @@ perspective: 100vh;
     position: absolute;
     top: 60%;
     left: 74%;
+   
 }
 .pBox3{
     position: absolute;
@@ -527,6 +528,34 @@ perspective: 100vh;
     }
 }
 
+.btnBoxM{
+    position: absolute;
+    z-index: 999;
+}
+
+.btnM{
+    width: 210px;
+    line-height: 49px;
+    display: inline-block;
+   position: absolute;
+    height: 55px;
+    
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-weight: bold;
+    text-align: center;
+    color: #000551;
+    border: 2px solid #000551;
+    border-radius: 30px;
+    background-color: #fff;
+    font-family: 'Poppins', 'welcome', Sans-serif;
+    transition: all 0.5s;
+    z-index: 999;
+}
+.btnBoxM:hover .btnM{
+    color: #fff;
+    background-color: #000551;
+}
 
  
 /* 5. 마스코트 소개영역 */
