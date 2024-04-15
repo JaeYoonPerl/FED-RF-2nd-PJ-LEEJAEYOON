@@ -9,6 +9,7 @@
 @import url(./grid_12_flex.css);
 @import url(./scroll.css);
 @import url(./sub.css);
+@import url(./mediaQuery.css);
 
 /* 공사중 표시 */
 body * {
