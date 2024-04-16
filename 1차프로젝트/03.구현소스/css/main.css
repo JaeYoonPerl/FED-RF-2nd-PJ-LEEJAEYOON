@@ -21,7 +21,10 @@ body{
    
 }
 body>* {
-    overflow-x: hidden;
+    /* overflow-x: hidden;
+     */
+     overflow-x: clip;
+     /* sticky와 hiddend을 같이 사용할때는 hidden이 아닌 clip사용 */
   }
 .banner-area{
     position: relative;
@@ -394,7 +397,7 @@ perspective: 100vh;
 .cir-ani{
     position: sticky;
     top: 10%;
-    
+    /* overflow-x: auto; */
     
 }
 .cir-ani>div{
