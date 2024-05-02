@@ -201,5 +201,5 @@ export default function letterAni() {
 
 
 
-    }// loadFn
+}// loadFn
 } 
