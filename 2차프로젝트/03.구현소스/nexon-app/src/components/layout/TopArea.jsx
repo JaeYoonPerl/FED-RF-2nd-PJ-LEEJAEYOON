@@ -1,8 +1,12 @@
 // 상단영역 컴포넌트 ///
 
+
 // GNB 데이터 불러오기
 import { Link } from "react-router-dom";
 import {menu} from "../data/gnb";
+
+// 상단영역 CSS 불러오기
+import "../../css/top_area.scss";
 
 export default function TopArea() {
     // 코드 리턴구역 ////
