@@ -8,6 +8,10 @@ import Company from "./components/pages/Company";
 import People from "./components/pages/People";
 import News from "./components/pages/News";
 
+// 전체 공통 CSS 불러오기
+import "../src/css/index.scss";
+
+
 
 export default function MainComponent() {
     return (

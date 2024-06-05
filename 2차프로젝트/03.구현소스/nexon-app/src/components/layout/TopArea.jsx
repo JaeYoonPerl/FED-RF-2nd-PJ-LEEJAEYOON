@@ -7,6 +7,7 @@ import {menu} from "../data/gnb";
 
 // 상단영역 CSS 불러오기
 import "../../css/top_area.scss";
+import Logo from "../modules/Logo";
 
 export default function TopArea() {
     // 코드 리턴구역 ////
@@ -16,13 +17,13 @@ export default function TopArea() {
             <header className="top-area">
                 {/* 로그인 환영메시지 박스 */}
                 
+                        {/* 1. 로고 컴포넌트 */}
+                        <li className="logoTop">
+                        <Logo logoStyle="top" />
+                        </li>
                 {/* 네비게이션 GNB파트 */}
                 <nav className="gnb">
                     <ul>
-                        {/* 1. 로고 컴포넌트 */}
-                        <li>
-                            
-                        </li>
                         {/* 2. GNB메뉴 데이터 배열로 만들기 */}
                         {menu.map((v,i)=>
                         <li key={i}>

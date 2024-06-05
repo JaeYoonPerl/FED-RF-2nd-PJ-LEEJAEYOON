@@ -1,0 +1,50 @@
+// 상단영역 CSS 
+
+.top-area{
+    position: fixed;
+    top: 24px;
+    left: 0;
+    left: 50%;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    width: calc(100% - 48px);
+    height: 80px;
+    background-color: #000;
+    transform: translate(-50%);
+    
+}
+
+.logoTop{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 2.2%;
+}
+
+.gnb{
+    margin: 0 auto;
+}
+.gnb>ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0 30px;
+    margin: 0 25px;
+}
+.gnb ul li{
+    margin: 0 25px;
+}
+
+.gnb>ul a{
+    color: #ffffff83;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3;
+}
+.gnb a:hover{
+    color: #fff;
+}
