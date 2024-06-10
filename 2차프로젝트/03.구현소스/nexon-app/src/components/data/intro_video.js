@@ -6,8 +6,8 @@ export const ivideo = {
     // company영상
     companyv: "/videos/company_video.mp4",
     // business영상1
-    businessv01: "/videos/business_video01.mp4",
+    gamev01: "/videos/business_video01.mp4",
     // business영상2
-    businessv02: "/videos/business_video02.mp4",
+    gamev02: "/videos/business_video02.mp4",
     
 };
