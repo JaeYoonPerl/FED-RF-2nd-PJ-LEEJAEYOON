@@ -17,18 +17,8 @@ export const mainIntroData = {
             video: "/videos/business_video01.mp4"
         },
     
-    people: 
-        {
-            tit: "PEOPLE",
-            txt: "도전과 변화를 즐기는 모험가들이 재미의 진화를 이끌어갑니다.",
-            link: "/people",
-        },
    
-    news: 
-        {
-            tit: "NEWS",
-            txt: "없음",
-            link: "/news",
-        },
+   
+   
    
 };

@@ -1,9 +1,6 @@
 // NEXON.com GNB메뉴 데이터
 export const menu = [
-    {
-        txt:"Home",
-        link:"/",
-    },
+  
     {
         txt:"COMPANY",
         link:"/company",
