@@ -25,11 +25,25 @@ export function SwiperList({ catName }) {
     return (
         <>
             <Swiper
-                slidesPerView={4.5}
+                // slidesPerView={4.5}
                 spaceBetween={20}
                 navigation={true}
                 /* 사용할 모듈을 여기에 적용시킨다 */
                 modules={[Navigation]}
+                breakpoints={{
+                    200: {
+                        slidesPerView: 1,
+                    },
+                    500: {
+                        slidesPerView: 2,
+                    },
+                    1000: {
+                        slidesPerView: 3,
+                    },
+                    1200: {
+                        slidesPerView: 4.5,
+                    },
+                }}
                 className="mySwiper"
             >
                 {selData.map((v, i) => (

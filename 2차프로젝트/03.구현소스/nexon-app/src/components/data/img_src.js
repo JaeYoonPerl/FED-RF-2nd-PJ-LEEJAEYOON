@@ -2,6 +2,10 @@
 export const isrc = {
 
 
-    // 로고
+    // 상단 로고
     logo: "/images/logo_w.png",
+
+    // 하단 로고
+    footlogo:"/images/logo_foot.png"
+
 };
