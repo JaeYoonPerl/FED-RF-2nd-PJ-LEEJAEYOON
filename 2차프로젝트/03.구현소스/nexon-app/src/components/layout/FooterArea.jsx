@@ -41,6 +41,7 @@ export default function FooterArea() {
             <div className="combo-box">
                 
                 <ul>
+                    
                     {comboData.map((v, i) => (
                         <li>
                             <a href={v.brandLink} target="_blank">

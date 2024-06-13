@@ -60,9 +60,10 @@ ol.bmenu{
     // max-width: 300px;
     // right: 0;
     height: 100%;
+    
 }
 .combo-box ul{
-    align-items: flex-end;
+    justify-content: flex-start;
     position: absolute;
     bottom: 100%;
     display: flex;
@@ -74,11 +75,20 @@ ol.bmenu{
     background-color: #000;
     border: 1px solid #fff;
     transform: translateY(22px);
+
+    
     
     opacity: 1;
     a{
+        display: block;
         color: #fff;
         text-decoration: none;
     }
    
+}
+.combo-box ul li{
+    
+    font-size: 1.5rem;
+   
+    
 }
