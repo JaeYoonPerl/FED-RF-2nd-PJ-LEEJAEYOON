@@ -8,14 +8,15 @@ export default function LogoFoot({logoStyle}){
     // 객체형 스타일 적용
     const myStyle = {
         bottom:{
-            height: "80px"
+            height: "40px"
+            
         }
     };
 
     // 로고 이미지 스타일 객체
     const imgStyle = {
         top: {maxWidth:"104px"},
-        bottom: {width:"80px"},
+        bottom: {width:"90px"},
     };
 
 

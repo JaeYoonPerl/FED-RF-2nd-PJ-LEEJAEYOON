@@ -15,14 +15,14 @@ export default function Logo({logoStyle}){
         },
 
         bottom:{
-            height: "80px"
+            height: "90px"
         }
     };
 
     // 로고 이미지 스타일 객체
     const imgStyle = {
         top: {maxWidth:"104px"},
-        bottom: {width:"80px"},
+        bottom: {width:"90px"},
     };
 
 
