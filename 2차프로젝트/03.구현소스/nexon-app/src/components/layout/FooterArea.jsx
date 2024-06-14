@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 import { menu } from "../data/gnb";
 
+import { ComboBoxList } from "../func/combo_box.jsx";
+
 // 하단 메뉴 데이터 불러오기
 import { bmData } from "../data/bmenu";
 
@@ -40,6 +42,7 @@ export default function FooterArea() {
             {/* 콤보박스 */}
             <div className="combo-box">
                 
+             
                 <ul>
                     
                     {comboData.map((v, i) => (

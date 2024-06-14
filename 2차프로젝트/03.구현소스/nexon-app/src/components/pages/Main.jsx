@@ -10,7 +10,7 @@ import * as wFn from "../func/auto_wheel";
 export default function Main(){
     // 화면 랜더링 실행구역
     useEffect(()=>{
-        // window.addEventListener("wheel",wFn.wheelFn);
+        window.addEventListener("wheel",wFn.wheelFn);
     },[]);
 
 
