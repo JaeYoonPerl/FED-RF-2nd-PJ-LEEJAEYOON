@@ -33,6 +33,10 @@ export default function TopArea() {
                         ))}
                     </ul>
                 </nav>
+                {/* 서브 메뉴 */}
+                <nav className="smenu">
+                    
+                </nav>
             </header>
         </>
     );
