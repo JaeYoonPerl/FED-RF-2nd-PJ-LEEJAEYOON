@@ -4,7 +4,7 @@ import { comboData } from "../data/combo_data.js";
 export function ComboBoxList(){
 
     function comboBox() {
-        const brandBox = document.querySelector("#brand");
+        const brandBox = document.querySelector(".brand");
     
         brandBox.innerHTML =
             `<option value="init">Family Site</option>` +
@@ -24,4 +24,5 @@ export function ComboBoxList(){
         if (url) window.open(url);
         else alert("선택을 변경해 주세요~!");
     }
+    comboBox();
 } 

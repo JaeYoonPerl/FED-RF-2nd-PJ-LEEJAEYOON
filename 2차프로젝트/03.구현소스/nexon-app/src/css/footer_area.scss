@@ -15,7 +15,7 @@
     color: #fff;
     background-color: #000;
     
-    
+    height: 100%;
 }
 
 .info>ul>li:last-child{
@@ -53,28 +53,31 @@ ol.bmenu{
 }
 .combo-box{
     display: flex;
-    position: relative;
+    position: absolute;
     flex-direction: column;
-    align-items: flex-end;
+    // align-items: flex-end;
     padding-right: 100px;
     // max-width: 300px;
     // right: 0;
     height: 100%;
-    
+    overflow: hidden;
+    top: 0%;
+    white-space: nowrap;
+    z-index: 20;
+    right: 20%;
 }
 .combo-box ul{
     justify-content: flex-start;
     position: absolute;
-    bottom: 100%;
+   
     display: flex;
     flex-direction: column;
     width: 248px;
-    
+    // bottom: 100%;
     padding: 8px 0;
     color: #fff;
     background-color: #000;
     border: 1px solid #fff;
-    transform: translateY(22px);
 
     
     

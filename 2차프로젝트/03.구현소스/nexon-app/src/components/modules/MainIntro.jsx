@@ -29,9 +29,15 @@ function MainIntro({ catname, clsName }) {
                     <h2 className="introtit">{selData.tit}</h2>
                     <div className=""></div>
                     {/* 설명 */}
-                    <p className="introtxt">{selData.txt}</p>
+                    <p className="introtxt">
+                        {selData.txt[0]}
+                        <br/>
+                        {selData.txt[1]}
+                        <br/>
+                        {selData.txt[2]}
+                        </p>
                     {/* 더보기 링크 */}
-                    <Link to={selData.link} className="linktxt">더보기</Link>
+                    <Link to={selData.link} className="linktxt">더보기 →</Link>
                 </div>
             </div>
         </section>

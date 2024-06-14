@@ -8,7 +8,7 @@ import { ComboBoxList } from "../func/combo_box.jsx";
 import { bmData } from "../data/bmenu";
 
 // 콤보박스 데이터 불러오기
-import {comboData} from "../data/combo_data.js";
+// import {comboDataA} from "../data/combo_data_a.js";
 
 // 하단영역 CSS 불러오기
 import LogoFoot from "../modules/Logo_foot";
@@ -41,19 +41,11 @@ export default function FooterArea() {
             </ul>
             {/* 콤보박스 */}
             <div className="combo-box">
+            {/* <ComboBoxList /> */}
                 
-             
-                <ul>
-                    
-                    {comboData.map((v, i) => (
-                        <li>
-                            <a href={v.brandLink} target="_blank">
-                                {v.brand}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
             </div>
         </footer>
     );
 } /////// FooterArea /////
+
+
