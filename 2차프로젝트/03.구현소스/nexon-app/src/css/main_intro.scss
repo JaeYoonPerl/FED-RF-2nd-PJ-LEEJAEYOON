@@ -45,11 +45,38 @@
     text-decoration: none;
     font-weight: bold;
     position: absolute;
-    transform: translate(50%,50%);
-    top: 44%;
-    left: 35.5%;
+    
     transition: .3s;
 }
+.linktxt::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    z-index:100;
+    transition: width .3s ease-out;
+}
+
 .linktxt:hover{
     color: #fff;
 }
+.linktxt:hover::after{
+    width: 100%;
+}
+
+.secIntro{
+    .introtit{
+        left: 40%;
+    }
+    .introtxt{
+        top: 23%;
+        left: 50%;
+    }
+    
+}
+
+

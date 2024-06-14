@@ -17,7 +17,7 @@ function MainNews({catName}) {
                 {/* 1. 타이틀 */}
                 <h2 className="tit">{mainNews.tit}
                 {/* 더보기 링크 */}
-                <Link to={mainNews.link} className="linktxtn">더보기</Link>
+                <Link to={mainNews.link} className="linktxtn">더보기 →</Link>
                 </h2>
             </div>
             {/* 2. 스와이퍼 컴포넌트 */}

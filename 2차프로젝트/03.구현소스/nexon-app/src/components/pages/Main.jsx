@@ -27,7 +27,7 @@ export default function Main(){
             <MainIntro catname="company" clsName="off"/>
 
             {/* 3. GAME 인트로 구역 */}
-            <MainIntro catname="game" clsName="off"/>
+            <MainIntro catname="game" clsName="secIntro"/>
 
             {/* 5. news 인트로 구역 */}
             <MainNews catName="news"/>

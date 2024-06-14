@@ -35,9 +35,10 @@ function MainIntro({ catname, clsName }) {
                         {selData.txt[1]}
                         <br/>
                         {selData.txt[2]}
-                        </p>
+                        <br/>
                     {/* 더보기 링크 */}
                     <Link to={selData.link} className="linktxt">더보기 →</Link>
+                        </p>
                 </div>
             </div>
         </section>

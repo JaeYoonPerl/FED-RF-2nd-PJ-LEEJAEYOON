@@ -1,6 +1,7 @@
 .news-swbox{
     position: relative;
     height: 100vh;
+    padding: 0px 1%;
 }
 
 .tit-box{
@@ -24,4 +25,21 @@
     transition: .3s;
     left: 5%;
     position: relative;
+}
+
+.linktxtn::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    z-index:100;
+    transition: width .3s ease-out;
+}
+
+.linktxtn:hover::after{
+    width: 100%;
 }
