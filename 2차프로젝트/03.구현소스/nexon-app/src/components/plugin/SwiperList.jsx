@@ -1,12 +1,18 @@
 // 메인 페이지 스와이퍼 플러그인 컴포넌트
 
-import React from "react";
+import React, { useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+// 제이쿼리 불러오기
+import $ from "jquery";
 
 // Import Swiper styles : 모듈용 기본 CSS 파일 로딩
 import "swiper/css";
 import "swiper/css/pagination";
+
+// 폰트어썸 불러오기
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 
 // CSS 불러오기
 import "./css/swiper_list.scss";
