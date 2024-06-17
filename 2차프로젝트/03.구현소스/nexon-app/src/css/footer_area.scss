@@ -82,15 +82,14 @@ ol.bmenu{
     cursor: pointer;
     right: 10%;
     top: 1%;
+    z-index: 30;
     h3{
     font-size: 1.5rem;
     padding: 0 18px;
     
     color: #fff;
     }
-    plusIcon{
-        color: #fff;
-    }
+    
 
 }
 
@@ -100,7 +99,7 @@ ol.bmenu{
     position: absolute;
     flex-direction: column;
     
-    
+    background-color: #000;
     height: 100%;
     width: 248px;
     line-height: 1.7;
@@ -108,10 +107,20 @@ ol.bmenu{
     white-space: nowrap;
     z-index: 20;
     right: 10%;
-
-    display: none;
-    
+    // display: none;
+    opacity: 0;
+    transition: .3s;
+    pointer-events:none;
+  
 }
+.combo-box.on{
+//    display: block;
+   opacity: 1;
+   top: -130%;
+   transition: .3s;
+   pointer-events:auto;
+}    
+
 .combo-box ul{
     justify-content: flex-start;
     position: absolute;
@@ -138,6 +147,6 @@ ol.bmenu{
 .combo-box ul li{
     
     font-size: 1.5rem;
-    padding: 0px 18px;
+    padding: 5px 18px;
     
 }

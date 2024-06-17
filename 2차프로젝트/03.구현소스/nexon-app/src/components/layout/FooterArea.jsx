@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { menu } from "../data/gnb";
 
-import { ComboBoxList } from "../func/combo_box.jsx";
+
 
 // 하단 메뉴 데이터 불러오기
 import { bmData } from "../data/bmenu";
@@ -12,8 +12,6 @@ import { comboDataA } from "../data/combo_data_a.js";
 // 제이쿼리
 import $ from "jquery";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 // 하단영역 CSS 불러오기
 import LogoFoot from "../modules/Logo_foot";
@@ -22,8 +20,8 @@ import LogoFoot from "../modules/Logo_foot";
 import "../../css/footer_area.scss";
 
 export default function FooterArea() {
-    const showHideCombo = (e)=>{
-        $(".comboBox").fadeToggle(300);
+    const showHideCombo = ()=>{
+        $(".combo-box").toggleClass("on");
     }
 
     // 코드 리턴구역 ////
@@ -66,7 +64,6 @@ export default function FooterArea() {
             </div>
                     <div className="comboBtn" onClick={showHideCombo}>
                         <h3>Family Site</h3>
-                        <FontAwesomeIcon icon="fa-duotone fa-plus" />
                         
                     </div>
         </footer>
