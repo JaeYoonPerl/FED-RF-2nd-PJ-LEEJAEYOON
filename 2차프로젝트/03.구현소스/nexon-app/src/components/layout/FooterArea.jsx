@@ -8,7 +8,12 @@ import { ComboBoxList } from "../func/combo_box.jsx";
 import { bmData } from "../data/bmenu";
 
 // 콤보박스 데이터 불러오기
-// import {comboDataA} from "../data/combo_data_a.js";
+import { comboDataA } from "../data/combo_data_a.js";
+// 제이쿼리
+import $ from "jquery";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 // 하단영역 CSS 불러오기
 import LogoFoot from "../modules/Logo_foot";
@@ -17,6 +22,10 @@ import LogoFoot from "../modules/Logo_foot";
 import "../../css/footer_area.scss";
 
 export default function FooterArea() {
+    const showHideCombo = (e)=>{
+        $(".comboBox").fadeToggle(300);
+    }
+
     // 코드 리턴구역 ////
     return (
         <footer className="info">
@@ -41,11 +50,25 @@ export default function FooterArea() {
             </ul>
             {/* 콤보박스 */}
             <div className="combo-box">
-            {/* <ComboBoxList /> */}
-                
+                <ul>
+                    <li>
+                        <ol className="comboBox">
+                            {comboDataA.map((v, i) => (
+                                <li key={i}>
+                                    <a href={v.brandLink} target="_blank">
+                                        {v.brand}
+                                    </a>
+                                </li>
+                            ))}
+                        </ol>
+                    </li>
+                </ul>
             </div>
+                    <div className="comboBtn" onClick={showHideCombo}>
+                        <h3>Family Site</h3>
+                        <FontAwesomeIcon icon="fa-duotone fa-plus" />
+                        {/* <FontAwesomeIcon icon={faPlus} className="plusIcon"/> */}
+                    </div>
         </footer>
     );
 } /////// FooterArea /////
-
-

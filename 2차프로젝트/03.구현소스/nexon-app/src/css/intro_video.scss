@@ -12,3 +12,18 @@
     -o-object-fit: cover;
     object-fit: cover;
 }
+
+
+.scroll-down-box{
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translate(-50%);
+    color: #fff;
+    // margin: 0 auto;
+}
+.scroll-icon{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}

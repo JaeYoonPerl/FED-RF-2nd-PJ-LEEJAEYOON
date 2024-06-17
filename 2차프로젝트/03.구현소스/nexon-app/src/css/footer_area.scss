@@ -68,27 +68,47 @@ ol.bmenu{
     padding-bottom: 10px;
     color: #ffffffa2;
 }
+.comboBtn{
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    width: 248px;
+    height: 48px;
+    padding: unset;
+    font-weight: 700;
+    border-bottom: 1px solid #d2d6e0;
+    outline: 0;
+    align-items: center;
+    cursor: pointer;
+    right: 10%;
+    top: 1%;
+    h3{
+    font-size: 1.5rem;
+    padding: 0 18px;
+    
+    color: #fff;
+    }
+    plusIcon{
+        color: #fff;
+    }
 
-
-
-
-
+}
 
 
 .combo-box{
     display: flex;
     position: absolute;
     flex-direction: column;
-    // align-items: flex-end;
-    padding-right: 100px;
-    // max-width: 300px;
-    // right: 0;
+    
+    
     height: 100%;
-    overflow: hidden;
-    top: 0%;
+    width: 248px;
+    line-height: 1.7;
+    top: -95%;
     white-space: nowrap;
     z-index: 20;
-    right: 20%;
+    right: 10%;
+    
 }
 .combo-box ul{
     justify-content: flex-start;
@@ -116,6 +136,6 @@ ol.bmenu{
 .combo-box ul li{
     
     font-size: 1.5rem;
-   
+    padding: 0 18px;
     
 }
