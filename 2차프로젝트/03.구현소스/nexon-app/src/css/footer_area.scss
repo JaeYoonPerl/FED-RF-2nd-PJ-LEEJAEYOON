@@ -150,3 +150,12 @@ ol.bmenu{
     padding: 5px 18px;
     
 }
+
+.comboIcon{
+    margin-left: auto;
+    transition: .3s;
+}
+.comboIcon.on{
+    transform: rotate(45deg);
+    transition: .3s;
+}

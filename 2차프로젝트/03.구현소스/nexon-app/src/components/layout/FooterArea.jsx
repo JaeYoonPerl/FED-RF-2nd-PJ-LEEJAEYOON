@@ -2,6 +2,9 @@
 import { Link } from "react-router-dom";
 import { menu } from "../data/gnb";
 
+// 폰트어썸 불러오기
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 // 하단 메뉴 데이터 불러오기
@@ -22,6 +25,7 @@ import "../../css/footer_area.scss";
 export default function FooterArea() {
     const showHideCombo = ()=>{
         $(".combo-box").toggleClass("on");
+        $(".comboIcon").toggleClass("on");
     }
 
     // 코드 리턴구역 ////
@@ -64,7 +68,8 @@ export default function FooterArea() {
             </div>
                     <div className="comboBtn" onClick={showHideCombo}>
                         <h3>Family Site</h3>
-                        
+                        <FontAwesomeIcon icon={faPlus} className="comboIcon" 
+                        style={{color:"white", fontSize:"16px"}} />
                     </div>
         </footer>
     );
