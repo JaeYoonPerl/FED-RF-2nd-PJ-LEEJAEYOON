@@ -83,7 +83,7 @@ function SlideNextButton() {
     <button className="swiper-button-next" onClick={
         (e) => {
             swiper.slideNext();
-            console.log(swiper.activeIndex,e.currentTarget.previousElementSibling);
+            console.log(swiper.activeIndex);
             if(swiper.activeIndex==6) e.currentTarget.disabled = true;
             else e.currentTarget.previousElementSibling.disabled = false;
         }
