@@ -83,7 +83,7 @@ function SlideNextButton() {
     <button className="swiper-button-next" onClick={
         (e) => {
             swiper.slideNext();
-            console.log(swiper.activeIndex);
+            // console.log(swiper.activeIndex);
             if(swiper.activeIndex==6) e.currentTarget.disabled = true;
             else e.currentTarget.previousElementSibling.disabled = false;
         }
@@ -97,11 +97,11 @@ function SlidePrevButton() {
 
   return (
     <button
-      className="swiper-button-prev"
+      className="swiper-button-prev" 
       onClick={(e) => {
         swiper.slidePrev();
-        console.log(swiper.activeIndex);
-        if(swiper.activeIndex==0) e.currentTarget.disabled = true;
+        // console.log(swiper.activeIndex);
+        if(swiper.activeIndex===0) e.currentTarget.disabled = true;
         else e.currentTarget.nextElementSibling.disabled = false;
     }}
     >

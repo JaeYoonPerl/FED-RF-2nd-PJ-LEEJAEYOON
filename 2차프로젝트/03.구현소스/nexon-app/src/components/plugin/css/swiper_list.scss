@@ -96,12 +96,14 @@
     height: 60px;
     background-color: #fff;
     box-shadow: none;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     font-size: 25px;
     text-align: center;
     line-height: 60px;
     
     transform: scale(0.8);
+
+    cursor: pointer;
   }
   
   .swiper-button-next {
@@ -118,7 +120,7 @@
   /* 슬라이드 끝에서 버튼 숨김 */
   .swiper-button-next.swiper-button-disabled,
   .swiper-button-prev.swiper-button-disabled {
-    // display: none;
+   
   }
   
   /* 기존 화살표 디자인 크기변경 */

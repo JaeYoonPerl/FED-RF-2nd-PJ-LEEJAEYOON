@@ -67,7 +67,7 @@ export default function FooterArea() {
                     <div className="comboBtn" onClick={showHideCombo}>
                         <h3>Family Site</h3>
                         <FontAwesomeIcon icon="fa-duotone fa-plus" />
-                        {/* <FontAwesomeIcon icon={faPlus} className="plusIcon"/> */}
+                        
                     </div>
         </footer>
     );

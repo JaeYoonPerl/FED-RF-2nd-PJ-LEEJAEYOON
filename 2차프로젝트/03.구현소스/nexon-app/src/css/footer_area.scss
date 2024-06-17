@@ -108,6 +108,8 @@ ol.bmenu{
     white-space: nowrap;
     z-index: 20;
     right: 10%;
+
+    display: none;
     
 }
 .combo-box ul{
@@ -118,7 +120,7 @@ ol.bmenu{
     flex-direction: column;
     width: 248px;
     // bottom: 100%;
-    padding: 8px 0;
+    // padding: 8px 0;
     color: #fff;
     background-color: #000;
     border: 1px solid #fff;
@@ -136,6 +138,6 @@ ol.bmenu{
 .combo-box ul li{
     
     font-size: 1.5rem;
-    padding: 0 18px;
+    padding: 0px 18px;
     
 }
