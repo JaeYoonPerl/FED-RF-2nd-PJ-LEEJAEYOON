@@ -100,8 +100,9 @@ function SlidePrevButton() {
       className="swiper-button-prev" 
       onClick={(e) => {
         swiper.slidePrev();
+        
         // console.log(swiper.activeIndex);
-        if(swiper.activeIndex===0) e.currentTarget.disabled = true;
+        if(swiper.activeIndex==0) e.currentTarget.disabled = true;
         else e.currentTarget.nextElementSibling.disabled = false;
     }}
     >
