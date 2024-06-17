@@ -2,7 +2,7 @@
 
 import React, { useEffect, useLayoutEffect } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
 // 제이쿼리 불러오기
 import $ from "jquery";
 
@@ -69,8 +69,8 @@ export function SwiperList({ catName }) {
             </section>
           </SwiperSlide>
         ))}
-        <SlideNextButton />
         <SlidePrevButton />
+        <SlideNextButton />
       </Swiper>
     </>
   );
@@ -80,7 +80,14 @@ function SlideNextButton() {
   const swiper = useSwiper();
 
   return (
-    <button className="swiper-button-next" onClick={() => swiper.slideNext()}>
+    <button className="swiper-button-next" onClick={
+        (e) => {
+            swiper.slideNext();
+            console.log(swiper.activeIndex,e.currentTarget.previousElementSibling);
+            if(swiper.activeIndex==6) e.currentTarget.disabled = true;
+            else e.currentTarget.previousElementSibling.disabled = false;
+        }
+        }>
       <FontAwesomeIcon icon={faChevronRight} />
     </button>
   );
@@ -91,7 +98,12 @@ function SlidePrevButton() {
   return (
     <button
       className="swiper-button-prev"
-      onClick={() => swiper.slidePrev()}
+      onClick={(e) => {
+        swiper.slidePrev();
+        console.log(swiper.activeIndex);
+        if(swiper.activeIndex==0) e.currentTarget.disabled = true;
+        else e.currentTarget.nextElementSibling.disabled = false;
+    }}
     >
         <FontAwesomeIcon icon={faChevronLeft} />
     </button>
