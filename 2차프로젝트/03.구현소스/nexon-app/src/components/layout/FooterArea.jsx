@@ -5,7 +5,8 @@ import { menu } from "../data/gnb";
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-
+import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faSquareYoutube } from "@fortawesome/free-brands-svg-icons";
 
 // 하단 메뉴 데이터 불러오기
 import { bmData } from "../data/bmenu";
@@ -15,7 +16,6 @@ import { comboDataA } from "../data/combo_data_a.js";
 // 제이쿼리
 import $ from "jquery";
 
-
 // 하단영역 CSS 불러오기
 import LogoFoot from "../modules/Logo_foot";
 
@@ -23,15 +23,15 @@ import LogoFoot from "../modules/Logo_foot";
 import "../../css/footer_area.scss";
 
 export default function FooterArea() {
-    const showHideCombo = ()=>{
+    const showHideCombo = () => {
         $(".combo-box").toggleClass("on");
         $(".comboIcon").toggleClass("on");
-    }
+    };
 
     // 코드 리턴구역 ////
     return (
         <footer className="info">
-            <ul>
+            <ul className="leftArea">
                 <li>
                     {/* 하단 링크 박스 */}
                     <ol className="bmenu">
@@ -44,13 +44,23 @@ export default function FooterArea() {
                         ))}
                     </ol>
                 </li>
+                {/* sns 링크 */}
+                <li className="snsLinkBox">
+                    <a href="https://www.facebook.com/NEXON.KR/?locale=ko_KR" target="_blank">
+                        <FontAwesomeIcon icon={faSquareFacebook} />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCZcyI32yv57Zz0Y8-Nr1V9A" target="_blank" >
+                    <FontAwesomeIcon icon={faSquareYoutube} />
+                    </a>
+                </li>
                 <li className="copyright">© NEXON Korea Corporation All Rights Reserved</li>
                 {/* 하단로고 컴포넌트 */}
-                <li>
+                <li className="footLogoBox">
                     <LogoFoot logoStyle="bottom" />
                 </li>
             </ul>
             {/* 콤보박스 */}
+
             <div className="combo-box">
                 <ul>
                     <li>
@@ -66,11 +76,14 @@ export default function FooterArea() {
                     </li>
                 </ul>
             </div>
-                    <div className="comboBtn" onClick={showHideCombo}>
-                        <h3>Family Site</h3>
-                        <FontAwesomeIcon icon={faPlus} className="comboIcon" 
-                        style={{color:"white", fontSize:"16px"}} />
-                    </div>
+            
+                {/* 콤보박스 열기버튼 */}
+                <div className="comboBtn" onClick={showHideCombo}>
+                    <h3>Family Site</h3>
+                    <FontAwesomeIcon icon={faPlus} className="comboIcon" style={{ color: "white", fontSize: "16px" }} />
+                </div>
+                
+           
         </footer>
     );
 } /////// FooterArea /////

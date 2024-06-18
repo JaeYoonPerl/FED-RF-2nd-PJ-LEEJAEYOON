@@ -2,7 +2,7 @@
 
 .info{
     // text-align: center;
-    padding: 30px;
+    padding: 15px;
     background-color: #000;
     
     display: flex;
@@ -17,6 +17,9 @@
     
     height: 100%;
 }
+.leftArea{
+    width: 50%;
+}
 
 .info>ul>li:last-child{
     font-weight: bold;
@@ -27,7 +30,8 @@ ol.bmenu{
    
     display: flex;
     // justify-content: center;
-    margin: 15px 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 .bmenu li{
     padding: 0 10px;
@@ -68,6 +72,45 @@ ol.bmenu{
     padding-bottom: 10px;
     color: #ffffffa2;
 }
+
+
+
+// SNS 아이콘
+.snsLinkBox{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #fff;
+    font-size: 30px;
+    gap: 10px;
+    margin-bottom: 2%;
+    padding: 0 10px;
+    cursor: pointer;
+    a{
+        text-decoration: none;
+        
+        color: #969696;
+        transition: .3s
+        }
+        
+}
+.snsLinkBox a:hover{
+    color: #fff;
+    transition: .3s;
+}
+.copyright{
+    
+    padding: 0 10px
+    
+}
+.footLogoBox{
+    
+    padding: 5px 10px
+    
+}
+
+// 콤보박스
 .comboBtn{
     display: flex;
     position: absolute;
@@ -116,7 +159,7 @@ ol.bmenu{
 .combo-box.on{
 //    display: block;
    opacity: 1;
-   top: -130%;
+   top: -116%;
    transition: .3s;
    pointer-events:auto;
 }    

@@ -15,6 +15,10 @@ export default function Main(){
     // 화면 랜더링 실행구역
     useEffect(()=>{
         window.addEventListener("wheel",wFn.wheelFn);
+
+        return(()=>{
+            // window.removeEventListener("wheel",wFn.wheelFn);
+        })  
     },[]);
 
 
