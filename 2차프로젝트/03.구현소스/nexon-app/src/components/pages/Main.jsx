@@ -14,7 +14,12 @@ import * as wFn from "../func/auto_wheel";
 export default function Main(){
     // 화면 랜더링 실행구역
     useEffect(()=>{
+        // 1. 자동 휠
         window.addEventListener("wheel",wFn.wheelFn);
+
+        // 등장요소 CSS초기화 함수 호출
+        wFn.initSet();
+
 
         return(()=>{
             // window.removeEventListener("wheel",wFn.wheelFn);
@@ -25,6 +30,7 @@ export default function Main(){
     // 코드 리턴구역 ////
     return(
         <>
+        <section className="page">
         <div className ="firstitnro">
            {/* 1. 인트로 구역 */}
            <video className="mainV" autoPlay loop muted>
@@ -39,14 +45,22 @@ export default function Main(){
             </div>
             </div>
         </div>
+        </section>
             {/* 2. COMPANY 인트로 구역 */}
-            <MainIntro catname="company" clsName="off"/>
+            <section className="page">
+            <MainIntro catname="company" clsName="off" />
+            </section>
 
             {/* 3. GAME 인트로 구역 */}
-            <MainIntro catname="game" clsName="secIntro"/>
+            <section className="page">
+
+            <MainIntro catname="game" clsName="secIntro" />
+            </section>
 
             {/* 5. news 인트로 구역 */}
-            <MainNews catName="news"/>
+            <section className="page">
+            <MainNews catName="news" />
+            </section>
         </>
     );
 } /////// Main /////

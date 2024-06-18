@@ -156,20 +156,21 @@ function initSet() {
   // 1. 초기화하기
 
   // 대상: 이미지 - .imgc
-  $(".imgc").css({
-    transform: "rotate(45deg)",
-    transformOrigin: "-10% -10%",
-    opacity: 0,
-    transition: "1s ease-in-out",
-  }); /////////// css //////////
+  // $(".imgc").css({
+  //   transform: "rotate(45deg)",
+  //   transformOrigin: "-10% -10%",
+  //   opacity: 0,
+  //   transition: "1s ease-in-out",
+  // }); /////////// css //////////
 
   // 대상: 글자 - .txtc a
-  $(".txtc a").css({
-    transform: "rotate(45deg)",
-    transformOrigin: "-100% -100%",
+  $(".introtit").css({
+    // transform: "rotate(45deg)",
+    // transformOrigin: "-100% -100%",
+    
     opacity: 0,
-    transition: "1s ease-in-out .5s",
-    display: "inline-block",
+    transition: "1s ease-in-out .3s",
+    // display: "inline-block",
   }); /////////// css //////////
 } /////////// initSet 함수 ///////////////
 
@@ -178,14 +179,16 @@ function initSet() {
   기능: 페이지 도착후 등장 애니메이션
  *****************************************/
 function actPage() {
-  // console.log("액숀~!!!", pno);
+  console.log("액숀~!!!", pno);
 
   // pno가 0 또는 4가 아니면 작동!
   if (pno != 0 || pno != 4) {
     // 대상: 해당순번 .page 아래 .imgc 와 .txtc a
-    $(".page").eq(pno).find(".imgc,.txtc a").css({
-      transform: "rotate(0deg)",
+    $(".page").eq(pno).find(".introtit").css({
+      // transform: "rotate(0deg)",
+      transform: "translate(50%, 90%)",
       opacity: 1,
+      transition: ".8s ease-in-out",
     }); ///////// css /////////
   } ///////// if //////////////
 
