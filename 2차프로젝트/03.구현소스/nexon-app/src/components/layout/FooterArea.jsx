@@ -1,10 +1,9 @@
-// 하단영역 컴포넌트 ///
-import { Link } from "react-router-dom";
-import { menu } from "../data/gnb";
+import React, { useEffect } from "react";
 
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faSquareYoutube } from "@fortawesome/free-brands-svg-icons";
 
@@ -22,7 +21,23 @@ import LogoFoot from "../modules/Logo_foot";
 // 하단 영역 CSS
 import "../../css/footer_area.scss";
 
+// 자동 휠 함수 불러오기
+import * as wFn from "../func/auto_wheel";
+
 export default function FooterArea() {
+ // 화면 랜더링 실행구역
+ useEffect(()=>{
+    // 1. 자동 휠
+    // window.addEventListener("wheel",wFn.wheelFn);
+    // window.removeEventListener("wheel",wFn.wheelFn);
+    // 등장요소 CSS초기화 함수 호출
+    // wFn.initSet();
+
+
+    
+},[]);
+
+    
     const showHideCombo = () => {
         $(".combo-box").toggleClass("on");
         $(".comboIcon").toggleClass("on");
@@ -30,6 +45,7 @@ export default function FooterArea() {
 
     // 코드 리턴구역 ////
     return (
+        
         <footer className="info">
             <ul className="leftArea">
                 <li>
@@ -84,6 +100,8 @@ export default function FooterArea() {
                 </div>
                 
            
+        
         </footer>
+        
     );
 } /////// FooterArea /////
