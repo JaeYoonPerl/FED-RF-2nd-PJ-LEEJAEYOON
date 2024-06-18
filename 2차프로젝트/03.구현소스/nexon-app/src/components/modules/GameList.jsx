@@ -21,14 +21,16 @@ function GameList(props) {
                             <li className="gImg">
                                 <img src={v.대표이미지} alt={v.게임명} />
                             </li>
-                            <li className="gName">{v.게임명}</li>
-                            <li className="genre">{v.장르}</li>
-                            <li className="platform">
-                                {v.플랫폼[0] == "PC" ? <FontAwesomeIcon icon={faDesktop} /> : ""}
-                                {v.플랫폼[1] == "모바일" ? <FontAwesomeIcon icon={faMobileScreen} /> : ""}
-                                {v.플랫폼[2] == "콘솔" ? <FontAwesomeIcon icon={faGamepad} /> : ""}
-                            </li>
+                            <div className="gtxtBox">
+                                <li className="gName">{v.게임명}</li>
+                                <li className="genre">{v.장르}</li>
+                                <li className="platform">
+                                    {v.플랫폼[0] == "PC" ? <FontAwesomeIcon icon={faDesktop} /> : ""}
+                                    {v.플랫폼[1] == "모바일" ? <FontAwesomeIcon icon={faMobileScreen} /> : ""}
+                                    {v.플랫폼[2] == "콘솔" ? <FontAwesomeIcon icon={faGamepad} /> : ""}
+                                </li>
                             <li></li>
+                            </div>
                         </ol>
                     </Link>
                 </li>
