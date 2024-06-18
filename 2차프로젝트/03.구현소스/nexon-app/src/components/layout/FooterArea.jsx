@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faSquareYoutube } from "@fortawesome/free-brands-svg-icons";
 
 // 하단 메뉴 데이터 불러오기
 import { bmData } from "../data/bmenu";
+
+// 위로 이동 버튼 모듈 불러오기
+import { TopButton } from "../modules/TopButton.jsx";
 
 // 콤보박스 데이터 불러오기
 import { comboDataA } from "../data/combo_data_a.js";
@@ -21,31 +24,19 @@ import LogoFoot from "../modules/Logo_foot";
 // 하단 영역 CSS
 import "../../css/footer_area.scss";
 
-// 자동 휠 함수 불러오기
-import * as wFn from "../func/auto_wheel";
+
 
 export default function FooterArea() {
  // 화면 랜더링 실행구역
- useEffect(()=>{
-    // 1. 자동 휠
-    // window.addEventListener("wheel",wFn.wheelFn);
-    // window.removeEventListener("wheel",wFn.wheelFn);
-    // 등장요소 CSS초기화 함수 호출
-    // wFn.initSet();
-
-
-    
-},[]);
-
-    
     const showHideCombo = () => {
         $(".combo-box").toggleClass("on");
         $(".comboIcon").toggleClass("on");
     };
 
+
     // 코드 리턴구역 ////
     return (
-        
+        <>
         <footer className="info">
             <ul className="leftArea">
                 <li>
@@ -94,14 +85,13 @@ export default function FooterArea() {
             </div>
             
                 {/* 콤보박스 열기버튼 */}
-                <div className="comboBtn" onClick={showHideCombo}>
+                <div className="comboBtn " onClick={showHideCombo}>
                     <h3>Family Site</h3>
                     <FontAwesomeIcon icon={faPlus} className="comboIcon" style={{ color: "white", fontSize: "16px" }} />
                 </div>
-                
-           
-        
         </footer>
+                        < TopButton />
+                </>
         
     );
 } /////// FooterArea /////
