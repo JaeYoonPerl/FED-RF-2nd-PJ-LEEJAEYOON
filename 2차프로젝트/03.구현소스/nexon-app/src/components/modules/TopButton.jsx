@@ -8,10 +8,10 @@ export const TopButton = () => {
   const [showButton, setShowButton] = useState(false);
 
   const scrollToTop = () => {
-    // window.scrollTo(0,0)
+    
     window.scroll({
       top: 0,
-      behavior: 'auto'
+      behavior: 'smooth'
     })
 
   }
@@ -32,7 +32,7 @@ export const TopButton = () => {
   return (
     <>
       {showButton &&
-          <div className="tbtn fi">
+          <div className="tbtn fi" onClick={scrollToTop}>
           <FontAwesomeIcon icon={faArrowUp}className="upBtn" style={{fontSize:"32px", lineHeight:"30px"}}/>
         </div>
       }
