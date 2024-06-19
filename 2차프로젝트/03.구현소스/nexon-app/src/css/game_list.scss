@@ -4,17 +4,35 @@
 .ul>li{
     flex-basis: calc(100% / var(--show-num) - 20px);
 }
+
+// 게임리스트 전체박스
+.gListSec{
+    clear: both;
+    position: relative;
+    max-width: 1328px;
+    padding-left: 24px;
+    margin: 0 auto;
+}
+.gListSec>h2{
+    height: 40px;
+    font-size: 3rem;
+    padding-top: 20px;
+}
+.filter{
+    position: relative;
+    padding: 20px 30px 3px;
+    margin: 29px 24px 20px 0;
+    background-color: #fff;
+}
+
+// 게임리스트
 .gArea{
     display: flex;
-    
     flex-wrap: wrap;
     gap: 40px 30px;
     list-style: none;
-    padding: 5% 0;
-    padding-top: 20px;
-    margin: 0 auto;
-    padding-left: 8%;
-    max-width: 1380px;
+    padding: 40px 0;
+    
 }
 .gBox{
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
