@@ -8,7 +8,7 @@ export const TopButton = () => {
   const [showButton, setShowButton] = useState(false);
 
   const scrollToTop = () => {
-    // setPos(0);
+    
     window.scroll({
       top: 0,
       behavior: 'smooth'

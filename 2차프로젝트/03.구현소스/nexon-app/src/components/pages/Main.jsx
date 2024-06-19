@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import { ivideo } from "../data/intro_video";
 import MainIntro from "../modules/MainIntro";
 import MainNews from "../modules/MainNews";
