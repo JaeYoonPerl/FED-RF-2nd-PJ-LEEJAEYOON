@@ -1,7 +1,7 @@
 // 상단영역 컴포넌트 ///
 
 // GNB 데이터 불러오기
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { menu } from "../data/gnb";
 
 // 상단영역 CSS 불러오기
@@ -9,6 +9,9 @@ import "../../css/top_area.scss";
 import Logo from "../modules/Logo";
 
 export default function TopArea() {
+    // 이동 함수 ///
+    const goNav = useNavigate();
+
     // 코드 리턴구역 ////
     return (
         <>
@@ -18,9 +21,17 @@ export default function TopArea() {
 
                 {/* 1. 로고 컴포넌트 */}
                 <li className="logoTop">
-                    <Link to="/">
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            // 기본이동막기
+                            e.preventDefault();
+                            // 라우터 이동 메서드 호출
+                            goNav("/");
+                        }}
+                    >
                         <Logo logoStyle="top" />
-                    </Link>
+                    </a>
                 </li>
                 {/* 네비게이션 GNB파트 */}
                 <nav className="gnb">
@@ -34,9 +45,7 @@ export default function TopArea() {
                     </ul>
                 </nav>
                 {/* 서브 메뉴 */}
-                <nav className="smenu">
-                    
-                </nav>
+                <nav className="smenu"></nav>
             </header>
         </>
     );

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { ivideo } from "../data/intro_video";
 import MainIntro from "../modules/MainIntro";
 import MainNews from "../modules/MainNews";
@@ -19,12 +19,14 @@ export default function Main(){
 
         // 등장요소 CSS초기화 함수 호출
         wFn.initSet();
-
-
         return(()=>{
-            // window.removeEventListener("wheel",wFn.wheelFn);
+            window.removeEventListener("wheel",wFn.wheelFn);
         })  
     },[]);
+    // useLayoutEffect(()=>{
+    //   console.log("useLayoutEffect");
+    //  
+    // },[]);
 
 
     // 코드 리턴구역 ////

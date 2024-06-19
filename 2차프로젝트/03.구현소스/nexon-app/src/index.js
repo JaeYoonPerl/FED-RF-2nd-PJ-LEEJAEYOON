@@ -2,6 +2,8 @@ import React from "react";
 import  ReactDOM  from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
+import ScrollToTop from "./components/func/ScrollToTop";
+
 import Main from "./components/pages/Main";
 import Game from "./components/pages/Game";
 import Company from "./components/pages/Company";
@@ -16,6 +18,7 @@ import "../src/css/index.scss";
 export default function MainComponent() {
     return (
         <BrowserRouter>
+        <ScrollToTop>
             <Routes>
             <Route path="/" element={<Layout/>}>
                 {/* 하위 라우트 셋팅 */}
@@ -24,9 +27,9 @@ export default function MainComponent() {
                 <Route path="game" element={<Game/>}/>
                 <Route path="people" element={<People/>}/>
                 <Route path="news" element={<News/>}/>
-
             </Route>
             </Routes>
+            </ScrollToTop>
         </BrowserRouter>
     );
 }
