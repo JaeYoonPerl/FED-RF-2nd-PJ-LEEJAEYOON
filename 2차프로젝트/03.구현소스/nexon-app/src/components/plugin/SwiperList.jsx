@@ -64,7 +64,7 @@ export function SwiperList({ catName }) {
               {/* 이미지박스 */}
               <div className="mnews-img">
                 <img src={v.isrc} alt={v.tit} />
-                {/* 폰트어썸 아이콘 */}
+                
               </div>
             </section>
           </SwiperSlide>

@@ -3,11 +3,13 @@
   }
   
   .swiper {
-    top: 15%;
+    top: 22%;
     width: 100%;
     padding: 10px;
     margin: 20px 0;
     box-sizing: border-box;
+    height: 500px;
+    
   }
   
   .swiper-slide {
@@ -15,11 +17,11 @@
     font-size: 18px;
     background: #fff;
   
-    /* Center slide text vertically */
+   max-height: 390px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    
   }
   
   .swiper-slide img {
@@ -31,9 +33,9 @@
   
   /* 타이틀박스 */
   .tit {
-    // font-family: "Ubuntu Condensed", sans-serif;
+    
     font-size: 40px;
-    /* background: url(../../../public/images/dcm1.jpg); */
+    
   }
   
   /* 컨텐츠 박스 */
