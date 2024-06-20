@@ -19,6 +19,8 @@ export default function Main(){
 
         // 등장요소 CSS초기화 함수 호출
         wFn.initSet();
+
+        wFn.zeroPno();
         return(()=>{
             window.removeEventListener("wheel",wFn.wheelFn);
         })  

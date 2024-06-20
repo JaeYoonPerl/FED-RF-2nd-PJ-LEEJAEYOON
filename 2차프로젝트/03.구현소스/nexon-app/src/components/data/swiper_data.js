@@ -1,5 +1,5 @@
-export const swData = {
-    news: [
+export const swData = 
+   [
         {
             idx: "1",
             isrc: "/images/m_news/mnews01.png",
@@ -197,5 +197,5 @@ export const swData = {
             ^
             2013년 넥슨에 합류한 김정욱 대표는 풍부한 경험을 바탕으로 넥슨의 대내외 커뮤니케이션을 담당해왔으며 2020년부터 CCO(Chief Communication Officer, 최고커뮤니케이션책임자)를 맡아 넥슨의 경영지원 및 커뮤니케이션 부문 전반을 이끌었다. 또한 2018년 설립된 넥슨재단의 이사장을 겸임하며 넥슨컴퍼니의 사회공헌 활동을 주도하는 등 넥슨의 기업 이미지 제고 및 사회적 책임 강화에 큰 역할을 했다.`,
         },
-    ],
-};
+    ];
+

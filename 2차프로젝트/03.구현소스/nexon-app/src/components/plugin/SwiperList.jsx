@@ -26,9 +26,9 @@ import { swData } from "../data/swiper_data";
 // (여기서는 네비게이션 - 양쪽 이동 버튼)
 // import { Navigation } from "swiper/modules";
 
-export function SwiperList({ catName }) {
+export function SwiperList() {
     // 선택데이터 변수할당
-    const selData = swData[catName];
+    const selData = swData;
 
     return (
         <>
@@ -61,7 +61,14 @@ export function SwiperList({ catName }) {
                                 <Link
                                   to="/detail" style={{ textDecoration: "none"}}
                                   // state로 데이터 넘기기
-
+                                    state={{
+                                        isrc:v.isrc, // 이미지
+                                        date:v.date, // date
+                                        tit:v.tit, // 제목
+                                        cate:v.cate, // 카테고리
+                                        isum:v.isum, // 요약
+                                        txt:v.txt, // 본문
+                                    }}
                                   >
                                     <section className="sw-inbox">
                                         {/* 타이틀 박스 */}

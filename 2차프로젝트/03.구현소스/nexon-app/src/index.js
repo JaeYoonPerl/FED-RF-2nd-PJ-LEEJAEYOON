@@ -9,6 +9,7 @@ import Game from "./components/pages/Game";
 import Company from "./components/pages/Company";
 import People from "./components/pages/People";
 import News from "./components/pages/News";
+import MNewsDetail from "./components/pages/MNewsDetail";
 
 // 전체 공통 CSS 불러오기
 import "../src/css/index.scss";
@@ -27,6 +28,7 @@ export default function MainComponent() {
                 <Route path="game" element={<Game/>}/>
                 <Route path="people" element={<People/>}/>
                 <Route path="news" element={<News/>}/>
+                <Route path="detail" element={<MNewsDetail/>}/>
             </Route>
             </Routes>
             </ScrollToTop>
