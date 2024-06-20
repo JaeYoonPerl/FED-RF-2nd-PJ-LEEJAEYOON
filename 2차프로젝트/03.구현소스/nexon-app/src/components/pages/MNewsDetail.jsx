@@ -45,7 +45,7 @@ function MNewsDetail() {
 
                     <ul>
                         {isum.map((v, i) => (
-                            <li key={i}>{isum[i]}</li>
+                            <li key={i} className="sum">{isum[i]}</li>
                             ))}
                     </ul>
                     </div>
