@@ -9,6 +9,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 // 자동 휠 함수 불러오기
 import * as wFn from "../func/auto_wheel";
+import MainPeople from "../modules/MainPeople";
 // 메인 페이지 컴포넌트 ///
 
 export default function Main(){
@@ -60,6 +61,10 @@ export default function Main(){
 
             <MainIntro catname="game" clsName="secIntro" />
             </section>
+            {/* 4. PEoPle 인트로 구역 */}
+            {/* <section className="page">
+                <MainPeople />
+            </section> */}
 
             {/* 5. news 인트로 구역 */}
             <section className="page">

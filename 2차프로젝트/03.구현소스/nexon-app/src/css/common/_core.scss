@@ -1,17 +1,12 @@
 /* DC.com 핵심공통 CSS - core.css */
+@font-face{
+    font-family: NS;
+    src: url(../../static/NotoSansKR-Regular.ttf) format("ttf");
+}
+
 /* Ubuntu체 */
-// @font-face {
-//     font-family: 'Ubuntu';
-//     src: url(../../static/fonts/Ubuntu-Regular.woff2) format("woff2");
-// }
-
-// /* Ubuntu Condensed체 */
-// @font-face {
-//     font-family: 'Ubuntu Condensed';
-//     src: url(../../static/fonts/UbuntuCondensed-Regular.woff2) format("woff2");
-// }
-
-/* 
-font-family: 'Ubuntu', sans-serif;
-font-family: 'Ubuntu Condensed', sans-serif;
-*/
+@font-face {
+    font-family: UB;
+    src: url(../../static/UbuntuCondensed-Regular.woff) format("woff");
+  }
+  

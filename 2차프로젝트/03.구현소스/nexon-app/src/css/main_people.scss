@@ -1,0 +1,14 @@
+.mPeopleBox{
+    height: 100vh;
+    position: relative;
+}
+.flowbx ul{
+    position: relative;
+    left: 0; /* 움직일 기준값 */
+    display: flex;
+}
+
+.flowbx ul li{
+    position: relative;
+    gap: 10px;
+}

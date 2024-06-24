@@ -30,7 +30,7 @@ function MNewsDetail() {
                     <div className="cate-box">
                         <p>{cate}</p>
                     </div>
-                    <div className="tit-box">
+                    <div className="mtit-box">
                         <h2>{tit}</h2>
                     </div>
                     <div className="date">
