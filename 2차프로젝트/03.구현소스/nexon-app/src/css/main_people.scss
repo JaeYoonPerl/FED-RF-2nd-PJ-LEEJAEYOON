@@ -1,6 +1,56 @@
+
 .mPeopleBox{
-    height: 100vh;
     position: relative;
+    height: 100vh;
+}
+.mptitbox{
+    
+    position: relative;
+    top: 15%;
+    flex-direction: column;
+    display: flex;
+    padding: 0 20px;
+}
+.mPeopleBox h2{
+    
+    font-size: 7vw;
+    color: #000;
+}
+.mplinktxtn{
+    font-size: 1.3vw;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    // position: absolute;
+    // display: flex;
+    transition: .3s;
+    left: 2%;
+    position: relative;
+}
+
+.mplinktxtn::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    z-index:100;
+    transition: width .3s ease-out;
+}
+.mplinktxtn:hover::after{
+    width: 100%;
+}
+.mptitbox p{
+    font-size: 1.6rem;
+}
+
+.flowbx{
+    position: relative;
+    width: 100%;
+    top: 30%;
 }
 .flowbx ul{
     position: relative;
@@ -12,3 +62,21 @@
     position: relative;
     gap: 10px;
 }
+
+/* 움직일 리스트박스 */
+.flist {
+    position: relative;
+    left: 0; /* 움직일 기준값 */
+    display: flex;
+}
+/* 리스트 하위 li */
+.flist li {
+    position: relative;
+    /* 부모자격 - 설명박스 */
+    padding: 0 10px;
+}
+/* 리스트 상품 이미지 */
+.flist li img {
+    width: 400px;
+}
+

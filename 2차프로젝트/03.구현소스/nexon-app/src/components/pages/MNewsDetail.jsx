@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { useLocation } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 import { SwiperList } from "../plugin/SwiperList";
 import MainNews from "../modules/MainNews";
 
@@ -59,6 +59,12 @@ function MNewsDetail() {
                             ))
                         }
                     </div>
+                </div>
+                {/* 목록으로가기 */}
+                <div className="goBack">
+                    <Link to="/news" className="gobackBtn">
+                        목록보기
+                    </Link>
                 </div>
             </div>
         </>

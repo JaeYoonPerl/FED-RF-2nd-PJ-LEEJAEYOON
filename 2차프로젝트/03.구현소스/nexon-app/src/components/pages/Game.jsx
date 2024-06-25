@@ -3,6 +3,9 @@ import React from "react";
 import GameList from "../modules/GameList";
 import SubPgIntro from "../modules/SubPgIntro";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+
 
 import "../../css/game_info.scss";
 
@@ -16,12 +19,19 @@ export default function Game(){
            <GameList/>
         </div>
 
+
+        {/* 클릭 팝업창 */}
         <div className="game-bx">
            <div className="ginfo-inbox">
 
             <h2 className="game-tit"></h2>
-            <img className="game-img" src="" alt="대표이미지" />
-            <p className="game-txt"></p>
+
+            <a href="" target="_blank" className="ghomebtn">
+                <FontAwesomeIcon icon={faHouse} className="ghicon" />
+            </a>
+
+            <iframe src="" allow="autoplay"></iframe>
+            
 
             {/* 닫기버튼 */}
             <button className="cbtn">×</button>

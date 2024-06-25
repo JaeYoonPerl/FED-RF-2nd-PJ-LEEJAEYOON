@@ -62,9 +62,9 @@ export default function Main(){
             <MainIntro catname="game" clsName="secIntro" />
             </section>
             {/* 4. PEoPle 인트로 구역 */}
-            {/* <section className="page">
+            <section className="page">
                 <MainPeople />
-            </section> */}
+            </section>
 
             {/* 5. news 인트로 구역 */}
             <section className="page">

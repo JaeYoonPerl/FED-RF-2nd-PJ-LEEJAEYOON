@@ -15,32 +15,34 @@ import "../../css/game_list.scss";
 function GameList(props) {
 
     // 게임 정보 창
-    const showGame =(게임명, 대표이미지,장르,홈페이지,플랫폼,txt) =>{
-        // console.log(게임명, 대표이미지,장르,홈페이지,플랫폼,txt);
+    const showGame =(게임명,gsrc,홈페이지) =>{
+        console.log(gsrc);
 
         // 전체 게임 박스
         const gb = $(".game-bx");
         // 타이틀 박스
         const gtit =$(".game-tit");
-        // 이미지 박스
-        const gimg =$(".game-img");
-        // 텍스트 박스
-        const gtxt =$(".game-txt");
+        // 홈페이지 링크
+        const ghome = $(".game-bx a")
+        // 동영상 박스
+        const ifr =$(".game-bx iframe");
+        
         // 닫기 버튼
         const cbtn = $(".cbtn");
         
         // 경로
         gtit.text(게임명);
-        gimg.attr("src",대표이미지);
-        gtxt.text(txt);
-        
-
+        ifr.attr("src", gsrc + "?autoplay=1");
+        ghome.attr("href",홈페이지);
         gb.fadeIn(300);
+
 
         cbtn.on("click", () => {
             // 전체박스 사라지기
             gb.fadeOut(300);
-            
+            // 기존 동영상 플레이 멈추기(src값 삭제)
+            ifr.attr("src", "");
+            ghome.attr("href", "");
         }); ////click
     }
 
@@ -51,7 +53,7 @@ function GameList(props) {
             <div className="filter"></div>
             <ul className="gArea">
                 {gameData.map((v, i) => (
-                    <li key={i} className="gBox" onClick={()=>showGame(v.게임명, v.대표이미지,v.장르,v.홈페이지,v.플랫폼,v.txt)}>
+                    <li key={i} className="gBox" onClick={()=>showGame(v.게임명,v.gsrc,v.홈페이지)}>
                         <div className="g-inbox">
                         {/* <Link to="/" className="gListLink"> */}
                             <ol className="gList">

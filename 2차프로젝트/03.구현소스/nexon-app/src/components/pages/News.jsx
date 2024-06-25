@@ -2,6 +2,7 @@
 
 import React from "react";
 import SubPgIntro from "../modules/SubPgIntro";
+import NewsList from "../modules/NewsList";
 
 
 export default function News(){
@@ -13,6 +14,7 @@ export default function News(){
         <div>
            
            <SubPgIntro catname="news" />
+           <NewsList/>
         </div>
     );
 } /////// News /////

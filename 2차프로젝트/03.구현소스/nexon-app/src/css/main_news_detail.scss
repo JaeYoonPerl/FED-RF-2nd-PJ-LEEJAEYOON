@@ -42,15 +42,44 @@
     flex-direction: column;
     
 }
+.intro-box img{
+    width: 500px;
+    height: 352px;
+}
 .txt-box{
     padding: 20px 0;
 }
 .sum{
     list-style:square;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .intro-box p{
     font-size: 16px;
     line-height: 30px;
+}
+
+
+.goBack{
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s  linear;
+}
+.gobackBtn{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.goBack:hover{
+    background-color: #00000081;
+    transition: .3s  linear;
 }
