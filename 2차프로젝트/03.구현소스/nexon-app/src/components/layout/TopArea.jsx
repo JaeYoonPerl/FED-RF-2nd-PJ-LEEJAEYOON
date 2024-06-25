@@ -8,9 +8,26 @@ import { menu } from "../data/gnb";
 import "../../css/top_area.scss";
 import Logo from "../modules/Logo";
 
+// 제이쿼리
+import $ from "jquery";
+
 export default function TopArea() {
     // 이동 함수 ///
     const goNav = useNavigate();
+
+    // 햄버거 버튼 열기 닫기
+    const showHideMenu = (e) => {
+        $(".mbox").fadeToggle(300);
+        $(e.currentTarget).toggleClass("on");
+    };
+    // 클릭시 메뉴 닫기
+
+    const exitMenu =(e) =>{
+        $(".mbox").fadeToggle(300);
+
+        $(e.currentTarget).toggleClass("on");
+        $(".ham").toggleClass("on");
+    }
 
     // 코드 리턴구역 ////
     return (
@@ -35,15 +52,32 @@ export default function TopArea() {
                 </li>
                 {/* 네비게이션 GNB파트 */}
                 <nav className="gnb">
-                    <ul>
+                    <ul className="gnbul">
                         {/* 2. GNB메뉴 데이터 배열로 만들기 */}
                         {menu.map((v, i) => (
-                            <li key={i}>
+                            <li key={i} className="gnbli">
                                 <Link to={v.link}>{v.txt}</Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
+                {/* 햄버거 버튼 */}
+                <div className="ham" onClick={showHideMenu}>
+                    <span></span> <span></span> <span></span>
+                </div>
+                {/* 모바일 GNB */}
+                <div className="mbox">
+                    <nav className="mlist">
+                        <ul className="ham_ul">
+                            {menu.map((v, i) => (
+                                <li key={i} className="ham_li">
+                                    <Link to={v.link} className="mHamA" onClick={exitMenu}>{v.txt}</Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                </div>
+
                 {/* 서브 메뉴 */}
                 <nav className="smenu"></nav>
             </header>
