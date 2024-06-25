@@ -15,7 +15,7 @@ function MainPeople(props) {
     useLayoutEffect(()=>{
         lpos.current=0;
         callSts.current=1;
-    },[]);
+    });
 
 
     const makeList = () => {
