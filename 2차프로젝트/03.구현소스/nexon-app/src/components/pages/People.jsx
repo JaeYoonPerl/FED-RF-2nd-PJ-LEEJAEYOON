@@ -5,6 +5,7 @@ import PeopleStory from "../modules/PeopleStory";
 
 import "../../css/people_sub.scss";
 import PeopleLifeSw from "../plugin/PeopleLifeSw";
+import Tab from "../modules/Tab";
 
 export default function People() {
     // 코드 리턴구역 ////
@@ -15,6 +16,8 @@ export default function People() {
                 <PeopleStory />
 
                 <PeopleLifeSw />
+
+                <Tab/>
             </div>
         </>
     );

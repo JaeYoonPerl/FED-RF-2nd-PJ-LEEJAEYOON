@@ -1,6 +1,7 @@
 import React from "react";
 import  ReactDOM  from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Layout from "./components/layout/Layout";
 import ScrollToTop from "./components/func/ScrollToTop";
 
@@ -19,6 +20,7 @@ import "../src/css/index.scss";
 export default function MainComponent() {
     return (
         <BrowserRouter>
+       < ScrollGoTop/>
         <ScrollToTop>
             <Routes>
             <Route path="/" element={<Layout/>}>
@@ -35,6 +37,28 @@ export default function MainComponent() {
         </BrowserRouter>
     );
 }
+const ScrollGoTop = ()=>{
+
+    // 라우터 경로 변경시 path값 읽어오기
+    // pathname 객체 속성에 담긴다.
+
+    
+    const {pathname} = useLocation();
+    
+    // 화면랜더링 구역에 스크롤 상단이동 코드넣기
+    useEffect(()=>{
+        // 스크롤 최상단 이동
+        window.scrollTo(0,0);
+        // 변경된 라우터 경로값 확인
+        console.log("라우터 경로",pathname);
+
+    },[pathname]);
+    // 의존성을 라우터 경로 변수로 설정한다.
+
+    // 컴포넌트 리턴이 필요하나 
+    // 소스 리턴이 아니므로 null을 쓴다.
+    return null;
+}; /////////// ScrollTop컴포넌트
 
 // 컴포넌트 출력
 // 먼저 root 객체 만들기

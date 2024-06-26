@@ -1,0 +1,88 @@
+:root{
+    --show-num:3;
+}
+.ul>li{
+    flex-basis: calc(100% / var(--show-num) - 20px);
+}
+
+.tabsec{
+    padding-top: 50px;
+}
+
+.TabMenu {
+    // background-color: #dcdcdc;
+    color: #747a86;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 7rem;
+    margin-top: 10px;
+}
+.submenu {
+    
+    display: flex;
+    height: 50px;
+    width: calc(100% / 3);
+    padding: 10px;
+    font-size: 15px;
+    transition: 0.5s;
+    border: 1px solid #747a8698;
+    border-bottom: 2px solid black ;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease-in;
+    
+}
+.focused {
+    
+    background-color: #f8f9fa;
+    color: rgb(21, 20, 20);
+    border: 2px solid black;
+    border-bottom: none;
+    scale: 1.005;
+    transition: .3s ease-in;
+}
+.Desc{
+   
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 30px;
+        list-style: none;
+        padding: 40px 0;
+        
+    
+}
+
+.dbox{
+    
+    height: 230px;
+    background-color: #f8f9fa;
+    transition: all .15s linear;
+    
+    overflow: hidden;
+    width: 300px;
+}
+
+li{
+    list-style: none;
+}
+.dbox img{
+    padding: 5px;
+}
+
+.dbox h3{
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+}
+.dbox p{
+    color: rgba(0, 0, 0, 0.596);
+    white-space: pre-line;
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: 700;
+}
