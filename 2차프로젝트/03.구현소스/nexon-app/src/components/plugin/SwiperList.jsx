@@ -35,7 +35,7 @@ export function SwiperList() {
             <Swiper
                 // slidesPerView={4.5}
                 spaceBetween={20}
-                navigation={true}
+                // navigation={true}
                 /* 사용할 모듈을 여기에 적용시킨다 */
                 // modules={[Navigation]}
                 breakpoints={{
@@ -97,7 +97,7 @@ function SlideNextButton() {
 
     return (
         <button
-            className="swiper-button-next"
+            className="swiper-button-nextN"
             onClick={(e) => {
                 swiper.slideNext();
                 // console.log(swiper.activeIndex);
@@ -114,7 +114,7 @@ function SlidePrevButton() {
 
     return (
         <button
-            className="swiper-button-prev"
+            className="swiper-button-prevN"
             onClick={(e) => {
                 swiper.slidePrev();
 

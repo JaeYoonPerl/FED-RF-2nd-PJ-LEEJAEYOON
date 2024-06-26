@@ -97,8 +97,8 @@
   
   /* 기존 스와이퍼 디자인 변경 */
   
-  .swiper-button-prev,
-  .swiper-button-next {
+  .swiper-button-prevN,
+  .swiper-button-nextN {
     position: absolute;
     z-index: 1;
     top: -5px;
@@ -118,14 +118,14 @@
     cursor: pointer;
   }
   
-  .swiper-button-next {
+  .swiper-button-nextN {
   }
   // .swiper-button-next::after {
   //   position: absolute;
   //   transform: translate(50%,50%);
   //   content: '<';
   // }
-  .swiper-button-prev {
+  .swiper-button-prevN {
     right: 70px;
   }
   
@@ -136,13 +136,13 @@
   }
   
   /* 기존 화살표 디자인 크기변경 */
-  .swiper-button-prev::after,
-  .swiper-button-next::after{
+  .swiper-button-prevN::after,
+  .swiper-button-nextN::after{
       font-size: 25px;
   }
   /* 오버시 화살표색 변경 */
-  .swiper-button-prev:hover::after,
-  .swiper-button-next:hover::after{
+  .swiper-button-prevN:hover::after,
+  .swiper-button-nextN:hover::after{
       color: #000;
   }
   
