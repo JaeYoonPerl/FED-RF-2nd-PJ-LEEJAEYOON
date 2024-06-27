@@ -19,7 +19,7 @@ import "../src/css/index.scss";
 
 export default function MainComponent() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
        < ScrollGoTop/>
         <ScrollToTop>
             <Routes>
