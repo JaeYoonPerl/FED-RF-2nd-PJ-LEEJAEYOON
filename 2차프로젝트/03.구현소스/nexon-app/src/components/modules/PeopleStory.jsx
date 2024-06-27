@@ -24,7 +24,7 @@ function PeopleStory(props) {
             </ul>
             <div className="ntBtn">
                 <a href="https://blog.nexon.com/" target="_blank">
-                    <button><img src={nexonTag.nTimg} alt="넥슨태그" /></button>
+                    <button><img src={process.env.PUBLIC_URL+nexonTag.nTimg} alt="넥슨태그" /></button>
                 </a>
             </div>
         </div>

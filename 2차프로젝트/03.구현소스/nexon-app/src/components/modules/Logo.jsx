@@ -31,7 +31,7 @@ export default function Logo({logoStyle}){
         <h1 style={myStyle[logoStyle]}>
             <img
             style={imgStyle[logoStyle]}
-            src={isrc.logo} alt="Nexon Logo" />
+            src={process.env.PUBLIC_URL+isrc.logo} alt="Nexon Logo" />
         </h1>
     );
 

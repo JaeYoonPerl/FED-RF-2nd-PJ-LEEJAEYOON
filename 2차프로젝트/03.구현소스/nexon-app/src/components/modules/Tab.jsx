@@ -26,7 +26,7 @@ function Tab() {
                     {ptabData[currentTab].tit.map((v, i) => (
                         <li key={i} className="dbox">
                             <div>
-                            <img src={ptabData[currentTab].src[i]} alt={ptabData[currentTab].tit[i]} />
+                            <img src={process.env.PUBLIC_URL+ptabData[currentTab].src[i]} alt={ptabData[currentTab].tit[i]} />
                             <h3>{ptabData[currentTab].tit[i]}</h3>
                             <p>{ptabData[currentTab].txt[i]}</p>
                             </div>

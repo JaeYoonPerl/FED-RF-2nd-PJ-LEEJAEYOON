@@ -42,7 +42,7 @@ export default function Main(){
         <div className ="firstitnro">
            {/* 1. 인트로 구역 */}
            <video className="mainV" autoPlay loop muted>
-                <source src={ivideo.mainv} type='video/mp4' />
+                <source src={process.env.PUBLIC_URL+ivideo.mainv} type='video/mp4' />
             </video>
             <div className="scroll-down-box">
             <h3 className="scroll-down-txt">SCROLL DOWN</h3>

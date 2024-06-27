@@ -22,7 +22,7 @@ function MainIntro({ catname, clsName }) {
             <div>
                 {/* 배경 동영상 */}
                 <video className="mintrov" autoPlay loop muted>
-                    <source src={selData.video} type="video/mp4" />
+                    <source src={process.env.PUBLIC_URL+selData.video} type="video/mp4" />
                 </video>
                 {/* 제목 */}
                 <div className="txtbox">
