@@ -51,7 +51,7 @@ function MNewsDetail() {
                     </ul>
                     </div>
                     {/* 이미지 */}
-                    <img src={isrc} alt={tit} />
+                    <img src={process.env.PUBLIC_URL+isrc} alt={tit} />
                     {/* 설명 */}
                     <div className="txt-box">
                         {

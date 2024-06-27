@@ -26,7 +26,7 @@ function MainPeople(props) {
                 className={"m" + x}
                 key={x}
                 >
-                    <img src={process.env.PUBLIC_URL+"./images/m_people/member_" + x + ".jpg"} alt="people" />
+                    <img src={process.env.PUBLIC_URL+"/images/m_people/member_" + x + ".jpg"} alt="people" />
                 </li>
             );
         } // for
