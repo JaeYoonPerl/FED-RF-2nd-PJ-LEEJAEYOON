@@ -1,7 +1,7 @@
 // 상단영역 컴포넌트 ///
 
 // GNB 데이터 불러오기
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { menu } from "../data/gnb";
 
 // 상단영역 CSS 불러오기
@@ -28,6 +28,8 @@ export default function TopArea() {
         $(e.currentTarget).toggleClass("on");
         $(".ham").toggleClass("on");
     }
+
+    
 
     // 코드 리턴구역 ////
     return (

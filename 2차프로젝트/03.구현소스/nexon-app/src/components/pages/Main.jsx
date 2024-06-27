@@ -12,6 +12,8 @@ import * as wFn from "../func/auto_wheel";
 import MainPeople from "../modules/MainPeople";
 // 메인 페이지 컴포넌트 ///
 
+
+
 export default function Main(){
     // 화면 랜더링 실행구역
     useEffect(()=>{
@@ -35,6 +37,7 @@ export default function Main(){
     // 코드 리턴구역 ////
     return(
         <>
+        
         <section className="page">
         <div className ="firstitnro">
            {/* 1. 인트로 구역 */}
@@ -70,6 +73,7 @@ export default function Main(){
             <section className="page">
             <MainNews catName="news" />
             </section>
+            
         </>
     );
 } /////// Main /////

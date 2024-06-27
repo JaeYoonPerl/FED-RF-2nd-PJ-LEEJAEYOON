@@ -47,6 +47,7 @@ function MainPeople(props) {
             </div>
 
             <div className="flowbx"
+            
             onMouseEnter={()=>{
                 callSts.current=0;
             }}

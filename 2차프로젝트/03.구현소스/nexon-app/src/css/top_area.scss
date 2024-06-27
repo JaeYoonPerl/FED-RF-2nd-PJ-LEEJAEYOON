@@ -82,6 +82,7 @@
     cursor: pointer;
     /* 손가락모양 */
     z-index: 99999; /* .gbx보다위! */
+    display: none;
   }
   
   /* 햄버거 막대 span공통 */
@@ -150,19 +151,6 @@
     display: none; /* 처음에 안보임 */
     background-color: #000;
 }
-/* 가상요소로 반투명배경 */
-// .mbox::after {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: #000;
-//     // opacity: 1;
-//     z-index: 999999;
-//   }
 
   
 /* 메뉴중앙박스 */
@@ -191,4 +179,14 @@
     font-weight: bold;
     text-decoration: none;
     transition: 0.3;
+}
+
+
+@media screen and (max-width:800px) {
+  .ham{
+    display: block;
+  }
+  .gnb{
+    display: none;
+  }
 }

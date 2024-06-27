@@ -9,6 +9,8 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 import "../../css/game_info.scss";
 
+
+
 export default function Game(){
 
     // 코드 리턴구역 ////

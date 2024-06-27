@@ -5,6 +5,7 @@ import SubPgIntro from "../modules/SubPgIntro";
 import NewsList from "../modules/NewsList";
 
 
+
 export default function News(){
 
    

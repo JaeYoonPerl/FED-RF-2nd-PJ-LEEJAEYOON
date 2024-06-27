@@ -7,6 +7,7 @@ import MainNews from "../modules/MainNews";
 
 import "../../css/main_news_detail.scss";
 
+
 function MNewsDetail() {
     const loc = useLocation();
     const isrc = loc.state.isrc;
