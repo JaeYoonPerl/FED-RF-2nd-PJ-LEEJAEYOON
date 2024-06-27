@@ -19,7 +19,7 @@ import { comboDataA } from "../data/combo_data_a.js";
 import $ from "jquery";
 
 // 하단영역 CSS 불러오기
-import Logo from "../modules/Logo";
+import LogoFoot from "../modules/Logo_foot.jsx";
 
 // 하단 영역 CSS
 import "../../css/footer_area.scss";
@@ -63,7 +63,7 @@ export default function FooterArea() {
                 <li className="copyright">© NEXON Korea Corporation All Rights Reserved</li>
                 {/* 하단로고 컴포넌트 */}
                 <li className="footLogoBox">
-                    <Logo logoStyle="bottom" />
+                    <LogoFoot logoStyle="bottom" />
                 </li>
             </ul>
             {/* 콤보박스 */}
