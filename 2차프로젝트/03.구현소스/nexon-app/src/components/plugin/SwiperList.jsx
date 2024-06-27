@@ -19,7 +19,8 @@ import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons
 import "./css/swiper_list.scss";
 
 // 데이터 불러오기
-import { swData } from "../data/swiper_data";
+import { swDa
+    ta } from "../data/swiper_data";
 
 // import required modules
 // 사용할 스와이퍼 모듈을 불러온다
