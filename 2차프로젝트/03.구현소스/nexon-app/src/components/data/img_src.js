@@ -6,6 +6,6 @@ export const isrc = {
     logo: "/images/logo_w.png",
 
     // 하단 로고
-    footlogo: "https://w7.pngwing.com/pngs/566/611/png-transparent-nexon-hd-logo.png"
+    footlogo: "https://i.namu.wiki/i/PZDFm5974yciyLBkz3viarpVMLiOdE7BBmuYWbSl3HA7uJgPS3pmeJpD2UM7PLn9Ty6Rqpve-3tvadj1IPBS6g.svg"
 
 };
