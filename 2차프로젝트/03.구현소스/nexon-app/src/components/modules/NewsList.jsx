@@ -26,7 +26,7 @@ function NewsList(props) {
                                     }} className='nListLink'>
                                 <ol className='nList'>
                                     <li className='nImg'>
-                                        <img src={process.env.PUBLIC_URL+v.isrc} alt={v.tit} />
+                                        <img src={v.isrc} alt={v.tit} />
                                     </li>
                                     <div className="ntxtBox">
                                         <li className='nName'>{v.tit}</li>

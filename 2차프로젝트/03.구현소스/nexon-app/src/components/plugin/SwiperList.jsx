@@ -78,7 +78,7 @@ export function SwiperList() {
                                         </div>
                                         {/* 이미지박스 */}
                                         <div className="mnews-img">
-                                            <img src={process.env.PUBLIC_URL+v.isrc} alt={v.tit} />
+                                            <img src={v.isrc} alt={v.tit} />
                                         </div>
                                     </section>
                                 </Link>

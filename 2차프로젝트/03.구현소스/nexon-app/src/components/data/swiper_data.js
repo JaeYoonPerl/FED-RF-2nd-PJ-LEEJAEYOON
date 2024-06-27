@@ -2,7 +2,7 @@ export const swData =
    [
         {
             idx: "1",
-            isrc: "/images/m_news/mnews01.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240521/779c0bb3-3dfa-4bd5-8587-e6603b07a7b7/image.png",
             date: "2024.05.21",
             tit: "넥슨, ‘크레이지 아케이드’, ‘카러플’에 창립 30주년 릴레이 이벤트 실시!",
             cate: "게임",
@@ -28,7 +28,7 @@ export const swData =
         },
         {
             idx: "2",
-            isrc: "/images/m_news/mnews02.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240516/6a25971e-0b6c-454c-8daf-842bd2d20f30/image.png",
             date: "2024.05.16",
             tit: "넥슨, ‘마비노기 영웅전’ 시즌4 에피소드9 ‘필사의 저지’ 업데이트!",
             cate: "게임",
@@ -47,7 +47,7 @@ export const swData =
         },
         {
             idx: "3",
-            isrc: "/images/m_news/mnews03.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240508/621764fb-fe76-4b26-bf5f-134e66c33443/%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C%EB%84%A4%EC%98%A4%ED%94%8C%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%82%A0%EA%B8%B0%EB%85%90%ED%96%89%EC%82%AC%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%EC%9D%98%ED%9A%8C%EC%9D%98%EC%9E%A5%ED%91%9C%EC%B0%BD%EC%88%98%EC%83%81.jpg",
             date: "2024.05.07",
             tit: "네오플, 어린이날 맞아 제주시 아동복지 유공기관 표창 수상",
             cate: "",
@@ -64,7 +64,7 @@ export const swData =
         },
         {
             idx: "4",
-            isrc: "/images/m_news/mnews04.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240503/9583bdb4-473a-4b13-b6b2-91618e8d3b2f/%EB%84%A5%EC%8A%A8%EB%84%A5%EC%8A%A8%EC%9E%AC%EB%8B%A85%EC%9B%94%EC%B0%A9%ED%95%9C%EC%84%A0%EB%AC%BC%EC%B2%9C%EC%82%AC%EB%8B%A4%EC%98%A4%EB%B8%8C%EB%A6%AD%ED%82%A4%ED%8A%B8.jpg",
             date: "2024.05.03",
             tit: "넥슨재단, ‘하이파이브 챌린지’와 함께하는 5월 착한선물 릴레이 이벤트 실시",
             cate: "사회공헌",
@@ -83,7 +83,7 @@ export const swData =
         },
         {
             idx: "5",
-            isrc: "/images/m_news/mnews05.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240429/eef67e60-1d71-4780-9cdd-8961720ffbf9/GS25%EC%A0%9C%ED%9C%B4.png",
             date: "2024.04.29",
             tit: "넥슨 ‘블루 아카이브’, 5월 3일부터 GS25와 제휴 이벤트 실시!",
             cate: "게임",
@@ -102,7 +102,7 @@ export const swData =
         },
         {
             idx: "6",
-            isrc: "/images/m_news/mnews06.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240429/59185b85-21f5-46c2-acd6-af16b44c93b6/%EB%A9%94%EC%9D%B4%ED%94%8C%EC%8A%A4%ED%86%A0%EB%A6%AC.png",
             date: "2024.04.26",
             tit: "넥슨 '메이플스토리', 한국조폐공사와 함께 '서울대학교병원 넥슨어린이통합케어센터'에 1억 원 기부",
             cate: "사회공헌",
@@ -125,7 +125,7 @@ export const swData =
         },
         {
             idx: "7",
-            isrc: "/images/m_news/mnews07.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240424/b0d3ea78-0d7e-476c-9f03-44929417278d/2.5%EC%A3%BC%EB%85%84%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C.png",
             date: "2024.04.24",
             tit: "넥슨, '블루 아카이브 2.5주년 페스티벌’ 5월 18ㆍ19일 개최!",
             cate: "게임",
@@ -140,7 +140,7 @@ export const swData =
         },
         {
             idx: "8",
-            isrc: "/images/m_news/mnews08.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240402/25b1a163-487c-472c-bf7b-99ba853e1a3b/%EC%8D%B8%EB%84%A4%EC%9D%BC.png",
             date: "2024.04.02",
             tit: "넥슨재단, 넥슨 창립 30주년 기념 ‘착한선물’ 릴레이 이벤트 개최",
             cate: "사회공헌",
@@ -157,7 +157,7 @@ export const swData =
         },
         {
             idx: "9",
-            isrc: "/images/m_news/mnews09.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240403/78a9f5de-ec04-42a3-b467-7c9538d235e0/image202404031006271.jpeg",
             date: "2024.04.01",
             tit: "넥슨, ‘던전앤파이터’ 쇼케이스 ‘던파로ON’에서 ‘안개신 레이드’ 공개!",
             cate: "게임",
@@ -180,7 +180,7 @@ export const swData =
         },
         {
             idx: "10",
-            isrc: "/images/m_news/mnews10.png",
+            isrc: "https://dszw1qtcnsa5e.cloudfront.net/community/20240416/05e5900b-98cc-4f04-9c10-7c3837201fef/%EB%84%A5%EC%8A%A8%EC%BD%94%EB%A6%AC%EC%95%84%EA%B9%80%EC%A0%95%EC%9A%B1%EA%B0%95%EB%8C%80%ED%98%84%EA%B3%B5%EB%8F%99%EB%8C%80%ED%91%9C1.jpg",
             date: "2024.03.28",
             tit: "넥슨코리아, 강대현·김정욱 신임 공동 대표이사 공식 선임",
             cate: "기업",
