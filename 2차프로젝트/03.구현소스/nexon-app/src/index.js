@@ -14,6 +14,8 @@ import MNewsDetail from "./components/pages/MNewsDetail";
 
 // 전체 공통 CSS 불러오기
 import "../src/css/index.scss";
+import Member from "./components/modules/Member";
+import Login from "./components/modules/Login";
 
 
 
@@ -31,6 +33,8 @@ export default function MainComponent() {
                 <Route path="people" element={<People/>}/>
                 <Route path="news" element={<News/>}/>
                 <Route path="detail" element={<MNewsDetail/>}/>
+                <Route path="member" element={<Member/>}/>
+                <Route path="login" element={<Login/>}/>
             </Route>
             </Routes>
             </ScrollToTop>

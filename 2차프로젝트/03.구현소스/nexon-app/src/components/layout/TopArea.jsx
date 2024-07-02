@@ -10,8 +10,14 @@ import Logo from "../modules/Logo";
 
 // 제이쿼리
 import $ from "jquery";
+import { useContext } from "react";
+import { dCon } from "../modules/dCon";
 
 export default function TopArea() {
+
+    // 컨텍스트 사용하기
+    const myCon = useContext(dCon);
+
     // 이동 함수 ///
     const goNav = useNavigate();
 
@@ -22,14 +28,12 @@ export default function TopArea() {
     };
     // 클릭시 메뉴 닫기
 
-    const exitMenu =(e) =>{
+    const exitMenu = (e) => {
         $(".mbox").fadeToggle(300);
 
         $(e.currentTarget).toggleClass("on");
         $(".ham").toggleClass("on");
-    }
-
-    
+    };
 
     // 코드 리턴구역 ////
     return (
@@ -73,7 +77,9 @@ export default function TopArea() {
                         <ul className="ham_ul">
                             {menu.map((v, i) => (
                                 <li key={i} className="ham_li">
-                                    <Link to={v.link} className="mHamA" onClick={exitMenu}>{v.txt}</Link>
+                                    <Link to={v.link} className="mHamA" onClick={exitMenu}>
+                                        {v.txt}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -81,7 +87,37 @@ export default function TopArea() {
                 </div>
 
                 {/* 서브 메뉴 */}
-                <nav className="smenu"></nav>
+                <nav className="smenu">
+                {
+                            /* 회원가입, 로그인 버튼은
+                            로그인 상태가 null일때 나옴 */
+                            myCon.loginSts === null && 
+                            <>
+                                <li>
+                                    <Link to="/member">JOIN US</Link>
+                                </li>
+                                <li>
+                                    <Link to="/login">LOGIN</Link>
+                                </li>
+                            </>
+                        }
+                        {
+                            /* 로그인 상태이면 로그아웃 버튼 보임 */
+                            myCon.loginSts !== null && 
+                            <>
+                                <li>
+                                    <a href="#" onClick={(e)=>{
+                                        // 기본이동 막기
+                                        e.preventDefault();
+                                        // 로그아웃 처리함수 호출
+                                        myCon.logoutFn();
+                                    }}>
+                                        LOGOUT
+                                    </a>
+                                </li>
+                            </>
+                        }
+                </nav>
             </header>
         </>
     );
