@@ -211,7 +211,7 @@ function Login(props) {
         <form method="post" action="process.php">
           <ul>
             <li>
-              <label>ID : </label>
+              <label>아이디 : </label>
               <input
                 id="user-id"
                 type="text"
@@ -238,7 +238,7 @@ function Login(props) {
               }
             </li>
             <li>
-              <label>Password : </label>
+              <label>비밀번호 : </label>
               <input
                 type="password"
                 maxLength="20"

@@ -183,12 +183,21 @@
 // 회원가입
 .smenu{
   display: flex;
-  gap: 0 10px;
+  gap: 0 15px;
+  padding-right:30px ;
+  align-items: center;
 }
-.smenu li a{
+.smenu li a {
   text-decoration: none;
   color: #fdfdfd;
   font-size: 13px;
+}
+.logmsg{
+  display: flex;
+  color: rgb(0, 247, 255);
+  font-size: 20px;
+  align-items: center;
+  font-weight: bold;
 }
 
 

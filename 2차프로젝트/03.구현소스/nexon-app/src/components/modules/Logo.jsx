@@ -16,6 +16,10 @@ export default function Logo({logoStyle}){
 
         bottom:{
             height: "90px"
+        },
+
+        login:{
+            height: "30px"
         }
     };
 
@@ -23,6 +27,7 @@ export default function Logo({logoStyle}){
     const imgStyle = {
         top: {maxWidth:"104px"},
         bottom: {width:"90px"},
+        login: {width:"30px"},
     };
 
 
@@ -31,7 +36,7 @@ export default function Logo({logoStyle}){
         <h1 style={myStyle[logoStyle]}>
             <img
             style={imgStyle[logoStyle]}
-            src={process.env.PUBLIC_URL+isrc.logo} alt="Nexon Logo" />
+            src={process.env.PUBLIC_URL+isrc[logoStyle]} alt="Nexon Logo" />
         </h1>
     );
 

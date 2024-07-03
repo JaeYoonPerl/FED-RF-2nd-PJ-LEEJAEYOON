@@ -315,7 +315,7 @@ function Member() {
                     <ul>
                         <li>
                             {/* 1. 아이디 */}
-                            <label>ID : </label>
+                            <label>아이디 : </label>
                             <input type="text" maxLength="20" placeholder="아이디" value={userId} onChange={changeUserId} />
                             {
                                 //   에러일 경우 메시지 출력
@@ -354,7 +354,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>Password : </label>
+                            <label>비밀번호 : </label>
                             <input type="password" maxLength="20" placeholder="비밀번호" value={pwd} onChange={changePwd} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -375,7 +375,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>Confirm Password : </label>
+                            <label>비밀번호 확인 : </label>
                             <input type="password" maxLength="20" placeholder="비밀번호 확인" value={chkPwd} onChange={changeChkPwd} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -396,7 +396,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>User Name : </label>
+                            <label>이름 : </label>
                             <input type="text" maxLength="20" placeholder="이름" value={userName} onChange={changeUserName} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -417,7 +417,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>Email : </label>
+                            <label>이메일 주소 : </label>
                             <input type="text" maxLength="50" placeholder="이메일주소" value={email} onChange={changeEmail} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -445,7 +445,7 @@ function Member() {
                         </li>
                         <li>
                             이미 회원이십니까?
-                            <Link to="/login">Log In</Link>
+                            <Link to="/login">로그인</Link>
                         </li>
                     </ul>
                 </form>

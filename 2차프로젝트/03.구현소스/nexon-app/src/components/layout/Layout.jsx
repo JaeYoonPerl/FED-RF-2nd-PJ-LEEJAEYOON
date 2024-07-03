@@ -8,6 +8,7 @@ import { dCon } from "../modules/dCon";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+
 export default function Layout(){
      // [ 상태관리 변수 ] 
     // 1. 로그인 상태관리변수
@@ -30,7 +31,7 @@ export default function Layout(){
         // 랜덤수: 0~4사이의 수
         let rdm = Math.floor(Math.random() * 5);
         // 로그인 메시ㅣㅈ 상태변수 업데이트
-        setLoginMsg(`Welcome ${name} ${usrIcon[rdm]}`);
+        setLoginMsg(` ${name}  `);
     }; //// makeMsg 함수 /////
 
     // 3. 로그아웃 함수

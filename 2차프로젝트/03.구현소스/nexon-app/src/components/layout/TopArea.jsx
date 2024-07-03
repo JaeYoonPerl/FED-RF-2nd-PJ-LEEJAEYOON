@@ -10,7 +10,7 @@ import Logo from "../modules/Logo";
 
 // 제이쿼리
 import $ from "jquery";
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { dCon } from "../modules/dCon";
 
 export default function TopArea() {
@@ -40,7 +40,7 @@ export default function TopArea() {
         <>
             {/* 1.상단영역 */}
             <header className="top-area">
-                {/* 로그인 환영메시지 박스 */}
+                
 
                 {/* 1. 로고 컴포넌트 */}
                 <li className="logoTop">
@@ -94,10 +94,10 @@ export default function TopArea() {
                             myCon.loginSts === null && 
                             <>
                                 <li>
-                                    <Link to="/member">JOIN US</Link>
+                                    <Link to="/member">회원가입</Link>
                                 </li>
                                 <li>
-                                    <Link to="/login">LOGIN</Link>
+                                    <Link to="/login">로그인</Link>
                                 </li>
                             </>
                         }
@@ -105,6 +105,10 @@ export default function TopArea() {
                             /* 로그인 상태이면 로그아웃 버튼 보임 */
                             myCon.loginSts !== null && 
                             <>
+                                <li className="logmsg">
+                                    {/* 로그인 확인 */}
+                                    <Logo logoStyle="login" className="logLogo"/> {myCon.loginMsg}
+                                </li>
                                 <li>
                                     <a href="#" onClick={(e)=>{
                                         // 기본이동 막기
