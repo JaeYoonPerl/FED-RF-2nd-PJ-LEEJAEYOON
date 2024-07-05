@@ -4,6 +4,9 @@ import React, { useContext, useEffect, useState } from "react";
 // CSS 불러오기 (회원가입과 동일)
 import "../../css/member.scss";
 
+
+import Logo from "../modules/Logo";
+
 // 로컬 스토리지 셋팅 함수 호출!
 import { initData } from "../func/mem_fn";
 import { dCon } from "../modules/dCon";
@@ -207,11 +210,11 @@ function Login(props) {
   return (
     <div className="outbx">
       <section className="membx" style={{ minHeight: "300px" }}>
-        <h2>LOG IN</h2>
+        <h2><Logo logoStyle="login" className="wLogo"/>로그인</h2>
         <form method="post" action="process.php">
           <ul>
             <li>
-              <label>아이디 : </label>
+              <label>아이디  </label>
               <input
                 id="user-id"
                 type="text"
@@ -238,7 +241,7 @@ function Login(props) {
               }
             </li>
             <li>
-              <label>비밀번호 : </label>
+              <label>비밀번호  </label>
               <input
                 type="password"
                 maxLength="20"

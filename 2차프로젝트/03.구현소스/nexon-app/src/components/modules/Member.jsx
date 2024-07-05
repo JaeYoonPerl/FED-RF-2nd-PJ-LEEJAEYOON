@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 // 로컬스토리지 생성 JS
 import { initData } from "../func/mem_fn";
 
+import Logo from "../modules/Logo";
+
 // 회원가입 CSS 불러오기
 import "../../css/member.scss";
 
@@ -310,7 +312,7 @@ function Member() {
     return (
         <div className="outbx">
             <section className="membx">
-                <h2>Join Us</h2>
+                <h2><Logo logoStyle="login" className="wLogo"/>회원가입</h2>
                 <form action="process.php" method="post">
                     <ul>
                         <li>
@@ -354,7 +356,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>비밀번호 : </label>
+                            <label>비밀번호  </label>
                             <input type="password" maxLength="20" placeholder="비밀번호" value={pwd} onChange={changePwd} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -375,7 +377,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>비밀번호 확인 : </label>
+                            <label>비밀번호 확인  </label>
                             <input type="password" maxLength="20" placeholder="비밀번호 확인" value={chkPwd} onChange={changeChkPwd} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -396,7 +398,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>이름 : </label>
+                            <label>이름  </label>
                             <input type="text" maxLength="20" placeholder="이름" value={userName} onChange={changeUserName} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -417,7 +419,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>이메일 주소 : </label>
+                            <label>이메일 주소  </label>
                             <input type="text" maxLength="50" placeholder="이메일주소" value={email} onChange={changeEmail} />
                             {
                                 // 에러일 경우 메시지 출력
