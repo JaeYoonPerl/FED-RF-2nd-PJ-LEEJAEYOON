@@ -317,7 +317,7 @@ function Member() {
                     <ul>
                         <li>
                             {/* 1. 아이디 */}
-                            <label>아이디 : </label>
+                            <label>아이디  </label>
                             <input type="text" maxLength="20" placeholder="아이디" value={userId} onChange={changeUserId} />
                             {
                                 //   에러일 경우 메시지 출력
