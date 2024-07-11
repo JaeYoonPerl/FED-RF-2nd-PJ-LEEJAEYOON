@@ -1,6 +1,7 @@
 import React from 'react';
 import {motion} from "framer-motion";
 import Tab from './Tab';
+import PeopleLifeSw from '../plugin/PeopleLifeSw';
 
 function ScrollAni(props) {
     return (
@@ -13,6 +14,7 @@ function ScrollAni(props) {
                 duration: 1,
                 y: { duration: 1 },
             }}>
+            
             <Tab/>
         </motion.div>
     );

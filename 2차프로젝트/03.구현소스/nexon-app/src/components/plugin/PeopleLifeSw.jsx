@@ -9,14 +9,22 @@ import 'swiper/css/navigation';
 import "./css/swiper_people.scss";
 
 import { peopleLifeSw } from '../data/people_life_sw';
-
+import {motion} from "framer-motion";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function PeopleLifeSw() {
   return (
-    <>
+    <motion.div
+    initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{
+            ease: "easeInOut",
+            duration: 1,
+            y: { duration: 1 },
+        }}>
     <div className="pStory">
 
         <h2>넥슨인 생활</h2>
@@ -49,6 +57,6 @@ export default function PeopleLifeSw() {
                 </a>
             </div>
 
-    </>
+    </motion.div>
   );
 }
