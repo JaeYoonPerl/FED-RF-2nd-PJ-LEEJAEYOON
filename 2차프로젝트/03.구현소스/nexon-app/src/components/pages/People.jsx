@@ -6,7 +6,7 @@ import PeopleStory from "../modules/PeopleStory";
 import "../../css/people_sub.scss";
 import PeopleLifeSw from "../plugin/PeopleLifeSw";
 import Tab from "../modules/Tab";
-
+import ScrollAni from "../modules/ScrollAni";
 
 
 export default function People() {
@@ -19,7 +19,7 @@ export default function People() {
 
                 <PeopleLifeSw />
 
-                <Tab/>
+                <ScrollAni/>
             </div>
         </>
     );

@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import { ptabData } from "../data/people_tab_data";
 
+
+
 import "../../css/tab_box.scss";
 
 function Tab() {
