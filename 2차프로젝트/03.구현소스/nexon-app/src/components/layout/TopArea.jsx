@@ -14,7 +14,6 @@ import { memo, useContext } from "react";
 import { dCon } from "../modules/dCon";
 
 export default function TopArea() {
-
     // 컨텍스트 사용하기
     const myCon = useContext(dCon);
 
@@ -40,8 +39,6 @@ export default function TopArea() {
         <>
             {/* 1.상단영역 */}
             <header className="top-area">
-                
-
                 {/* 1. 로고 컴포넌트 */}
                 <li className="logoTop">
                     <a
@@ -88,10 +85,10 @@ export default function TopArea() {
 
                 {/* 서브 메뉴 */}
                 <nav className="smenu">
-                {
-                            /* 회원가입, 로그인 버튼은
+                    {
+                        /* 회원가입, 로그인 버튼은
                             로그인 상태가 null일때 나옴 */
-                            myCon.loginSts === null && 
+                        myCon.loginSts === null && (
                             <>
                                 <li>
                                     <Link to="/member">회원가입</Link>
@@ -100,27 +97,32 @@ export default function TopArea() {
                                     <Link to="/login">로그인</Link>
                                 </li>
                             </>
-                        }
-                        {
-                            /* 로그인 상태이면 로그아웃 버튼 보임 */
-                            myCon.loginSts !== null && 
+                        )
+                    }
+                    {
+                        /* 로그인 상태이면 로그아웃 버튼 보임 */
+                        myCon.loginSts !== null && (
                             <>
                                 <li className="logmsg">
                                     {/* 로그인 확인 */}
-                                    <Logo logoStyle="login" className="logLogo"/> {myCon.loginMsg}
+                                    <Logo logoStyle="login" className="logLogo" /> {myCon.loginMsg}
                                 </li>
                                 <li>
-                                    <a href="#" onClick={(e)=>{
-                                        // 기본이동 막기
-                                        e.preventDefault();
-                                        // 로그아웃 처리함수 호출
-                                        myCon.logoutFn();
-                                    }}>
+                                    <a
+                                        href="#"
+                                        onClick={(e) => {
+                                            // 기본이동 막기
+                                            e.preventDefault();
+                                            // 로그아웃 처리함수 호출
+                                            myCon.logoutFn();
+                                        }}
+                                    >
                                         LOGOUT
                                     </a>
                                 </li>
                             </>
-                        }
+                        )
+                    }
                 </nav>
             </header>
         </>
