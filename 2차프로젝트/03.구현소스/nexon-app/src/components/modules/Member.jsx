@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 // 로컬스토리지 생성 JS
 import { initData } from "../func/mem_fn";
 
-import Logo from "../modules/Logo";
+import LogoFoot from "../modules/Logo_foot";
 
 // 회원가입 CSS 불러오기
 import "../../css/member.scss";
@@ -312,7 +312,7 @@ function Member() {
     return (
         <div className="outbx">
             <section className="membx">
-                <h2><Logo logoStyle="login" className="wLogo"/>회원가입</h2>
+                <h2><LogoFoot logoStyle="login" className="wLogo"/>회원가입</h2>
                 <form action="process.php" method="post">
                     <ul>
                         <li>

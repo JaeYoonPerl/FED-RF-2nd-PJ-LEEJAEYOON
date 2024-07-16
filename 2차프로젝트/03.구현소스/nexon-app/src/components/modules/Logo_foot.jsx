@@ -10,6 +10,9 @@ export default function LogoFoot({logoStyle}){
         bottom:{
             height: "40px"
             
+        },
+        login:{
+            height: "30px"
         }
     };
 
@@ -17,6 +20,7 @@ export default function LogoFoot({logoStyle}){
     const imgStyle = {
         top: {maxWidth:"104px"},
         bottom: {width:"90px"},
+        login: {width:"30px"},
     };
 
 

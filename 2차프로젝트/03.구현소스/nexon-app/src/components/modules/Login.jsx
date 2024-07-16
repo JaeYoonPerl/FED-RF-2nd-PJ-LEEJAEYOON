@@ -5,7 +5,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "../../css/member.scss";
 
 
-import Logo from "../modules/Logo";
+import LogoFoot from "../modules/Logo_foot";
 
 // 로컬 스토리지 셋팅 함수 호출!
 import { initData } from "../func/mem_fn";
@@ -210,7 +210,7 @@ function Login(props) {
   return (
     <div className="outbx">
       <section className="membx" style={{ minHeight: "300px" }}>
-        <h2><Logo logoStyle="login" className="wLogo"/>로그인</h2>
+        <h2><LogoFoot logoStyle="login" className="wLogo"/>로그인</h2>
         <form method="post" action="process.php">
           <ul>
             <li>
