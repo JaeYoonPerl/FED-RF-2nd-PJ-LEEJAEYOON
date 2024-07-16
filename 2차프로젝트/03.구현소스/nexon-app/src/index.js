@@ -3,7 +3,7 @@ import  ReactDOM  from "react-dom/client";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Layout from "./components/layout/Layout";
-import ScrollToTop from "./components/func/ScrollToTop";
+
 
 import Main from "./components/pages/Main";
 import Game from "./components/pages/Game";
@@ -23,7 +23,6 @@ export default function MainComponent() {
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
        < ScrollGoTop/>
-        <ScrollToTop>
             <Routes>
             <Route path="/" element={<Layout/>}>
                 {/* 하위 라우트 셋팅 */}
@@ -37,7 +36,7 @@ export default function MainComponent() {
                 <Route path="login" element={<Login/>}/>
             </Route>
             </Routes>
-            </ScrollToTop>
+           
         </BrowserRouter>
     );
 }
@@ -54,7 +53,7 @@ const ScrollGoTop = ()=>{
         // 스크롤 최상단 이동
         window.scrollTo(0,0);
         // 변경된 라우터 경로값 확인
-        console.log("라우터 경로",pathname);
+        // console.log("라우터 경로",pathname);
 
     },[pathname]);
     // 의존성을 라우터 경로 변수로 설정한다.

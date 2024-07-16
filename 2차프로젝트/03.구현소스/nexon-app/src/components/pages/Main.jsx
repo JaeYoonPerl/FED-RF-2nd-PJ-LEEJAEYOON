@@ -26,10 +26,9 @@ export default function Main() {
         wFn.zeroPno();
         return () => {
             window.removeEventListener("wheel", wFn.wheelFn);
+            window.scrollTo(0, 0);
         };
 
-
-        
     }, []);
     // useLayoutEffect(()=>{
     //   console.log("useLayoutEffect");

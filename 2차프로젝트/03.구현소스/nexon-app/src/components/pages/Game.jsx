@@ -1,18 +1,28 @@
 // 게임 페이지 컴포넌트 ///
-import React from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import GameList from "../modules/GameList";
 import SubPgIntro from "../modules/SubPgIntro";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-
+// 자동 휠 함수 불러오기
+// import * as wFn from "../func/auto_wheel";
 
 import "../../css/game_info.scss";
 
 
 
 export default function Game(){
-
+    // useLayoutEffect(() => {
+    //     document.addEventListener("wheel", { passive: false });
+    // window.scrollTo(0, 0);
+    // return () => {
+    //     document.removeEventListener("wheel", { passive: false });
+    //     // 실제 스크롤위치값 초기화
+    //   window.scrollTo(0, 0);
+    // };
+    // }, []);
+   
     // 코드 리턴구역 ////
     return(
         <>
