@@ -1,12 +1,12 @@
 // 전체 레이아웃 컴포넌트 ///
 
-import TopArea from "./TopArea";
+import {TopArea} from "./TopArea";
 import MainArea from "./MainArea";
 import FooterArea from "./FooterArea";
 
 import { dCon } from "../modules/dCon";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 
 export default function Layout(){
@@ -23,7 +23,12 @@ export default function Layout(){
 
     // [ 공통 함수 ]
     // 1. 라우팅 이동함수
-    const goPage = useNavigate();
+    const goNav = useNavigate();
+
+    const goPage = useCallback((pm1, pm2) => {
+        goNav(pm1, pm2);
+    },[]);
+
     // 2. 로그인 환영메시지 생성 함수
     const makeMsg = (name) => {
         // 유저아이콘
@@ -76,7 +81,7 @@ export default function Layout(){
             logoutFn
             }}>
             {/* 1. 상단영역  */}
-            <TopArea/>
+            <TopArea goPage={goPage}/>
             {/* 2. 메인영역 */}
             <MainArea/>
             {/* 3. 하단영역 */}

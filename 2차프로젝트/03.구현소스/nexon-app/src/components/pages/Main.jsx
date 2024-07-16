@@ -18,14 +18,16 @@ export default function Main() {
     useEffect(() => {
         // 1. 자동 휠
         window.addEventListener("wheel", wFn.wheelFn);
-        wFn.evtFn();
+        // wFn.evtFn();
 
         // 등장요소 CSS초기화 함수 호출
-        wFn.initSet();
+        // wFn.initSet();
 
         wFn.zeroPno();
         return () => {
             window.removeEventListener("wheel", wFn.wheelFn);
+           
+            
             window.scrollTo(0, 0);
         };
 
@@ -73,7 +75,7 @@ export default function Main() {
                 <MainNews catName="news" />
             </section>
 
-            사이드 인디케이터
+            {/* 사이드 인디케이터 */}
             <nav className="indic">
                 <ul>
                     <li className="on" style={{display:"none"}}>
