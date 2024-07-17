@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 
 import AboutUs from "../modules/AboutUs";
-
+import Family from "../modules/Family";
 
 export default function Company(){
    
@@ -15,7 +15,7 @@ export default function Company(){
             <AboutUs/>
 
             {/* 계열사 목록 */}
-           
+            <Family/>
         </>
     );
 } /////// Company /////

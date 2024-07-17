@@ -3,13 +3,15 @@ import React, { useEffect } from "react";
 import * as wFn from "../func/auto_wheel";
 import { aboutusData } from "../data/about_us_data";
 import "../../css/aboutus.scss";
+import scrollShowFn from "../func/scroll_show";
 
 function AboutUs() {
     const selData = aboutusData.com;
+
     useEffect(() => {
         // 1. 자동 휠
         window.addEventListener("wheel", wFn.wheelFn);
-
+        scrollShowFn();
         return () => {
             window.removeEventListener("wheel", wFn.wheelFn);
             window.scrollTo(0, 0);
@@ -27,9 +29,9 @@ function AboutUs() {
             </section>
 
             <section id="pg2" className="page compg">
-                <div className="com2">
+                <div className="com2 obj">
                     <div className="com-box">
-                        <div className="com-logo">
+                        <div className="com-logo ">
                             <img src="https://company.nexon.com/images/nexon_logo.png" alt="logo" />
                             <h3>ABOUT US</h3>
                             <p>
@@ -45,22 +47,30 @@ function AboutUs() {
             </section>
 
             <section id="pg3" className="page compg">
-                <div className="com3">
+                <div className="com3 obj">
                     <div className="lBox">
-
-                    <img src="https://company.nexon.com/images/nexon_logo.png" alt="logo" className="clogo"/>
+                        <img src="https://company.nexon.com/images/nexon_logo.png" alt="logo" className="clogo" />
                     </div>
                     <div className="com-box">
-                        <h2><span>45+</span>{selData.tit[0]}</h2>
+                        <h2>
+                            <span>45+</span>
+                            {selData.tit[0]}
+                        </h2>
                         <div className="intro">
                             <img src={selData.src[0]} alt="aa" />
                             <p>{selData.txt[0]}</p>
                         </div>
-                        <h2><span>190</span>{selData.tit[1]}</h2>
-                        <h2><span>19.B</span>{selData.tit[2]}</h2>
+                        <h2>
+                            <span>190</span>
+                            {selData.tit[1]}
+                        </h2>
+                        <h2>
+                            <span>19.B</span>
+                            {selData.tit[2]}
+                        </h2>
                         <div className="intro">
-                        <p>{selData.txt[1]}</p>
-                        <img src={selData.src[1]} alt="aa" />
+                            <p>{selData.txt[1]}</p>
+                            <img src={selData.src[1]} alt="aa" />
                         </div>
                     </div>
                 </div>
