@@ -27,7 +27,7 @@ function MainIntro({ catname, clsName }) {
                 {/* 제목 */}
                 <div className="txtbox">
                     <h2 className="introtit">{selData.tit}</h2>
-                    <div className=""></div>
+                    
                     {/* 설명 */}
                     <p className="introtxt">
                         {selData.txt[0]}

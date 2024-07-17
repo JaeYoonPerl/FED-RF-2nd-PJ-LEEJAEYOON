@@ -1,0 +1,172 @@
+.compg {
+    height: 100vh;
+    position: relative;
+    background-color: #000000;
+}
+
+.com1 {
+    h2 {
+        color: #ffffff;
+        font-size: 12rem;
+        text-align: center;
+        // top: 25%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // padding-top: 20% ;
+        // margin-top: 25%;
+        font-weight: 900;
+    }
+    .imgbox {
+        position: absolute;
+        height: 30vh;
+        width: 90vw;
+
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        margin: 0 auto;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.com2 {
+    h2 {
+        color: #ffffff;
+        font-size: 12rem;
+        text-align: center;
+        // top: 25%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // margin-top: 25%;
+        // padding-top: 20% ;
+        font-weight: 900;
+    }
+}
+.com2 {
+    background: url("https://company.nexon.com/images/company-background-tablet-small.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    // background-attachment: fixed;
+
+    .com-logo {
+        position: absolute;
+        margin: 0 auto;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+            margin: 30px auto;
+            display: block;
+            // margin: 0 auto;
+            object-fit: cover;
+            animation: logo-ani 3s ease-in-out infinite alternate;
+        }
+    }
+    h3 {
+        color: #ffffff;
+        font-size: 4rem;
+        text-align: center;
+        // top: 25%;
+        // position: absolute;
+        // top: 60%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // margin-top: 25%;
+        // padding-top: 20% ;
+        font-weight: 900;
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
+    p {
+        color: #ffffff;
+        font-size: 1.7rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+.com3 {
+    position: relative;
+    height: 100vh;
+    .lBox{
+        position: absolute;
+        top: 14%;
+    left: 60%;
+        transform: translate(-50%, -50%);
+        animation: logo-ani 3s ease-in-out infinite alternate;
+    }
+    .clogo {
+        transform: rotate(-45deg);
+        
+        width: 100%;
+        height: 100%;
+       
+       
+        object-fit: cover;
+    }
+    .com-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 5;
+        min-width: 748px;
+        color: #fff;
+        height: 50vh;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+
+        h2 {
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 90px;
+            line-height: 1;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            span {
+                background: linear-gradient(92.04deg, #5ecfff -9.87%, #6bfac4 102.79%);
+                background-clip: text;
+                border-top: 3px solid #000;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .intro {
+            display: flex;
+            align-items: center;
+            margin-top: 18px;
+            margin-bottom: 20px;
+            p {
+                width: 350px;
+                max-width: 100%;
+                margin-left: 24px;
+                color: #8f96a3;
+                font-weight: bold;
+                font-size: 1.5rem;
+                line-height: 1.73;
+                letter-spacing: -0.35px;
+            }
+        }
+    }
+}
+/* 위아래 반복 애니메이션 */
+@keyframes logo-ani {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(1vw);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
