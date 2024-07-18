@@ -9,13 +9,13 @@ function AboutUs() {
     const selData = aboutusData.com;
 
     useEffect(() => {
-        // 1. 자동 휠
+        // 자동 휠
         window.addEventListener("wheel", wFn.wheelFn);
         scrollShowFn();
-        return () => {
+        // return () => {
             window.removeEventListener("wheel", wFn.wheelFn);
             window.scrollTo(0, 0);
-        };
+        // };
     }, []);
     return (
         <>

@@ -29,7 +29,7 @@ export default function LogoFoot({logoStyle}){
         <h1 style={myStyle[logoStyle]}>
             <img
             style={imgStyle[logoStyle]}
-            src={isrc.footlogo} alt="Nexon Logo" />
+            src={isrc[logoStyle]} alt="Nexon Logo" />
         </h1>
     );
 

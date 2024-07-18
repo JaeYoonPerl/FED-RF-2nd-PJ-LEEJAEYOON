@@ -1,0 +1,161 @@
+:root{
+    --show-num:3;
+}
+.ul>li{
+    flex-basis: calc(100% / var(--show-num) - 20px);
+}
+
+
+
+.tit-box{
+    clear: both;
+    position: relative;
+    max-width: 1200px;
+    padding-right: 200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    // margin: 0 auto;
+    h2{
+        font-weight: 700;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 15px;
+
+        line-height: 26px;
+
+        white-space: nowrap;
+    }
+}
+.obj {
+    opacity: 0;
+    transform: translateY(20%);
+    // translate: 0 20%;
+    transition: 0.6s ease-in-out;
+  }
+  .obj.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+.combox{
+    clear: both;
+    position: relative;
+    max-width: 1200px;
+    padding-left: 200px;
+    margin: 150px auto 0;
+}
+.combox>h2{
+    height: 40px;
+    font-size: 3rem;
+    padding-top: 20px;
+}
+
+
+.cArea{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+    list-style: none;
+    padding: 40px 0;
+    
+}
+.cBox{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    height: 500px;
+    background-color: #fff;
+    transition: all .15s linear;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 20;
+    transition: all .5s ease;
+}
+
+
+.cinbox{
+    position: relative;
+    width: 100%;
+    height: 186px;
+    background: rgba(232, 235, 242, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cImg{
+    position: relative;
+    display: block;
+    // width: 186px;
+    height: 90px;
+    overflow: hidden;
+    padding: 10px;
+    
+    
+}
+.cImg img{
+    width: 90%;
+    height: 90%;
+    
+    object-fit: contain;
+    
+}
+
+.cList{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 314px;
+    padding: 24px 0;
+    color: #333;
+    max-width: 260px;
+    background-color: #fff;
+    transition: all .5s ease;
+    padding: 24px 32px 0;
+}
+.ctxtBox{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 18px;
+    // max-width: 33%;
+}
+.ctit{
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+.ctxt{
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    flex: 1;
+    height: 100%;
+    max-height: 10.4em;
+    margin-top: 10px;
+    overflow: hidden;
+    color: #747a86;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7333333333;
+    letter-spacing: -.35px;
+    transition: max-height .5s ease;
+}
+.cBox:hover{
+    box-shadow: 1px 1px 3px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0);
+}
+.cBox:hover .cList{
+    max-height: 500px;
+    transform: translateY(-36%);
+}
+.cBox:hover .ctxt{
+    max-height: 500px;
+    // transform: translateY(-36%);
+}
