@@ -32,16 +32,19 @@ function Family({ catname }) {
                     {selData.map((v, i) => (
                         <li key={i} className="cBox">
                             <div className="cinbox">
-                                    <li className="cImg">
+                                    <div className="cImg">
                                         <img src={process.env.PUBLIC_URL+v.src} alt={v.ctit} />
-                                    </li>
+                                    </div>
                             </div>
                                 <ol className="cList">
                                     <div className="ctxtBox">
-                                        <li className="ctit">{v.ctit}</li>
-                                        <li className="ctxt">{v.ctxt}</li>
+                                        <h3 className="ctit">{v.ctit}</h3>
+                                        <p className="ctxt">{v.ctxt} <br/>
+                                        </p>
                                     </div>
                                 </ol>
+                                       <a href="#" className="crl" onClick={(e)=>{e.preventDefault();}}>
+                                        사이트 이동하기↗</a>
                         </li>
                     ))}
                 </ul>

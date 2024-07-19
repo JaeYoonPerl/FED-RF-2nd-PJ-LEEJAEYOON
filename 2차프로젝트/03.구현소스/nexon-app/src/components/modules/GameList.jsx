@@ -1,10 +1,10 @@
-import React, { memo, useCallback } from "react";
+import React, { memo, useCallback, useState } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faMobileScreen } from "@fortawesome/free-solid-svg-icons";
 import { faGamepad } from "@fortawesome/free-solid-svg-icons";
@@ -49,11 +49,16 @@ export const GameList = memo(() => {
         }); ////click
     };
 
+    // 카테고리 필터
+    // 체크박스 체크여부 상태관리 변수
+    
+    
+
    
 
     return (
         <section className="gListSec">
-            <h2>전체게임</h2>
+            <h2>전체 게임</h2>
             <div className="filter">
                 
             </div>
@@ -68,7 +73,7 @@ export const GameList = memo(() => {
                                 </li>
                                 <div className="gtxtBox">
                                     <li className="gName">{v.게임명}</li>
-                                    <li className="genre">{v.장르}</li>
+                                    <li className="genre">{v.cate}</li>
                                     <li className="platform">
                                         {v.플랫폼[0] == "PC" ? <FontAwesomeIcon icon={faDesktop} /> : ""}
                                         {v.플랫폼[1] == "모바일" ? <FontAwesomeIcon icon={faMobileScreen} /> : ""}

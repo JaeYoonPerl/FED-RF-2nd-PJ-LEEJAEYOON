@@ -73,6 +73,7 @@
     overflow: hidden;
     z-index: 20;
     transition: all .5s ease;
+    position: relative;
 }
 
 
@@ -119,6 +120,7 @@
     padding: 24px 32px 0;
 }
 .ctxtBox{
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -148,6 +150,19 @@
     letter-spacing: -.35px;
     transition: max-height .5s ease;
 }
+.crl{
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    width: unset;
+    height: 24px;
+    background-color: unset;
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+    transition: .5s ease;
+}
+
 .cBox:hover{
     box-shadow: 1px 1px 3px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0);
 }
@@ -158,4 +173,7 @@
 .cBox:hover .ctxt{
     max-height: 500px;
     // transform: translateY(-36%);
+}
+.crl:hover {
+    color: #002fff;
 }

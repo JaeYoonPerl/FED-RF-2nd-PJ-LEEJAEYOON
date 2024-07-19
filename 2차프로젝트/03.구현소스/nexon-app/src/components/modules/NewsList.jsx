@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 import { newsListData } from '../data/news_list_data';
 // 제이쿼리 불러오기
@@ -8,8 +8,13 @@ import { Link } from 'react-router-dom';
 import "../../css/news_list.scss";
 
 function NewsList(props) {
+    
     return (
         <section className='nListSec'>
+            <div className="filter-area">
+               
+            </div>
+
             <ul className='nArea'>
                 {newsListData.map((v,i)=>(
                     <li key={i} className='nBox'>

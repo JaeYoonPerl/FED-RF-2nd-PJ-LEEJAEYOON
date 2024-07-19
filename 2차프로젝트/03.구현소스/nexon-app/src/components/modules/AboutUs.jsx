@@ -10,10 +10,10 @@ function AboutUs() {
 
     useEffect(() => {
         // 자동 휠
-        window.addEventListener("wheel", wFn.wheelFn);
+        // window.addEventListener("wheel", wFn.wheelFn);
         scrollShowFn();
         // return () => {
-            window.removeEventListener("wheel", wFn.wheelFn);
+            // window.removeEventListener("wheel", wFn.wheelFn);
             window.scrollTo(0, 0);
         // };
     }, []);
