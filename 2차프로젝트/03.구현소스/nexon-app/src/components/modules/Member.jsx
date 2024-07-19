@@ -9,6 +9,8 @@ import LogoFoot from "../modules/Logo_foot";
 
 // 회원가입 CSS 불러오기
 import "../../css/member.scss";
+import AddressInput from "./AddressInput";
+import $ from "jquery";
 
 function Member() {
     // 라우터 이동 네비게이트
@@ -36,6 +38,10 @@ function Member() {
     const [userName, setUserName] = useState("");
     // 5. 이메일변수
     const [email, setEmail] = useState("");
+    // 6. 주소변수
+    const [addr, setAddr] = useState("");
+    // 7. 우편 번호변수
+    const [zipcode, setZipcode] = useState("");
 
     // [2] 에러상태관리 변수
     // -> 에러상태값 초기값은 에러아님(false)
@@ -49,6 +55,8 @@ function Member() {
     const [userNameError, setUserNameError] = useState(false);
     // 5. 이메일변수
     const [emailError, setEmailError] = useState(false);
+    // 6. 주소변수
+    const [addrError, setAddrError] = useState("");
 
     console.log(userIdError);
 
@@ -223,6 +231,27 @@ function Member() {
         setEmail(val);
     }; ///////// changeEmail 함수 //////////
 
+    // 6. 주소 유효성 검사
+    const changeAddr = () => {
+        // 입력된 값 읽기
+        // 앞주소(자동입력값)
+        let address1 = $(".addr1").val();
+        // 뒷주소
+        let address2 = $(".addr2").val();
+        // 우편번호
+        let zc = $(".zipcode").val();
+
+        // 빈값체크
+        if (address1 !== "" && address2 !== "" && zc !== "") setAddrError(false);
+        else setAddrError(true);
+
+        // 3. 기존 입력값 반영
+        // (1) 전체주소값 저장
+        setAddr(address1 + " " + address2);
+        // (2) 우편번호 젖아
+        setZipcode(zc);
+    };
+
     // [ 전체 유효성검사 체크함수 ] ///////////
     const totalValid = () => {
         // 1. 모든 상태변수에 빈값일때 에러상태값 업데이트!
@@ -231,10 +260,15 @@ function Member() {
         if (!chkPwd) setChkPwdError(true);
         if (!userName) setUserNameError(true);
         if (!email) setEmailError(true);
+        // 주소체크 추가
+        if (!addr) setAddrError(true);
+        // 우편번호체크 추가
+        // -> 주소에러로 등록(우편번호에러값이 따로없음)
+        if (!zipcode) setAddrError(true);
 
         // 2. 통과시 true, 불통과시 false 리턴처리
         // 통과조건 : 빈값아님 + 에러후크변수가 모두 false
-        if (userId && pwd && chkPwd && userName && email && !userIdError && !pwdError && !chkPwdError && !userNameError && !emailError) return true;
+        if (userId && pwd && chkPwd && userName && email && !userIdError && addr && !pwdError && !chkPwdError && !userNameError && !emailError && !addrError) return true;
         // 하나라도 false이면 false를 리턴함!
         else return false;
     }; /////////// totalValid 함수 ///////////
@@ -273,6 +307,10 @@ function Member() {
                 pwd: pwd,
                 unm: userName,
                 eml: email,
+                // 추가항목1 : 우편번호
+                zcode: zipcode,
+                // 추가항목2 : 주소
+                addr: addr,
             };
 
             // 5. 데이터 추가하기 : 배열의 데이터 추가 push
@@ -283,13 +321,11 @@ function Member() {
 
             // 7. 회원가입 환영메시지 + 로그인 페이지 이동
             // 버튼 텍스트에 환영메시지
-            document.querySelector(".sbtn").innerText =
-            "회원가입이 완료되었습니다.";
+            document.querySelector(".sbtn").innerText = "회원가입이 완료되었습니다.";
             // 1초후 페이지 이동 : 라우터 Navigate로 이동
-            setTimeout(()=>{
+            setTimeout(() => {
                 goNav("/login");
-            },1000);
-
+            }, 1000);
         } /////// if /////
         // 3. 불통과시 ///
         else {
@@ -297,27 +333,30 @@ function Member() {
         } /// else
     }; //////// onSubmit 함수 ////
 
-    // 최대수 테스트
-    const arr = [{ idx: "100" }, { idx: "77" }, { idx: "3" }, { idx: "44" }, { idx: "5" }];
-    const newArr = arr.map((v) => v.idx);
-    // ...배열변수 -> 스프레드 연산자로 배열값만 가져온다.
-    const maxValue = Math.max(...newArr);
-    const minValue = Math.min(...newArr);
-    // const maxValue = Math.max("77","55","33");
-    console.log(newArr);
-    console.log("최대수", maxValue);
-    console.log("최소수", minValue);
+    // // 최대수 테스트
+    // const arr = [{ idx: "100" }, { idx: "77" }, { idx: "3" }, { idx: "44" }, { idx: "5" }];
+    // const newArr = arr.map((v) => v.idx);
+    // // ...배열변수 -> 스프레드 연산자로 배열값만 가져온다.
+    // const maxValue = Math.max(...newArr);
+    // const minValue = Math.min(...newArr);
+    // // const maxValue = Math.max("77","55","33");
+    // console.log(newArr);
+    // console.log("최대수", maxValue);
+    // console.log("최소수", minValue);
 
     // 코드리턴 구역 //////////////////
     return (
         <div className="outbx">
             <section className="membx">
-                <h2><LogoFoot logoStyle="login" className="wLogo"/>회원가입</h2>
+                <h2>
+                    <LogoFoot logoStyle="login" className="wLogo" />
+                    회원가입
+                </h2>
                 <form action="process.php" method="post">
                     <ul>
                         <li>
                             {/* 1. 아이디 */}
-                            <label>아이디  </label>
+                            <label>아이디 </label>
                             <input type="text" maxLength="20" placeholder="아이디" value={userId} onChange={changeUserId} />
                             {
                                 //   에러일 경우 메시지 출력
@@ -356,7 +395,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>비밀번호  </label>
+                            <label>비밀번호 </label>
                             <input type="password" maxLength="20" placeholder="비밀번호" value={pwd} onChange={changePwd} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -377,7 +416,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>비밀번호 확인  </label>
+                            <label>비밀번호 확인 </label>
                             <input type="password" maxLength="20" placeholder="비밀번호 확인" value={chkPwd} onChange={changeChkPwd} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -398,7 +437,7 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>이름  </label>
+                            <label>이름 </label>
                             <input type="text" maxLength="20" placeholder="이름" value={userName} onChange={changeUserName} />
                             {
                                 // 에러일 경우 메시지 출력
@@ -419,7 +458,28 @@ function Member() {
                             }
                         </li>
                         <li>
-                            <label>이메일 주소  </label>
+                            <label>주소</label>
+                            {/* 다음우편번호 모듈 */}
+                            <AddressInput changeAddr={changeAddr} />
+                            {
+                                // 에러 메시지
+                                addrError && (
+                                    <div className="msg">
+                                        <small
+                                            style={{
+                                                color: "red",
+                                                fontSize: "10px",
+                                            }}
+                                        >
+                                            {msgEtc.req}
+                                        </small>
+                                    </div>
+                                )
+                            }
+                        </li>
+
+                        <li>
+                            <label>이메일 주소 </label>
                             <input type="text" maxLength="50" placeholder="이메일주소" value={email} onChange={changeEmail} />
                             {
                                 // 에러일 경우 메시지 출력
