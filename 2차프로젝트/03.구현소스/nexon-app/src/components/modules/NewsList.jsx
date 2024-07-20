@@ -29,7 +29,7 @@ function NewsList(props) {
                         onClick={() => handleCategoryClick(category)}
                         className={selectedCategory === category ? 'active' : ''}
                     >
-                        {category}
+                        <p>{category}</p>
                     </button>
                 ))}
             </div>

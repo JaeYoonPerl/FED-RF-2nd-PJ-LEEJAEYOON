@@ -7,18 +7,20 @@
 
 .categoryButtons button{
     // position: absolute;
-    top: 0;
-    right: 0;
-    width: 80px;
+    width: max-content;
     height: 40px;
-    background-color: #f9f9f9;
-    color: #000;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 10px;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid #e8ebf2;
+    margin: 20px 5px;
 }
 .categoryButtons .active{
-    background-color: #3fffef;
+    background-color: #17191c;
+    border: 1px solid #e8ebf2;
+    
+}
+.categoryButtons .active p{
+   color: #fff;
 }
 .nListSec{
     clear: both;
