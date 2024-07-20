@@ -81,7 +81,7 @@ export default function Layout(){
             logoutFn
             }}>
             {/* 1. 상단영역  */}
-            <TopArea goPage={goPage}/>
+            <TopArea/>
             {/* 2. 메인영역 */}
             <MainArea/>
             {/* 3. 하단영역 */}

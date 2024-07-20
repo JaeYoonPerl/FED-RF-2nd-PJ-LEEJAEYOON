@@ -11,7 +11,7 @@ import Company from "./components/pages/Company";
 import People from "./components/pages/People";
 import News from "./components/pages/News";
 import MNewsDetail from "./components/pages/MNewsDetail";
-import SearchingPage from "./components/pages/SearchingPage";
+
 
 // 전체 공통 CSS 불러오기
 import "../src/css/index.scss";
@@ -33,7 +33,7 @@ export default function MainComponent() {
                 <Route path="people" element={<People/>}/>
                 <Route path="news" element={<News/>}/>
                 <Route path="detail" element={<MNewsDetail/>}/>
-                <Route path="search" element={<SearchingPage/>}/>
+                
                 <Route path="member" element={<Member/>}/>
 
                 <Route path="login" element={<Login/>}/>
