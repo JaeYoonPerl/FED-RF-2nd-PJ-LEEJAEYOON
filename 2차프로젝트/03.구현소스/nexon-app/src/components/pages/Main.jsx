@@ -20,10 +20,11 @@ export default function Main() {
         window.addEventListener("wheel", wFn.wheelFn);
         // wFn.evtFn();
 
-        // 등장요소 CSS초기화 함수 호출
-        // wFn.initSet();
+        // 등장요소 CSS
+        wFn.initSet();
 
         wFn.zeroPno();
+
         return () => {
             window.removeEventListener("wheel", wFn.wheelFn);
            
@@ -32,10 +33,7 @@ export default function Main() {
         };
 
     }, []);
-    // useLayoutEffect(()=>{
-    //   console.log("useLayoutEffect");
-    //
-    // },[]);
+    
 
     // 코드 리턴구역 ////
     return (

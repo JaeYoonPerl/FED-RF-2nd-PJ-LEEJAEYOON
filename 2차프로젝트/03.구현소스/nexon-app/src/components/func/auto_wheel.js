@@ -224,6 +224,9 @@ function evtFn() {
   }); //////// click ////////
 } /////////// evtFn 함수 /////////////////
 
+
+
+
 // 사용할 함수만 내보냄!
 export { wheelFn, evtFn, initSet, zeroPno };
 
