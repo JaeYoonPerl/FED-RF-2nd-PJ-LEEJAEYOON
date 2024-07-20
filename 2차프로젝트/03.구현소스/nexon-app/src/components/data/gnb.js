@@ -45,5 +45,9 @@ export const menu = [
         txt:"NEWS",
         link:"/news",
     },
+    {
+        txt:"NOTICE",
+        link:"/notice"
+    }
     
 ];

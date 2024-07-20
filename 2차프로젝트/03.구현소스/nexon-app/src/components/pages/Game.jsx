@@ -1,5 +1,5 @@
 // 게임 페이지 컴포넌트 ///
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import {GameList} from "../modules/GameList";
 import SubPgIntro from "../modules/SubPgIntro";
 
@@ -13,6 +13,9 @@ import "../../css/game_info.scss";
 
 
 export default function Game(){
+
+    
+
     
    
     // 코드 리턴구역 ////

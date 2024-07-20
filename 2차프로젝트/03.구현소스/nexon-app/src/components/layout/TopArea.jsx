@@ -111,7 +111,7 @@ export const TopArea = memo(({}) => {
                             <>
                                 <li className="logmsg">
                                     {/* 로그인 확인 */}
-                                    <Logo logoStyle="login" className="logLogo" /> {myCon.loginMsg}
+                                    어서오세요 {myCon.loginMsg} 님
                                 </li>
                                 <li>
                                     <a

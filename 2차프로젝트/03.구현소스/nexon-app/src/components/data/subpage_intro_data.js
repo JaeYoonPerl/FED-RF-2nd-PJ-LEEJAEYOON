@@ -15,6 +15,10 @@ export const subPgIntro={
     news:{
              tit:"NEWS",
             isrc:"https://company.nexon.com/images/news/news-background-1024.png"
+    },
+    notice:{
+             tit:"NOTICE",
+            isrc:"https://company.nexon.com/images/news/news-background-1024.png"
     }
 
 };

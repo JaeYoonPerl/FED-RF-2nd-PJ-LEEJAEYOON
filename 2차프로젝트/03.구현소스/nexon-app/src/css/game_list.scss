@@ -5,6 +5,20 @@
     flex-basis: calc(100% / var(--show-num) - 20px);
 }
 
+.searchInput{
+    display: flex;
+    position: relative;
+    width: 200px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d5d5d5;
+    font-size: 1.2rem;
+    outline: none;
+    margin-left: auto;
+    right: 25px;
+}
+
 // 게임리스트 전체박스
 .gListSec{
     clear: both;

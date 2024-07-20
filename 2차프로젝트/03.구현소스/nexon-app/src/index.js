@@ -17,6 +17,7 @@ import MNewsDetail from "./components/pages/MNewsDetail";
 import "../src/css/index.scss";
 import Member from "./components/modules/Member";
 import Login from "./components/modules/Login";
+import Board from "./components/pages/Board";
 
 
 
@@ -32,8 +33,10 @@ export default function MainComponent() {
                 <Route path="game" element={<Game/>}/>
                 <Route path="people" element={<People/>}/>
                 <Route path="news" element={<News/>}/>
+                <Route path="notice" element={<Board/>}/>
+
                 <Route path="detail" element={<MNewsDetail/>}/>
-                
+
                 <Route path="member" element={<Member/>}/>
 
                 <Route path="login" element={<Login/>}/>

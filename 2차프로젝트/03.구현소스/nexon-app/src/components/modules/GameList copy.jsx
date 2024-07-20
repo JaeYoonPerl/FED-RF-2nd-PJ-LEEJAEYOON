@@ -1,54 +1,64 @@
-import React, { memo, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
+
+import { Link, useNavigate } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDesktop, faMobileScreen, faGamepad } from "@fortawesome/free-solid-svg-icons";
+
+import { faDesktop } from "@fortawesome/free-solid-svg-icons";
+import { faMobileScreen } from "@fortawesome/free-solid-svg-icons";
+import { faGamepad } from "@fortawesome/free-solid-svg-icons";
+// 제이쿼리 불러오기
 import $ from "jquery";
 import { gameData } from "../data/game_list_data";
+
 import "../../css/game_list.scss";
 
 export const GameList = memo(() => {
-    const [searchTerm, setSearchTerm] = useState("");
 
+  
+    // 게임 정보 창
     const showGame = (게임명, gsrc, 홈페이지) => {
+        console.log(gsrc);
+
+        // 전체 게임 박스
         const gb = $(".game-bx");
+        // 타이틀 박스
         const gtit = $(".game-tit");
+        // 홈페이지 링크
         const ghome = $(".game-bx a");
+        // 동영상 박스
         const ifr = $(".game-bx iframe");
+
+        // 닫기 버튼
         const cbtn = $(".cbtn");
 
+        // 경로
         gtit.text(게임명);
         ifr.attr("src", gsrc + "?autoplay=1");
         ghome.attr("href", 홈페이지);
         gb.fadeIn(300);
 
         cbtn.on("click", () => {
+            // 전체박스 사라지기
             gb.fadeOut(300);
+            // 기존 동영상 플레이 멈추기(src값 삭제)
             ifr.attr("src", "");
             ghome.attr("href", "");
-        });
+        }); ////click
     };
 
-    const handleSearchChange = (e) => {
-        setSearchTerm(e.target.value);
-    };
-
-    const filteredGames = gameData.filter((game) =>
-        game.게임명.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    // 카테고리 필터
+    // 체크박스 체크여부 상태관리 변수
 
     return (
         <section className="gListSec">
             <h2>전체 게임</h2>
-            <input
-                type="text"
-                placeholder="게임 검색"
-                value={searchTerm}
-                onChange={handleSearchChange}
-                className="searchInput"
-            />
+
             <ul className="gArea">
-                {filteredGames.map((v, i) => (
+                {gameData.map((v, i) => (
                     <li key={i} className="gBox" onClick={() => showGame(v.게임명, v.gsrc, v.홈페이지)}>
                         <div className="g-inbox">
+                            {/* <Link to="/" className="gListLink"> */}
                             <ol className="gList">
                                 <li className="gImg">
                                     <img src={v.대표이미지} alt={v.게임명} />
@@ -57,13 +67,14 @@ export const GameList = memo(() => {
                                     <li className="gName">{v.게임명}</li>
                                     <li className="genre">{v.cate}</li>
                                     <li className="platform">
-                                        {v.플랫폼.includes("PC") && <FontAwesomeIcon icon={faDesktop} />}
-                                        {v.플랫폼.includes("모바일") && <FontAwesomeIcon icon={faMobileScreen} />}
-                                        {v.플랫폼.includes("콘솔") && <FontAwesomeIcon icon={faGamepad} />}
+                                        {v.플랫폼[0] == "PC" ? <FontAwesomeIcon icon={faDesktop} /> : ""}
+                                        {v.플랫폼[1] == "모바일" ? <FontAwesomeIcon icon={faMobileScreen} /> : ""}
+                                        {v.플랫폼[2] == "콘솔" ? <FontAwesomeIcon icon={faGamepad} /> : ""}
                                     </li>
                                 </div>
                             </ol>
                         </div>
+                        {/* </Link> */}
                     </li>
                 ))}
             </ul>
