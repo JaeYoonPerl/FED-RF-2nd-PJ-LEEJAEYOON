@@ -8,7 +8,7 @@
 .searchInput{
     display: flex;
     position: relative;
-    width: 200px;
+    width: 15%;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -17,6 +17,12 @@
     outline: none;
     margin-left: auto;
     right: 25px;
+    height: 30px;
+}
+
+.filter-box{
+    display: flex;
+    align-items: center;
 }
 
 // 게임리스트 전체박스

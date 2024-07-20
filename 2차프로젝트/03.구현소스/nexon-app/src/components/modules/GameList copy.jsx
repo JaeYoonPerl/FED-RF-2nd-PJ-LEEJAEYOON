@@ -1,13 +1,15 @@
 import React, { memo, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faDesktop, faMobileScreen, faGamepad } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faDesktop, faMobileScreen, faGamepad } from "@fortawesome/free-solid-svg-icons";
 import $ from "jquery";
 import { gameData } from "../data/game_list_data";
 import "../../css/game_list.scss";
 
 export const GameList = memo(() => {
-    const [searchTerm, setSearchTerm] = useState("");
+    // 검색 필터 상태관리변수
+    const [searchGame, setSearchGame] = useState("");
+    // 카테고리 필터 상태관리변수
+    const [selectedCategory, setSelectedCategory] = useState('All');
 
     const showGame = (게임명, gsrc, 홈페이지) => {
         const gb = $(".game-bx");
@@ -21,6 +23,7 @@ export const GameList = memo(() => {
         ghome.attr("href", 홈페이지);
         gb.fadeIn(300);
 
+        
         cbtn.on("click", () => {
             gb.fadeOut(300);
             ifr.attr("src", "");
@@ -29,24 +32,48 @@ export const GameList = memo(() => {
     };
 
     const handleSearchChange = (e) => {
-        setSearchTerm(e.target.value);
+        setSearchGame(e.target.value);
     };
 
-    const filteredGames = gameData.filter((game) =>
-        game.게임명.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const handleCategoryClick = (category) => {
+        setSelectedCategory(category);
+    };
+
+    // 카테고리 필터링
+    const filteredGames = gameData.filter((game) => {
+        const matchesSearch = game.게임명.toLowerCase().includes(searchGame.toLowerCase());
+        const matchesCategory = selectedCategory === 'All' || game.cate === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
+
+    // set
+    const categories = ['All', ...new Set(gameData.map(game => game.cate))];
 
     return (
         <section className="gListSec">
-            <h2>전체 게임</h2>
+            <h2> 넥슨 게임</h2>
+            <div className="filter-box">
+
+           
+            <div className="categoryButtons">
+                {categories.map((category, i) => (
+                    <button 
+                        key={i} 
+                        onClick={() => handleCategoryClick(category)}
+                        className={selectedCategory === category ? 'active' : ''}
+                    >
+                        <p>{category}</p>
+                    </button>
+                ))}
+            </div>
             <input
                 type="text"
                 placeholder="게임 검색"
-                value={searchTerm}
+                value={searchGame}
                 onChange={handleSearchChange}
                 className="searchInput"
             />
-            
+            </div>
             <ul className="gArea">
                 {filteredGames.map((v, i) => (
                     <li key={i} className="gBox" onClick={() => showGame(v.게임명, v.gsrc, v.홈페이지)}>
