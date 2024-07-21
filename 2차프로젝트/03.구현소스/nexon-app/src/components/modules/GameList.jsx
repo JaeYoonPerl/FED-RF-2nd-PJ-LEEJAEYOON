@@ -39,7 +39,7 @@ export const GameList = memo(() => {
         setSelectedCategory(category);
     };
 
-    // 카테고리 필터링
+    // 필터링
     const filteredGames = gameData.filter((game) => {
         const matchesSearch = game.게임명.toLowerCase().includes(searchGame.toLowerCase());
         const matchesCategory = selectedCategory === 'All' || game.cate === selectedCategory;

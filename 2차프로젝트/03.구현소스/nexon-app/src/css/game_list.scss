@@ -134,3 +134,53 @@
     font-size: 20px;
     z-index: 1;
 }
+
+
+/* 북마크*/
+
+// .bookmarkSection {
+//     position: fixed;
+//     top: 0;
+//     right: -300px; /* 화면 밖 위치 */
+//     width: 300px;
+//     height: 100%;
+//     background-color: white;
+//     box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+//     overflow-y: auto;
+//     transition: right 0.3s ease;
+//     z-index: 1000;
+// }
+
+// .bookmarkSection.show {
+//     right: 0; /* 화면 안 위치 */
+// }
+
+// .bookmarkToggleBtn {
+//     margin: 10px;
+//     padding: 10px 20px;
+//     background-color: #007bff;
+//     color: white;
+//     border: none;
+//     cursor: pointer;
+//     border-radius: 5px;
+// }
+
+// .bookmarkToggleBtn:hover {
+//     background-color: #0056b3;
+// }
+// .bookmarkCloseBtn {
+//     margin-top: 10px;
+//     padding: 10px 20px;
+//     background-color: #ff4d4d;
+//     color: white;
+//     border: none;
+//     cursor: pointer;
+//     border-radius: 5px;
+//     display: block;
+//     width: 100%;
+//     text-align: center;
+// }
+
+// .bookmarkCloseBtn:hover {
+//     background-color: #cc0000;
+// }
