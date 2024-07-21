@@ -13,7 +13,7 @@ function MainNews({catName}) {
         
         <>
             <section className="news-swbox">
-            <div className='tit-box'>
+            <div className='mntit-box'>
                 {/* 1. 타이틀 */}
                 <h2 className="tit">{mainNews.tit}
                 {/* 더보기 링크 */}

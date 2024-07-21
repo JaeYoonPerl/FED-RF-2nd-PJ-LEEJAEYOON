@@ -229,3 +229,11 @@ ol.bmenu{
     background-color: #000;
     border-color: #fff;
 }
+
+@media screen and (max-width: 800px) {
+    
+    
+    .comboBtn {
+        display: none;
+    }
+}

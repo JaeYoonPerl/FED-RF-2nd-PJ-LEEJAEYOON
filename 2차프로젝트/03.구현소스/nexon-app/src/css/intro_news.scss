@@ -4,12 +4,15 @@
     padding: 0px 1%;
 }
 
-.tit-box{
+.mntit-box{
     // position: absolute;
     position: relative;
     top: 15%;
     
     display: flex;
+    h2{
+        font-size: 7vw;
+    }
 }
 .tit{
     font-size: 7vw;

@@ -197,11 +197,20 @@
     font-weight: bold;
 }
 
+@media screen and (max-width: 1000px) {
+    
+    .smenu{
+        display: none;
+    }
+}
 @media screen and (max-width: 800px) {
     .ham {
         display: block;
     }
     .gnb {
+        display: none;
+    }
+    .indic {
         display: none;
     }
 }
