@@ -2,7 +2,7 @@
     --show-num:3;
 }
 .ul>li{
-    flex-basis: calc(100% / var(--show-num) - 20px);
+    // flex-basis: calc(100% / var(--show-num) - 20px);
 }
 
 
@@ -21,6 +21,7 @@
         font-weight: 700;
         font-size: 36px;
         margin-bottom: 20px;
+        margin: 0 auto;
     }
     p{
         font-size: 15px;
@@ -176,4 +177,19 @@
 }
 .crl:hover {
     color: #002fff;
+}
+
+@media screen and (max-width: 980px) {
+    
+    
+    .tit-box{
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 850px) {
+    
+    
+    .combox{
+        padding-left: 20px;
+    }
 }

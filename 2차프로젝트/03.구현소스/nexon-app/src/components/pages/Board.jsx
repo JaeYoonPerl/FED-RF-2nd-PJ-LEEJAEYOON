@@ -26,7 +26,7 @@ export default function Board() {
   const myCon = useContext(dCon);
   // 전역 로그인 상태 변수 확인(변수할당!)
   const sts = myCon.loginSts;
-  // console.log("로그인상태:", sts);
+  // //console.log("로그인상태:", sts);
 
   // 로컬스토리지 게시판 데이터 정보확인! //
   initBoardData();
@@ -52,7 +52,7 @@ export default function Board() {
   // [ 참조변수 ] ///
   // [1] 전체 개수 - 매번 계산하지 않도록 참조변수로!
   const totalCount = useRef(baseData.length);
-  // console.log("전체개수:", totalCount);
+  // //console.log("전체개수:", totalCount);
   // [2] 선택 데이터 저장
   const selRecord = useRef(null);
   // -> 특정리스트 글 제목 클릭시 데이터 저장함!
@@ -70,7 +70,7 @@ export default function Board() {
         기능 : 페이지별 리스트를 생성하여 바인딩함
   **********************************************/
   const bindList = () => {
-    // console.log(baseData);
+    // //console.log(baseData);
 
     // 1. 전체 원본데이터 선택
     let orgData = baseData;
@@ -90,21 +90,21 @@ export default function Board() {
     let sNum = (pageNum - 1) * unitSize;
     // 끝번호 = 페이지번호*단위수
     let eNum = pageNum * unitSize;
-    // console.log("첫번호:", sNum, "/끝번호:", eNum);
+    // //console.log("첫번호:", sNum, "/끝번호:", eNum);
     // 결과배열
     const selData = [];
 
     // for문으로 배열 만들기
     for (let i = sNum; i < eNum; i++) {
-      // console.log(i);
+      // //console.log(i);
       // 끝번호가 전체 개수보다 크면 나가라!
       if (i >= totalCount.current) break;
       // 대상배열값 추가
       selData.push(orgData[i]);
     } ///// for //////
 
-    console.log("일부데이터:", selData);
-    console.log("여기:", selData.length);
+    //console.log("일부데이터:", selData);
+    //console.log("여기:", selData.length);
     if (selData.length == 0) setPageNum(pageNum - 1);
 
     return selData.map((v, i) => (
@@ -136,7 +136,7 @@ export default function Board() {
   const clickButton = (e) => {
     // 버튼글자 읽기
     let btnText = e.target.innerText;
-    // console.log(btnText);
+    // //console.log(btnText);
     // 버튼별 분기
     switch (btnText) {
       // 글쓰기 모드로 변경
@@ -228,10 +228,10 @@ export default function Board() {
       // 2. 글번호 만들기 /////
       // 전체 데이터중 idx 만 모아서 배열만들기
       let arrIdx = baseData.map((v) => parseInt(v.idx));
-      // console.log(arrIdx);
+      // //console.log(arrIdx);
       // 최대값 찾기 : 스프레드 연산자로 배열값만 넣음!
       let maxNum = Math.max(...arrIdx);
-      // console.log(maxNum);
+      // //console.log(maxNum);
 
       // 3. 입력 데이터 객체형식으로 구성하기 ////
       let data = {
@@ -244,7 +244,7 @@ export default function Board() {
         unm: person.unm,
         cnt: "0",
       };
-      // console.log("글쓰기 서브밋:",data);
+      // //console.log("글쓰기 서브밋:",data);
 
       // 4. 로컬스에 입력하기 //////
       // (1) 로컬스 파싱
@@ -256,7 +256,7 @@ export default function Board() {
       localStorage.setItem("board-data", JSON.stringify(locals));
 
       // 로컬스 확인!
-      // console.log(localStorage.getItem("board-data"));
+      // //console.log(localStorage.getItem("board-data"));
 
       // 4. 추가후 리스트 리랜더링시 리스트 불일치로 인한
       // 에러를 방지하기 위하여 전체 개수를 바로 업데이트한다!
@@ -289,7 +289,7 @@ export default function Board() {
       // find()는 특정항목을 찾아서 리턴하여 데이터를 가져
       // 오기도 하지만 업데이트 등 작업도 가능함!
       baseData.find((v) => {
-        // console.log(v,selRecord);
+        // //console.log(v,selRecord);
         if (v.idx == currIdx) {
           // [ 업데이트 작업하기 ]
           // 기존항목변경 : tit, cont
@@ -316,7 +316,7 @@ export default function Board() {
       localStorage.setItem("board-data", JSON.stringify(baseData));
 
       // 로컬스 확인!
-      // console.log(localStorage.getItem("board-data"));
+      // //console.log(localStorage.getItem("board-data"));
 
       // 5. 리스트로 돌아가기 /////
       // -> 모드변경! "L"
@@ -373,7 +373,7 @@ export default function Board() {
                   {mode == "R" && <button onClick={clickButton}>목록</button>}
 
                   {
-                    // console.log("비교:",
+                    // //console.log("비교:",
                     // JSON.parse(sts).uid,
                     // "==?",
                     // selRecord.current.uid)
@@ -497,7 +497,7 @@ const ReadMode = ({ selRecord, sts }) => {
   // 읽기 모드가 호출되었다는 것은
   // 리스트의 제목이 클릭되었다는 것을 의미!
   // 따라서 현재 레코드 값도 저장되었다는 의미!
-  // console.log("전달된 참조변수:", selRecord.current);
+  // //console.log("전달된 참조변수:", selRecord.current);
   // 전달된 데이터 객체를 변수에 할당
   const data = selRecord.current;
 
@@ -523,17 +523,17 @@ const ReadMode = ({ selRecord, sts }) => {
   // (2) 기존 배열값에 현재글번호 존재여부검사하기
   // 결과가 true이면 조회수를 증가하지 않는다!
   let isRec = rec.includes(data.idx);
-  console.log("이미있니?", isRec);
+  //console.log("이미있니?", isRec);
 
   // (3) 로그인한 사용자의 글이면 isRec값을 true처리
   // sts가 true이면 즉, 로그인한 사용자이면 처리
   if (sts) {
-    console.log(
-      "선택글 아이디:",
-      data.uid,
-      "로그인사용자 아이디:",
-      JSON.parse(sts).uid
-    );
+    //console.log(
+    //   "선택글 아이디:",
+    //   data.uid,
+    //   "로그인사용자 아이디:",
+    //   JSON.parse(sts).uid
+    // );
     // 글쓴이 아이디와 로그인사용자 아이디가 같은가?
     if (data.uid == JSON.parse(sts).uid) {
       // 글번호저장과 조회수증가를 하지 않도록 isRec값을
@@ -626,7 +626,7 @@ const ReadMode = ({ selRecord, sts }) => {
 const WriteMode = ({ sts }) => {
   // sts - 로그인 상태정보
   // 로그인한 사람만 글쓰기 가능!
-  // console.log(sts);
+  // //console.log(sts);
 
   return (
     <>
@@ -688,7 +688,7 @@ const ModifyMode = ({ selRecord }) => {
   // 읽기 모드가 호출되었다는 것은
   // 리스트의 제목이 클릭되었다는 것을 의미!
   // 따라서 현재 레코드 값도 저장되었다는 의미!
-  // console.log("전달된 참조변수:", selRecord.current);
+  // //console.log("전달된 참조변수:", selRecord.current);
   // 전달된 데이터 객체를 변수에 할당
   const data = selRecord.current;
 
@@ -771,7 +771,7 @@ const PagingList = ({
     pagingCount++;
   }
 
-  // console.log(
+  // //console.log(
   //   "페이징개수:",
   //   pagingCount,
   //   "나머지개수:",
@@ -796,7 +796,7 @@ const PagingList = ({
     pgPgCount++;
   } /// if ////
 
-  console.log("페이징의 페이징개수:", pgPgCount);
+  //console.log("페이징의 페이징개수:", pgPgCount);
 
   // (2) 리스트 시작값 / 한계값 구하기
   // 시작값 : (페페넘-1)*페페단
@@ -804,7 +804,7 @@ const PagingList = ({
   // 한계값 : 페페넘*페페단
   let limitNum = pgPgNum.current * pgPgSize;
 
-  console.log("시작값:", initNum, "/한계값:", limitNum);
+  //console.log("시작값:", initNum, "/한계값:", limitNum);
 
   ///// [ 링크코드 만들기 ] /////////////////
   const pgCode = [];
@@ -925,7 +925,7 @@ const PagingList = ({
   const goPaging = (dir, opt) => {
     // dir - 이동방향(오른쪽:+1, 왼쪽:-1)
     // opt - 일반이동(true), 끝이동(false)
-    console.log("방향:", dir, "/옵션:", opt);
+    //console.log("방향:", dir, "/옵션:", opt);
 
     // 새 페이징의 페이징번호
     let newPgPgNum;
@@ -946,7 +946,7 @@ const PagingList = ({
     // -> 항상 이전블록의 마지막번호 + 1 이 다음페이지 첫번호임!
     // 이동할 페이지번호
     let landingPage = (pgPgNum.current - 1) * pgPgSize + 1;
-    console.log("도착페이지번호:", landingPage);
+    //console.log("도착페이지번호:", landingPage);
     // 페이지번호 상태변수 업데이트로 전체 리랜더링!!!
     setPageNum(landingPage);
   }; //////////// goPaging /////////////
