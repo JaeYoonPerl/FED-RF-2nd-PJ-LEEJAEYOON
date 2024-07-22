@@ -1,14 +1,14 @@
-:root{
-    --show-num:4;
+:root {
+    --show-num: 4;
 }
-.ul>li{
+.ul > li {
     flex-basis: calc(100% / var(--show-num) - 20px);
 }
 
-.searchingBox{
+.searchingBox {
     position: relative;
     margin-left: auto;
-    .schbtn{
+    .schbtn {
         position: absolute;
         z-index: 2;
         font-size: 15px;
@@ -18,7 +18,7 @@
         opacity: 0.5;
     }
 }
-.searchInput{
+.searchInput {
     display: flex;
     position: relative;
     // width: 15%;
@@ -33,25 +33,25 @@
     height: 30px;
 }
 
-.filter-box{
+.filter-box {
     display: flex;
     align-items: center;
 }
 
 // 게임리스트 전체박스
-.gListSec{
+.gListSec {
     clear: both;
     position: relative;
     max-width: 1328px;
     padding-left: 24px;
     margin: 0 auto;
 }
-.gListSec>h2{
+.gListSec > h2 {
     height: 40px;
     font-size: 3rem;
     padding-top: 20px;
 }
-.filter{
+.filter {
     position: relative;
     padding: 20px 30px 3px;
     margin: 29px 24px 20px 0;
@@ -59,31 +59,32 @@
 }
 
 // 게임리스트
-.gArea{
+.gArea {
     display: flex;
     flex-wrap: wrap;
     gap: 40px 30px;
     list-style: none;
     padding: 40px 0;
-    
 }
-.gBox{
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+.gBox {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     height: 300px;
     background-color: #fff;
-    transition: all .15s linear;
+    transition: all 0.15s linear;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
-.gBox:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+.gBox:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.gBox:hover .gImg{
+.gBox:hover .gImg {
     scale: 1.2;
-    transition: .3s linear;
+    transition: 0.3s linear;
 }
 
-.gListLink{
+.gListLink {
     text-decoration: none;
     color: #000;
 }
@@ -92,25 +93,25 @@
     padding: 0;
     list-style: none;
 }
-.gImg{
+.gImg {
     position: relative;
     display: block;
     width: 302px;
     height: 200px;
     overflow: hidden;
-    transition: .3s linear;
+    transition: 0.3s linear;
 }
-.gtxtBox{
+.gtxtBox {
     position: relative;
     display: block;
-    
+
     width: 302px;
     height: 100%;
     z-index: 20;
     // overflow: hidden;
     background-color: #fff;
 }
-.gName{
+.gName {
     position: relative;
     display: block;
     width: 262px;
@@ -122,24 +123,22 @@
     word-wrap: break-word;
     font-size: 1.6rem;
     font-weight: bold;
-    
-    
 }
-.genre{
+.genre {
     display: block;
     width: 262px;
     height: 20px;
     margin: 0px auto;
     padding-right: 10px;
     color: #737881;
-    letter-spacing: -.3px;
+    letter-spacing: -0.3px;
     white-space: nowrap;
-    
+
     text-overflow: ellipsis;
     font-size: 1.3rem;
     z-index: 1;
 }
-.platform{
+.platform {
     padding-right: 12px;
     display: flex;
     justify-content: flex-end;
@@ -147,7 +146,6 @@
     font-size: 20px;
     z-index: 1;
 }
-
 
 /* 북마크*/
 
@@ -158,7 +156,7 @@
     width: 400px;
     height: 100%;
     background-color: white;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     transition: right 0.3s ease;
     z-index: 1000;
@@ -180,7 +178,6 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    
 }
 
 .bookmarkToggleBtn:hover {
@@ -202,31 +199,30 @@
 .bookmarkCloseBtn:hover {
     background-color: #cc0000;
 }
-.bookmarkSection{
-    
-    h3{
-      font-size: 30px; 
-      margin: 0 auto;
-      padding-top: 150px;
+.bookmarkSection {
+    h3 {
+        font-size: 30px;
+        margin: 0 auto;
+        padding-top: 150px;
     }
-    .gArea{
+    .gArea {
         justify-content: center;
     }
-    button{
+    button {
         position: relative;
         z-index: 20;
-        
     }
 }
 
-.bookmarkbtn{
-    border:0;
+.bookmarkbtn {
+    border: 0;
     background-color: #ffffff00;
     font-size: 20px;
     position: relative;
     top: -20px;
     left: 8px;
+    padding: 5px;
 }
-.bookmarkbtn:hover{
+.bookmarkbtn:hover {
     background-color: #5e5e5e8e;
 }

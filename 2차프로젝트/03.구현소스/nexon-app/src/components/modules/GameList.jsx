@@ -117,7 +117,7 @@ function GameList(props) {
                 <h3>My Game</h3>
                 <ul className="gArea">
                     {bookmarks.map((v, i) => (
-                        <li key={i} className="gBox" >
+                        <li key={i} className="gBox"  onClick={() => showGame(v.게임명, v.gsrc, v.홈페이지)}>
                             <div className="g-inbox">
                                 <ol className="gList">
                                     <li className="gImg">
@@ -131,7 +131,11 @@ function GameList(props) {
                                             {v.플랫폼.includes("모바일") && <FontAwesomeIcon icon={faMobileScreen} />}
                                             {v.플랫폼.includes("콘솔") && <FontAwesomeIcon icon={faGamepad} />}
                                         </li>
-                                        <button onClick={() => toggleBookmark(v)} className="bookmarkbtn">
+                                        <button onClick={(e) => {
+                                            // 북마크 버튼 클릭시 팝업창 이벤트 x
+                                        e.stopPropagation();
+                                        toggleBookmark(v);
+                                    }} className="bookmarkbtn">
                                             <FontAwesomeIcon icon={faTrashAlt} />
                                         </button>
                                     </div>
