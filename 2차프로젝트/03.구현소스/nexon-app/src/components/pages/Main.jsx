@@ -18,11 +18,12 @@ export default function Main() {
     useEffect(() => {
         // 1. 자동 휠
         window.addEventListener("wheel", wFn.wheelFn);
-        wFn.evtFn();
-
+        
         // 등장요소 CSS
         wFn.initSet();
-
+        
+        
+        wFn.evtFn();
         wFn.zeroPno();
 
         return () => {
