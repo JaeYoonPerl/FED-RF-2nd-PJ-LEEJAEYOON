@@ -4,6 +4,14 @@
 .ul>li{
     flex-basis: calc(100% / var(--show-num) - 20px);
 }
+.categoryButtons{
+    display: flex;
+    align-items: center;
+    .searchingBox{
+        left: -150px;
+    
+    }
+}
 
 .categoryButtons button{
     // position: absolute;
@@ -140,4 +148,13 @@
     font-size: 10px;
     margin-top: auto;
     z-index: 1;
+}
+
+
+@media screen and (max-width: 920px) {
+    
+    
+    .searchingBox{
+        display: none;
+    }
 }

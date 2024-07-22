@@ -1,6 +1,6 @@
 // 게임 페이지 컴포넌트 ///
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import {GameList} from "../modules/GameList";
+import GameList from "../modules/GameList";
 import SubPgIntro from "../modules/SubPgIntro";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

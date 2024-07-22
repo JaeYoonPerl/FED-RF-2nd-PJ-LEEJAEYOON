@@ -5,11 +5,24 @@
     flex-basis: calc(100% / var(--show-num) - 20px);
 }
 
+.searchingBox{
+    position: relative;
+    margin-left: auto;
+    .schbtn{
+        position: absolute;
+        z-index: 2;
+        font-size: 15px;
+        /* margin: 0 auto; */
+        margin-top: 13px;
+        margin-left: -22px;
+        opacity: 0.5;
+    }
+}
 .searchInput{
     display: flex;
     position: relative;
-    width: 15%;
-    padding: 10px 20px;
+    // width: 15%;
+    padding: 5px 20px;
     border: none;
     border-radius: 5px;
     background-color: #d5d5d5;
@@ -138,49 +151,82 @@
 
 /* 북마크*/
 
-// .bookmarkSection {
-//     position: fixed;
-//     top: 0;
-//     right: -300px; /* 화면 밖 위치 */
-//     width: 300px;
-//     height: 100%;
-//     background-color: white;
-//     box-shadow: -2px 0 5px rgba(0,0,0,0.5);
-//     overflow-y: auto;
-//     transition: right 0.3s ease;
-//     z-index: 1000;
-// }
+.bookmarkSection {
+    position: fixed;
+    top: 0;
+    right: -400px; /* 화면 밖 위치 */
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    margin: 0 auto;
+}
 
-// .bookmarkSection.show {
-//     right: 0; /* 화면 안 위치 */
-// }
+.bookmarkSection.show {
+    right: 0; /* 화면 안 위치 */
+}
 
-// .bookmarkToggleBtn {
-//     margin: 10px;
-//     padding: 10px 20px;
-//     background-color: #007bff;
-//     color: white;
-//     border: none;
-//     cursor: pointer;
-//     border-radius: 5px;
-// }
+.bookmarkToggleBtn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
 
-// .bookmarkToggleBtn:hover {
-//     background-color: #0056b3;
-// }
-// .bookmarkCloseBtn {
-//     margin-top: 10px;
-//     padding: 10px 20px;
-//     background-color: #ff4d4d;
-//     color: white;
-//     border: none;
-//     cursor: pointer;
-//     border-radius: 5px;
-//     display: block;
-//     width: 100%;
-//     text-align: center;
-// }
+.bookmarkToggleBtn:hover {
+    background-color: #0056b3;
+}
+.bookmarkCloseBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
 
-// .bookmarkCloseBtn:hover {
-//     background-color: #cc0000;
-// }
+.bookmarkCloseBtn:hover {
+    background-color: #cc0000;
+}
+.bookmarkSection{
+    
+    h3{
+      font-size: 30px; 
+      margin: 0 auto;
+      padding-top: 150px;
+    }
+    .gArea{
+        justify-content: center;
+    }
+    button{
+        position: relative;
+        z-index: 20;
+        
+    }
+}
+
+.bookmarkbtn{
+    border:0;
+    background-color: #ffffff00;
+    font-size: 20px;
+    position: relative;
+    top: -20px;
+    left: 8px;
+}
+.bookmarkbtn:hover{
+    background-color: #5e5e5e8e;
+}

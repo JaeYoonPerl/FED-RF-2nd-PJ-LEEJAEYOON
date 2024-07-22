@@ -5,12 +5,12 @@ import $ from "jquery";
 import { gameData } from "../data/game_list_data";
 import "../../css/game_list.scss";
 
-export const GameList = memo(() => {
+function GameList(props) {
     // 검색 필터 상태관리변수
     const [searchGame, setSearchGame] = useState("");
     // 카테고리 필터 상태관리변수
     const [selectedCategory, setSelectedCategory] = useState('All');
-
+    
     const showGame = (게임명, gsrc, 홈페이지) => {
         const gb = $(".game-bx");
         const gtit = $(".game-tit");
@@ -66,6 +66,8 @@ export const GameList = memo(() => {
                     </button>
                 ))}
             </div>
+            <div className="searchingBox">
+            <FontAwesomeIcon icon={faSearch} className="schbtn" title="Open search" />
             <input
                 type="text"
                 placeholder="게임 검색"
@@ -74,6 +76,7 @@ export const GameList = memo(() => {
                 className="searchInput"
             />
             </div>
+            </div>
             <ul className="gArea">
                 {filteredGames.map((v, i) => (
                     <li key={i} className="gBox" onClick={() => showGame(v.게임명, v.gsrc, v.홈페이지)}>
@@ -81,6 +84,7 @@ export const GameList = memo(() => {
                             <ol className="gList">
                                 <li className="gImg">
                                     <img src={v.대표이미지} alt={v.게임명} />
+                                    
                                 </li>
                                 <div className="gtxtBox">
                                     <li className="gName">{v.게임명}</li>
@@ -98,4 +102,6 @@ export const GameList = memo(() => {
             </ul>
         </section>
     );
-});
+}
+
+export default GameList;

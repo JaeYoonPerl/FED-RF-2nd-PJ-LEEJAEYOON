@@ -37,6 +37,7 @@ export default function FooterArea() {
     // 코드 리턴구역 ////
     return (
         <>
+        {/* <footer className="info page"> */}
         <footer className="info page">
             <ul className="leftArea">
                 <li>
