@@ -13,10 +13,14 @@ import Logo from "../modules/Logo";
 
 // 제이쿼리
 import $ from "jquery";
-import { memo, useContext } from "react";
+
+import { memo, useContext, useEffect } from "react";
 import { dCon } from "../modules/dCon";
 
+
 export const TopArea = memo(({}) => {
+
+
    
 
     // 컨텍스트 사용하기
@@ -65,6 +69,7 @@ export const TopArea = memo(({}) => {
                         {menu.map((v, i) => (
                             <li key={i} className="gnbli">
                                 <Link to={v.link}>{v.txt}</Link>
+                              
                             </li>
                         ))}
                     </ul>
