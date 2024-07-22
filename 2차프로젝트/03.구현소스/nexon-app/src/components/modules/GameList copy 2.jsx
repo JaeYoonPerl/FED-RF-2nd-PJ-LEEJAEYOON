@@ -11,17 +11,16 @@ function GameList(props) {
     const [searchGame, setSearchGame] = useState("");
     // 카테고리 필터 상태관리변수
     const [selectedCategory, setSelectedCategory] = useState('All');
-
-    const [selectedGame, setSelectedGame] = useState(null);
+    // 북마크 상태관리 변수
     const [bookmarks, setBookmarks] = useState([]);
     // 북마크 리스트 페이지 
     const [showBookmarks, setShowBookmarks] = useState(false);
 
+    // 북마크데이터 저장
     useEffect(() => {
         const savedBookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
         setBookmarks(savedBookmarks);
     }, []);
-
     useEffect(() => {
         localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     }, [bookmarks]);
@@ -47,19 +46,18 @@ function GameList(props) {
         });
     };
 
+    // 게임 이름 검색
     const handleSearchChange = (e) => {
         setSearchGame(e.target.value);
     };
 
+    // 카테고리 버튼 클릭
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
     };
 
-    const handleCloseGame = () => {
-        setSelectedGame(null);
-    };
-
-   // 북마크
+   
+   // 북마크 some()
     const toggleBookmark = (game) => {
         if (bookmarks.some((bookmark) => bookmark.게임명 === game.게임명)) {
             setBookmarks(bookmarks.filter((bookmark) => bookmark.게임명 !== game.게임명));
@@ -103,7 +101,7 @@ function GameList(props) {
             <input
                 type="text"
                 placeholder="게임 검색"
-                value={searchGame}게임목록
+                value={searchGame}
                 onChange={handleSearchChange}
                 className="searchInput"
             />
