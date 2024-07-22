@@ -7,9 +7,13 @@
 .categoryButtons{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     .searchingBox{
         left: -150px;
     
+    }
+    p{
+        white-space: nowrap;
     }
 }
 
@@ -156,5 +160,16 @@
     
     .searchingBox{
         display: none;
+    }
+    
+    .bookmarkToggleBtn{
+        display: none;
+    }
+}
+@media screen and (max-width: 550px) {
+        .nListSec {
+    
+    padding-left: 100px;
+    
     }
 }

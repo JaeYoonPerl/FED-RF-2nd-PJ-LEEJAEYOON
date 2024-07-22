@@ -16,9 +16,9 @@ function GameList(props) {
     // 북마크 리스트 페이지 등장
     const [showBookmarks, setShowBookmarks] = useState(false);
 
-    // 북마크데이터 저장
+    // useEffect 북마크데이터 로컬호스트 
     useEffect(() => {
-        const savedBookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+        const savedBookmarks = JSON.parse(localStorage.getItem("bookmarks"));
         setBookmarks(savedBookmarks);
     }, []);
     useEffect(() => {
@@ -57,7 +57,7 @@ function GameList(props) {
     };
 
    
-   // 북마크 some()
+   // 북마크 some()으로 중복데이터 확인
     const toggleBookmark = (game) => {
         if (bookmarks.some((bookmark) => bookmark.게임명 === game.게임명)) {
             setBookmarks(bookmarks.filter((bookmark) => bookmark.게임명 !== game.게임명));
@@ -79,6 +79,7 @@ function GameList(props) {
     });
 
     const categories = ["All", ...new Set(gameData.map((game) => game.cate))];
+
     
     const isBookmarked = (game) => bookmarks.some((bookmark) => bookmark.게임명 === game.게임명);
 
