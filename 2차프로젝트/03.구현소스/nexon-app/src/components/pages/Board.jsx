@@ -22,6 +22,10 @@ import { dCon } from "../modules/dCon";
 import SubPgIntro from "../modules/SubPgIntro";
 
 export default function Board() {
+
+  
+
+
   // 컨텍스트 사용하기
   const myCon = useContext(dCon);
   // 전역 로그인 상태 변수 확인(변수할당!)

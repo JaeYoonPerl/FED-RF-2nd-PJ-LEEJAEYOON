@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 
 import { useLocation } from "react-router-dom";
 import { Link } from 'react-router-dom';
@@ -19,9 +19,9 @@ function MNewsDetail() {
     console.log(isrc, date, tit, cate, isum);
     // const dt=isum.length;
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.scrollTo(0, 0);
-    });
+    },[]);
 
     return (
         <>

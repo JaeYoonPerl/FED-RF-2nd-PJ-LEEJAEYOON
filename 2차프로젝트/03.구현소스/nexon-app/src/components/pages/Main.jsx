@@ -26,6 +26,7 @@ export default function Main() {
         wFn.evtFn();
         wFn.zeroPno();
 
+        window.scrollTo(0, 0);
         return () => {
             window.removeEventListener("wheel", wFn.wheelFn);
            

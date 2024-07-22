@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-// 자동 휠 함수 불러오기
-import * as wFn from "../func/auto_wheel";
+
+
 import { aboutusData } from "../data/about_us_data";
 import "../../css/aboutus.scss";
 import scrollShowFn from "../func/scroll_show";
@@ -9,13 +9,9 @@ function AboutUs() {
     const selData = aboutusData.com;
 
     useEffect(() => {
-        // 자동 휠
-        // window.addEventListener("wheel", wFn.wheelFn);
+        
         scrollShowFn();
-        // return () => {
-            // window.removeEventListener("wheel", wFn.wheelFn);
-            window.scrollTo(0, 0);
-        // };
+        
     }, []);
     return (
         <>
