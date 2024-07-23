@@ -41,6 +41,7 @@ $(()=>{
 $("html,body").animate({ scrollTop: "0px" });
 
 function wheelFn(e) {
+  e.preventDefault();
   // 광휠금지
   if (prot[0]) return;
   chkCrazy(0);
@@ -182,7 +183,7 @@ function evtFn() {
   /////////////////////////////////////////////
   // GNB 메뉴 + 사이드 인디케이터 클릭 이동기능 //
   /////////////////////////////////////////////
-  $(".gnb li, .indic li").click(function () {
+  $(".indic li").on("click",function () {
     // 1. 순번변수
     let idx = $(this).index();
     // console.log('나야나~!',idx);

@@ -6,6 +6,8 @@ import MainNews from "../modules/MainNews";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
+import $ from "jquery";
+
 // 자동 휠 함수 불러오기
 import * as wFn from "../func/auto_wheel";
 import MainPeople from "../modules/MainPeople";
@@ -17,7 +19,7 @@ export default function Main() {
     // 화면 랜더링 실행구역
     useEffect(() => {
         // 1. 자동 휠
-        window.addEventListener("wheel", wFn.wheelFn);
+        window.addEventListener("wheel", wFn.wheelFn,{passive: false});
         
         // 등장요소 CSS
         wFn.initSet();
@@ -28,9 +30,8 @@ export default function Main() {
 
         window.scrollTo(0, 0);
         return () => {
-            window.removeEventListener("wheel", wFn.wheelFn);
-           
-            
+            console.log("메인모듈 소멸자!");
+            window.removeEventListener("wheel", wFn.wheelFn,{passive: false});    
             window.scrollTo(0, 0);
         };
 
