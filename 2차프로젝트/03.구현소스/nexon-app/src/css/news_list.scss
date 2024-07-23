@@ -185,7 +185,30 @@
 @media screen and (max-width: 550px) {
         .nListSec {
     
-    padding-left: 100px;
+    padding-left: 40px;
+    .categoryButtons {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        left: 30px;
+    }
     
     }
+}
+
+
+@media screen and (max-width: 500px) {
+    .nArea {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 30px;
+        list-style: none;
+        padding: 40px 0;
+        margin: 0 auto;
+        left: 20px;
+        
+    }
+    
 }

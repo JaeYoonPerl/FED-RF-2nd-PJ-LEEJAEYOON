@@ -7,7 +7,7 @@
     left: 95%;
     width: 30px;
     /* outline: 3px dotted blue; */
-    z-index: 100;
+    z-index: 19;
   }
   
   .indic li {
@@ -45,4 +45,10 @@
   /* 설명글자숨기기 */
   .indic span {
     display: none;
+  }
+
+
+  #pg1{
+    position: relative;
+    z-index: 20;
   }

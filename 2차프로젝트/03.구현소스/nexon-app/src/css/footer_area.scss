@@ -237,3 +237,13 @@ ol.bmenu{
         display: none;
     }
 }
+@media screen and (max-width: 500px) {
+    
+    
+    .comboBtn {
+        display: none;
+    }
+    .bmenu a{
+        font-size: 10px;
+    }
+}

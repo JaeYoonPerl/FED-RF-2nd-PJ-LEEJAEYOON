@@ -1,6 +1,7 @@
 import React, { memo, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faDesktop, faMobileScreen, faGamepad, faBookmark, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faDesktop, faMobileScreen, faGamepad,faHeart} from "@fortawesome/free-solid-svg-icons";
+import { faHeart as binfaHeart } from '@fortawesome/free-regular-svg-icons';
 
 import $ from "jquery";
 import { gameData } from "../data/game_list_data";
@@ -136,7 +137,7 @@ function GameList(props) {
                                         e.stopPropagation();
                                         toggleBookmark(v);
                                     }} className="bookmarkbtn">
-                                            <FontAwesomeIcon icon={faTrashAlt} />
+                                            <FontAwesomeIcon icon={faHeart} />
                                         </button>
                                     </div>
                                 </ol>
@@ -169,7 +170,7 @@ function GameList(props) {
                                         e.stopPropagation();
                                         toggleBookmark(v);
                                     }} className="bookmarkbtn">
-                                        <FontAwesomeIcon icon={isBookmarked(v) ? faTrashAlt : faBookmark} /> 
+                                        <FontAwesomeIcon icon={isBookmarked(v) ? faHeart : binfaHeart} /> 
                                     </button>
                                 </div>
                             </ol>

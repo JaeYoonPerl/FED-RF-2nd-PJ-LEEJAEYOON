@@ -8,6 +8,7 @@
 .searchingBox {
     position: relative;
     margin-left: auto;
+    left: 20px;
     .schbtn {
         position: absolute;
         z-index: 2;
@@ -228,4 +229,18 @@
 }
 .bookmarkbtn:hover {
     background-color: #5e5e5e8e;
+}
+
+@media screen and (max-width: 500px) {
+    .gArea {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 30px;
+        list-style: none;
+        padding: 40px 0;
+        margin: 0 auto;
+        left: 30px;
+    }
+    
 }
