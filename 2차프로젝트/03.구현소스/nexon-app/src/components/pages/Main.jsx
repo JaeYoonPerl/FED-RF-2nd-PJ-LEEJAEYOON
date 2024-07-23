@@ -63,7 +63,7 @@ export default function Main() {
 
             {/* 3. GAME 인트로 구역 */}
             <section id="pg3" className="page">
-                <MainIntro catname="game" clsName="secIntro" />
+                <MainIntro catname="game" clsName="off" />
             </section>
             {/* 4. PEoPle 인트로 구역 */}
             <section id="pg4" className="page">

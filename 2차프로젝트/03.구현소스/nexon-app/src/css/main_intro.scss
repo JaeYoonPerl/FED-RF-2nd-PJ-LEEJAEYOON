@@ -70,13 +70,36 @@
 
 .secIntro{
     .introtit{
+        top: 20%;
         left: 40%;
     }
     .introtxt{
-        top: 30%;
+        top: 40%;
         left: 50%;
     }
     
 }
 
 
+@media screen and (max-width: 850px) {
+    .introtit {
+        
+        font-size: 70px;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+    }
+    .introtxt{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+    }
+    .secintro{
+        .introtxt{
+
+            top: 40% !important;
+            left: 50%;
+            transform: translate(-50%, -50%) !important;
+        }
+    }
+}
