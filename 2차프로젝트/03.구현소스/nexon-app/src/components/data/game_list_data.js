@@ -170,4 +170,16 @@ export const gameData = [
         txt: "테일즈위버는 유저들의 협력을 중심으로 누구나 즐겁게, 함께 스토리를 즐길 수 있는 게임이라는 부분에 포커스를 맞추고 있습니다. 실제 게임을 플레이하는 유저들은 온라인게임 환경에서 여러 플레이어가 함께 진행 가능한 드라마틱한 시나리오를 구현해주는 이벤트 시스템과 기존의 온라인 게임과는 전혀 다른 박진감 넘치는 전투 시스템을 통해서 기존의 성장 중심의 게임이나 가상 사회 스타일의 게임과는 차별화된 테일즈위버만의 새로운 재미를 느끼게 될 것입니다.",
         gsrc:"https://www.youtube.com/embed/HMYrjdFGewo?si=rZXdUf5UBGKBJ-WN"
     },
+    {
+        idx: "16",
+        게임명: "카운터 스트라이크 온라인",
+        대표이미지: "https://rs.nxfs.nexon.com/bannerusr/24/7/PfaV10175648179.jpg",
+        cate: "FPS",
+        홈페이지: "https://csonline.nexon.com/Eventfull/E240711/Event?utm_source=Nexon&utm_medium=gamecard&utm_campaign=Grandprix_2nd&utm_term=PC&utm_content=Brionac&airbridge_referrer=airbridge%3Dtrue%26event_uuid%3D3a54961b-22bf-4d2a-8eb1-ed4decd944ed%26client_id%3D1d1347bc-95b4-405d-b486-e7b3321877e0%26short_id%3Dmkvmth%26referrer_timestamp%3D1721705334470%26channel%3DNexon%26campaign%3DGrandprix_2nd%26tracking_template_id%3Da57f450afdd32af1c7d6962f7d2a567e%26content%3DBrionac%26term%3DPC%26sub_id%3Dgamecard%26og_tag_id%3D78585004%26routing_short_id%3Damblwo",
+        외부링크: "https://www.facebook.com/CounterStrikeOnline.Korea/",
+        플랫폼: ["PC", ""],
+        txt: "테일즈위버는 유저들의 협력을 중심으로 누구나 즐겁게, 함께 스토리를 즐길 수 있는 게임이라는 부분에 포커스를 맞추고 있습니다. 실제 게임을 플레이하는 유저들은 온라인게임 환경에서 여러 플레이어가 함께 진행 가능한 드라마틱한 시나리오를 구현해주는 이벤트 시스템과 기존의 온라인 게임과는 전혀 다른 박진감 넘치는 전투 시스템을 통해서 기존의 성장 중심의 게임이나 가상 사회 스타일의 게임과는 차별화된 테일즈위버만의 새로운 재미를 느끼게 될 것입니다.",
+        gsrc:"https://www.youtube.com/embed/SWhbwRbnrB0 "
+    },
+   
 ];
