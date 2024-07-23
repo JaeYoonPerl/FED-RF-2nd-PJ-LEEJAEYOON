@@ -168,7 +168,7 @@ function actPage() {
     // 대상: 해당순번 .page 아래 .imgc 와 .txtc a
     $(".page").eq(pno).find(".introtit").css({
       // transform: "rotate(0deg)",
-      transform: "translate(50%, 90%)",
+      transform: "translate(50%, 140%)",
       opacity: 1,
       transition: "1s ease-in-out .3s",
     }); ///////// css /////////
