@@ -6,6 +6,8 @@ import * as wFn from "../func/auto_wheel";
 import AboutUs from "../modules/AboutUs";
 import Family from "../modules/Family";
 import scrollShowFn from "../func/scroll_show";
+// 제이쿼리
+import $ from "jquery";
 
 export default function Company(){
     // const selData = familyData[catname];
@@ -19,6 +21,11 @@ export default function Company(){
     //         window.scrollTo(0, 0);
     //     };
     // }, []);
+    // 화면 랜더링 구역
+    useEffect(() => {
+        // 전체 스크롤바 살리기
+        $("html,body").css({ overflow: "visible" });
+    }, []);
    
 
     // 코드 리턴구역 ////

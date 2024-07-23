@@ -9,11 +9,16 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 // import * as wFn from "../func/auto_wheel";
 
 import "../../css/game_info.scss";
-
+// 제이쿼리
+import $ from "jquery";
 
 
 export default function Game(){
-
+    // 화면 랜더링 구역
+    useEffect(() => {
+        // 전체 스크롤바 살리기
+        $("html,body").css({ overflow: "visible" });
+    }, []);
     
 
     

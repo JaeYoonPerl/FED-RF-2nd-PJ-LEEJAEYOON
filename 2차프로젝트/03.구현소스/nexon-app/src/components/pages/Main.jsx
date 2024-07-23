@@ -29,6 +29,9 @@ export default function Main() {
         wFn.zeroPno();
 
         window.scrollTo(0, 0);
+
+        // 스크롤 숨기기
+        $("html,body").css({ overflow: "hidden" });
         return () => {
             console.log("메인모듈 소멸자!");
             window.removeEventListener("wheel", wFn.wheelFn,{passive: false});    

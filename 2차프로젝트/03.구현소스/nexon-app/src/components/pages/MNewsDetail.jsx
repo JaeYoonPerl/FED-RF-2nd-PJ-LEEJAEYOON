@@ -6,9 +6,15 @@ import { SwiperList } from "../plugin/SwiperList";
 import MainNews from "../modules/MainNews";
 
 import "../../css/main_news_detail.scss";
-
+// 제이쿼리
+import $ from "jquery";
 
 function MNewsDetail() {
+    // 화면 랜더링 구역
+    useEffect(() => {
+        // 전체 스크롤바 살리기
+        $("html,body").css({ overflow: "visible" });
+    }, []);
     const loc = useLocation();
     const isrc = loc.state.isrc;
     const date = loc.state.date;

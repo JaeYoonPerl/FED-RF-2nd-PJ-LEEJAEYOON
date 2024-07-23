@@ -22,7 +22,11 @@ import { dCon } from "../modules/dCon";
 import SubPgIntro from "../modules/SubPgIntro";
 
 export default function Board() {
-
+  // 화면 랜더링 구역
+  useEffect(() => {
+    // 전체 스크롤바 살리기
+    $("html,body").css({ overflow: "visible" });
+}, []);
   
 
 
